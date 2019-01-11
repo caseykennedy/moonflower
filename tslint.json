@@ -1,11 +1,17 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended"
+        "tslint:recommended", "tslint-react", "tslint-config-prettier"
     ],
+    "linterOptions": {
+        "exclude": [
+            "config/**/*.js",
+            "node_modules/**/*.ts"
+        ]
+    },
     "jsRules": {},
     "rules": {
-        "interface-name": [ "never-prefix" ],
+        "interface-name": ["never-prefix"],
         "member-access": [
             false
         ],
@@ -15,7 +21,9 @@
         "no-console": [
             false
         ],
-        "no-var-requires": false
+        "no-var-requires": false,
+        "quotemark": [true, "double", "jsx-double"],
+        "no-shadowed-variable": false
     },
     "rulesDirectory": []
 }
