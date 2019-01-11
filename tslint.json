@@ -1,7 +1,7 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended", "tslint-react", "tslint-config-prettier"
+        "tslint:recommended"
     ],
     "linterOptions": {
         "exclude": [
@@ -22,9 +22,9 @@
         "no-console": [
             false
         ],
-        "no-var-requires": false,
         "quotemark": [true, "double", "jsx-double"],
-        "no-shadowed-variable": false
+        "no-shadowed-variable": false,
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }

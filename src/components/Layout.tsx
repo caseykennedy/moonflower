@@ -16,12 +16,12 @@ import theme from "../theme"
 export const menuItems = [
   { name: "Home", path: "/", exact: true, icon: "home", inverted: true },
   { name: "About", path: "/about/", exact: true, icon: "info circle" },
-  { name: "Blog", path: "/blog/", exact: false, icon: "newspaper" }
+  { name: "Blog", path: "/blog/", exact: false, icon: "newspaper" },
 ]
 
 export interface LayoutProps {
   location: {
-    pathname: string
+    pathname: string,
   }
   children: any
 }
@@ -35,6 +35,13 @@ const Layout = (props: LayoutProps) => {
       <ThemeProvider theme={theme}>
         <Provider store={store}>
           <Sidebar.Pushable as={Segment}>
+            <SidebarMenu
+              Link={Link}
+              pathname={pathname}
+              items={menuItems}
+              visible={false}
+            />
+
             <Sidebar.Pusher style={{ minHeight: "100vh" }}>
               {/* Header */}
               {isHome ? null : (
@@ -43,8 +50,6 @@ const Layout = (props: LayoutProps) => {
 
               {/* Render children pages */}
               <div style={{ paddingBottom: 60 }}>{props.children}</div>
-
-              {/* Footer */}
             </Sidebar.Pusher>
           </Sidebar.Pushable>
         </Provider>
