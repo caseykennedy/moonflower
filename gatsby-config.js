@@ -8,6 +8,16 @@ module.exports = {
     'MarkdownRemark.frontmatter.author': `AuthorJson`
   },
   plugins: [
+    'gatsby-plugin-styled-components',
+
+    // Global Typography
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`
+    //   }
+    // },
+
     // Expose `/data` to graphQL layer
     {
       resolve: `gatsby-source-filesystem`,
