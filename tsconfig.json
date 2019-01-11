@@ -6,7 +6,13 @@
         "module": "commonjs",
         "target": "esnext",
         "jsx": "react",
-        "lib": ["dom", "esnext"]
+        "lib": ["dom", "esnext"],
+
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "allowJs": true,
     },
     "include": [
         "./src/**/*"

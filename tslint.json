@@ -12,6 +12,7 @@
     "jsRules": {},
     "rules": {
         "interface-name": ["never-prefix"],
+        "semicolon": [true, "never"],
         "member-access": [
             false
         ],

@@ -1,6 +1,12 @@
-import * as React from "react";
-import { Header, Container, Segment, Icon } from "semantic-ui-react";
-import { withLayout } from "../components/Layout";
+import * as React from "react"
+import { Header, Container, Segment, Icon } from "semantic-ui-react"
+import { withLayout } from "../components/Layout"
+
+import styled from "styled-components"
+
+const Test = styled.div`
+  margin-top: 400px;
+`
 
 const AboutPage = () => {
   return (
@@ -10,6 +16,7 @@ const AboutPage = () => {
           <Icon name="info circle" />
           <Header.Content>About</Header.Content>
         </Header>
+        <Test>asdfsdaf</Test>
       </Segment>
       <Segment vertical>
         <p>This starter was created by @fabien0102.</p>
@@ -31,7 +38,7 @@ const AboutPage = () => {
         </p>
       </Segment>
     </Container>
-  );
-};
+  )
+}
 
-export default withLayout(AboutPage);
+export default withLayout(AboutPage)
