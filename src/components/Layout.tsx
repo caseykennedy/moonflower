@@ -1,34 +1,38 @@
 import { Link } from "gatsby"
 import * as React from "react"
-import HeaderMenu from "./HeaderMenu/HeaderMenu"
-import SidebarMenu from "./SidebarMenu/SidebarMenu"
-import { Segment, Icon, Container, Sidebar } from "semantic-ui-react"
-import "../css/responsive.css"
-import "../css/semantic.min.css"
-import "prismjs/themes/prism-okaidia.css"
 import { Provider } from "react-redux"
 import { store } from "../store"
 
 import GlobalStyle from "../styles/global"
+import "../css/responsive.css"
+import "../css/semantic.min.css"
+import "prismjs/themes/prism-okaidia.css"
+
+import { Box } from "rebass"
+import { Segment, Icon, Container, Sidebar } from "semantic-ui-react"
+
+import Header from "./Header/Header"
+import SidebarMenu from "./SidebarMenu/SidebarMenu"
+
 import { ThemeProvider } from "styled-components"
 import theme from "../theme"
 
 export const menuItems = [
   { name: "Home", path: "/", exact: true, icon: "home", inverted: true },
   { name: "About", path: "/about/", exact: true, icon: "info circle" },
-  { name: "Blog", path: "/blog/", exact: false, icon: "newspaper" },
+  { name: "Blog", path: "/blog/", exact: false, icon: "newspaper" }
 ]
 
 export interface LayoutProps {
   location: {
-    pathname: string,
+    pathname: string
   }
   children: any
 }
 
 const Layout = (props: LayoutProps) => {
   const { pathname } = props.location
-  const isHome = pathname === "/"
+  // const isHome = pathname === "/"
 
   return (
     <div>
@@ -41,15 +45,16 @@ const Layout = (props: LayoutProps) => {
               items={menuItems}
               visible={false}
             />
-
             <Sidebar.Pusher style={{ minHeight: "100vh" }}>
               {/* Header */}
-              {isHome ? null : (
+              {/* {isHome ? null : (
                 <HeaderMenu Link={Link} pathname={pathname} items={menuItems} />
-              )}
+              )} */}
+
+              <Header />
 
               {/* Render children pages */}
-              <div style={{ paddingBottom: 60 }}>{props.children}</div>
+              <div>{props.children}</div>
             </Sidebar.Pusher>
           </Sidebar.Pushable>
         </Provider>

@@ -13,6 +13,13 @@
         "experimentalDecorators": true,
         "importHelpers": true,
         "allowJs": true,
+
+        "moduleResolution": "node",
+        "suppressImplicitAnyIndexErrors": true,
+
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true
     },
     "include": [
         "./src/**/*"

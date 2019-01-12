@@ -1,11 +1,21 @@
 const theme = {
-  breakpoints: {
-    xs: 0,
-    sm: 576,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-  },
+
+  // Rebass theme options
+
+  breakpoints: [
+    464,
+    1024,
+    1366,
+    1620,
+  ],
+
+  fontSizes: [
+    "1rem", "1.3rem", "1.5rem", "2rem", "3rem", "4rem", "6rem",
+  ],
+
+  space: [
+    0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+  ],
 
   colors: {
     base: "#121212", // Black
@@ -17,7 +27,8 @@ const theme = {
   sizes: {
     maxWidth: "1050px",
     maxWidthCentered: "650px",
-  },
+  }
+
 }
 
 export default theme

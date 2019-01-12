@@ -18,8 +18,7 @@ export const HeaderMenu = ({
   inverted,
   dispatch
 }: HeaderMenuProps) => (
-  <Container>
-    <Box width={1} bg="white" color="black" p={30}>I am Box.</Box>
+  <Container fluid>
     <Menu size="large" pointing secondary inverted={inverted}>
       <Menu.Item
         as="a"
@@ -27,7 +26,6 @@ export const HeaderMenu = ({
         icon="sidebar"
         onClick={() => dispatch && dispatch(toggleSidebar())}
       />
-      <Menu.Item className="mobile hidden">moonflower</Menu.Item>
       {items.map(item => {
         const active = item.exact
           ? pathname === item.path
