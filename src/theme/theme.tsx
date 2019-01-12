@@ -18,10 +18,17 @@ const theme = {
   ],
 
   colors: {
-    base: "#121212", // Black
-    secondary: "#e9e9e9", // Medium Gray
-    tertiary: "#f3f3f3", // Light Gray
-    highlight: "#5b8bf7", // Light Blue
+    Black: "#000000",
+    White: "#ffffff",
+    LightGray: "#f3f3f3",
+    DarkGrey: "#ededed",
+
+    DarkSky: "#11111b",
+    PurpleRain: "#202136",
+    OgPurp: "#7175a2",
+    Lavendar: "#7175a2",
+    GoldBloom: "#e9c564",
+    PaleMoon: "d7ddf7"
   },
 
   sizes: {

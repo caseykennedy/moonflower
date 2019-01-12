@@ -7,11 +7,9 @@ import styled from "styled-components"
 import { Box, Heading } from "rebass"
 
 const IndexPage = () => (
-  <div>
-    <Main bg="black" width={1} py={8} px={4}>
-      
-    </Main>    
-  </div>
+  <React.Fragment>
+    <Main bg="black" width={1} py={8} px={4} />    
+  </React.Fragment>
 )
 
 const Main = styled(Box)`
