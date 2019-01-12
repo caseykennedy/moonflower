@@ -24,7 +24,9 @@
         ],
         "quotemark": [true, "double", "jsx-double"],
         "no-shadowed-variable": false,
-        "object-literal-sort-keys": false
+        "object-literal-sort-keys": false,
+        "jsx-self-close": true,
+        "no-var-requires": false
     },
     "rulesDirectory": []
 }
