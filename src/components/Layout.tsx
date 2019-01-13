@@ -15,7 +15,7 @@ import Header from './Header/Header'
 import SidebarMenu from './SidebarMenu/SidebarMenu'
 
 import { ThemeProvider } from 'styled-components'
-import theme from '../theme'
+import theme from '../theme/theme'
 
 export const menuItems = [
   { name: 'Home', path: '/', exact: true, icon: 'home', inverted: true },

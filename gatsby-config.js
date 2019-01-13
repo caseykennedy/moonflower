@@ -10,6 +10,15 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
 
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    },
+
     // Global Typography
     // {
     //   resolve: `gatsby-plugin-typography`,
@@ -44,14 +53,13 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 690,
-              backgroundColor: `#f7f0eb`
-            }
-          },
+        plugins: [{
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 690,
+            backgroundColor: `#f7f0eb`
+          }
+        },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-autolink-headers`
@@ -76,11 +84,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby website`,
-        short_name: `Gatsby website`,
+        name: `Moonflower Delivery`,
+        short_name: `Moonflower`,
         start_url: `/`,
-        background_color: `#f7f7f7`,
-        theme_color: `#191919`,
+        background_color: `#202136`,
+        theme_color: `#7175a2`,
         display: `minimal-ui`
       }
     },

@@ -1,17 +1,17 @@
 import Typography from 'typography'
-import config from '../../config/SiteConfig'
+import config from '../theme/config'
 
 const typography = new Typography({
   baseFontSize: config.baseFontSize,
   baseLineHeight: 1.66,
-  scaleRatio: 3.157,
+  scaleRatio: 3,
   headerFontFamily: [config.headerFontFamily, 'sans-serif'],
   bodyFontFamily: [config.bodyFontFamily, 'sans-serif'],
-  headerWeight: 700,
+  headerWeight: 400,
   googleFonts: [
     {
       name: config.headerFontFamily,
-      styles: ['700']
+      styles: ['400']
     },
     {
       name: config.bodyFontFamily,

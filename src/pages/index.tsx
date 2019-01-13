@@ -8,8 +8,8 @@ import { Box, Heading } from 'rebass'
 
 const IndexPage = () => (
   <React.Fragment>
-    <Main bg='PurpleRain' width={1} py={8} px={4} color='White'>
-      <h1>Planetary existence</h1>
+    <Main bg='PurpleRain' width={1} py={100} px={3} color='White'>
+      {/* <h1>Planetary existence</h1>
       <p>
         Right. Which one's your pop? No no no no no, Marty, both you and
         Jennifer turn out fine. It's your kids, Marty, something has got to be
@@ -22,10 +22,35 @@ const IndexPage = () => (
         her. You'll find out.
       </p>
       <h2>Planetary existence</h2>
+      <p>
+        Right. Which one's your pop? No no no no no, Marty, both you and
+        Jennifer turn out fine. It's your kids, Marty, something has got to be
+        done about your kids.
+      </p>
       <h3>Planetary existence</h3>
+      <p>
+        Right. Which one's your pop? No no no no no, Marty, both you and
+        Jennifer turn out fine. It's your kids, Marty, something has got to be
+        done about your kids.
+      </p>
       <h4>Planetary existence</h4>
+      <p>
+        Right. Which one's your pop? No no no no no, Marty, both you and
+        Jennifer turn out fine. It's your kids, Marty, something has got to be
+        done about your kids.
+      </p>
       <h5>Planetary existence</h5>
+      <p>
+        Right. Which one's your pop? No no no no no, Marty, both you and
+        Jennifer turn out fine. It's your kids, Marty, something has got to be
+        done about your kids.
+      </p>
       <h6>Planetary existence</h6>
+      <p>
+        Right. Which one's your pop? No no no no no, Marty, both you and
+        Jennifer turn out fine. It's your kids, Marty, something has got to be
+        done about your kids.
+      </p> */}
     </Main>
   </React.Fragment>
 )

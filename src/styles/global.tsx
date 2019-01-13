@@ -144,43 +144,48 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     font-size: 10px;
-    font-family: TransatStandard
+    font-family: TransatStandard;
+    letter-spacing: 0.1rem;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    
+  h1, h2, h3 {
+    padding-bottom: 0.4em
+  }
+
+  h4, h5, h6 {
+    padding-bottom: 0.8em
   }
 
   h1 {
     font-size: 8rem;
-    line-height: 1.8
+    line-height: 1.1
   }
   h2 {
     font-size: 6rem;
-    line-height: 1.8
+    line-height: 1.1
   }
   h3 {
     font-size: 4rem;
-    line-height: 1.8
+    line-height: 1.1
   }
   h4 {
     font-size: 3rem;
-    line-height: 1.8
+    line-height: 1.1
   }
   h5 {
     font-size: 2rem;
-    line-height: 1.8
+    line-height: 1.1
   }
   h6 {
-    font-size: 1rem;
-    line-height: 1.8
+    font-size: 1.4rem;
+    line-height: 1.1
   }
 
   p {
     font-size: 1.8rem;
     line-height: 1.8;
     font-family: TransatLight;
-    padding-bottom: 2rem;
+    padding-bottom: 2.6em;
   }
   
 `
