@@ -23,7 +23,8 @@ const Header = ({ isMobile }: HeaderProps) => (
       py={[2, 3, 4]}
     >
       <Box width={1 / 2}>
-        {/* <Box>{isMobile ? <Symbol /> : <Logo />}</Box> */}
+        {/* <Box>{ !isMobile ? <Logo /> : <Symbol />}</Box> */}
+        <Symbol />
       </Box>
       <Flex
         alignItems='baseline'
@@ -48,7 +49,7 @@ const Container = styled(Box)`
 `
 
 const Logo = styled(LogoType)`
-  
+  width: 180px;
 `
 
 const Symbol = styled(LogoSymbol)`
