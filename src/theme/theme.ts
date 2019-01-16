@@ -1,20 +1,28 @@
-import Config from './config'
+import config from './config'
 
 const theme = {
   // Rebass theme options
 
   breakpoints: [
-    `${Config.Breakpoint.Sm}px`,
-    `${Config.Breakpoint.Md}px`,
-    `${Config.Breakpoint.Lg}px`,
-    `${Config.Breakpoint.Xl}px`,
+    `${config.breakpoints.sm}px`,
+    `${config.breakpoints.md}px`,
+    `${config.breakpoints.lg}px`,
+    `${config.breakpoints.xl}px`
   ],
+  
+  // && {
+  //   xs: 320,
+  //   sm: 464,
+  //   md: 1024,
+  //   lg: 1367,
+  //   xl: 1620
+  // },
 
   fonts: {
-    transatLight:          'TransatLight, sans-serif',
-    transatStandard:       'TransatStandard, sans-serif',
-    transatMedium:         'TransatMedium, sans-serif',
-    transatBold:           'TransatBold, sans-serif'
+    transatLight: 'TransatLight, sans-serif',
+    transatStandard: 'TransatStandard, sans-serif',
+    transatMedium: 'TransatMedium, sans-serif',
+    transatBold: 'TransatBold, sans-serif'
   },
 
   Heading: {
@@ -62,17 +70,18 @@ const theme = {
   ],
 
   colors: {
-    Black: `${Config.Color.Black}`,
-    White: `${Config.Color.White}`,
-    LightGrey: `${Config.Color.LightGrey}`,
-    DarkGrey: `${Config.Color.DarkGrey}`,
+    black: `${config.colors.black}`,
+    white: `${config.colors.white}`,
+    lightGrey: `${config.colors.lightGrey}`,
+    darkGrey: `${config.colors.darkGrey}`,
 
-    DarkSky: `${Config.Color.DarkSky}`,
-    PurpleRain: `${Config.Color.PurpleRain}`,
-    OgPurp: `${Config.Color.OgPurp}`,
-    Lavendar: `${Config.Color.Lavendar}`,
-    GoldBloom: `${Config.Color.GoldBloom}`,
-    PaleMoon: `${Config.Color.PaleMoon}`
+    darkSky: `${config.colors.darkSky}`,
+    purpleRain: `${config.colors.purpleRain}`,
+    ogPurp: `${config.colors.ogPurp}`,
+    lavendar: `${config.colors.lavendar}`,
+    goldBloom: `${config.colors.goldBloom}`,
+    paleMoon: `${config.colors.paleMoon}`,
+    superNova: `${config.colors.superNova}`
   },
 
   widths: {

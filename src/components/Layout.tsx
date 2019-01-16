@@ -17,11 +17,11 @@ import SidebarMenu from './SidebarMenu/SidebarMenu'
 import { ThemeProvider } from 'styled-components'
 import theme from '../theme/theme'
 
-export const menuItems = [
-  { name: 'Home', path: '/', exact: true, icon: 'home', inverted: true },
-  { name: 'About', path: '/about/', exact: true, icon: 'info circle' },
-  { name: 'Blog', path: '/blog/', exact: false, icon: 'newspaper' }
-]
+// export const menuItems = [
+//   { name: 'Home', path: '/', exact: true, icon: 'home', inverted: true },
+//   { name: 'About', path: '/about/', exact: true, icon: 'info circle' },
+//   { name: 'Blog', path: '/blog/', exact: false, icon: 'newspaper' }
+// ]
 
 export interface LayoutProps {
   location: {
@@ -31,8 +31,8 @@ export interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps) => {
-  const { pathname } = props.location
-  // const isHome = pathname === "/"
+  // const { pathname } = props.location
+  // // const isHome = pathname === "/"
 
   return (
     <React.Fragment>
