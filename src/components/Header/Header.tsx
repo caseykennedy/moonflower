@@ -5,38 +5,42 @@ import styled from 'styled-components'
 import { Box, Heading, Flex, Link } from 'rebass'
 import withSizes from 'react-sizes'
 
-import LogoType from '../../assets/logo.svg'
+import LogoType from './assets/logo.svg'
 
-import LogoSymbol from '../../assets/logo-symbol.svg'
+import LogoSymbol from './assets/logo-symbol.svg'
 
 interface HeaderProps {
   isMobile: boolean
   width: any
 }
 
-const Header = ({
-  isMobile
-}: HeaderProps) => (
+const Header = ({ isMobile }: HeaderProps) => (
   <Container as='header' width={1} px={[2, 3, 4, 4]}>
-    <Flex alignItems='center' css={{ maxWidth: 1366 }} m='0 auto' py={[2, 3, 4]}>
+    <Flex
+      alignItems='center'
+      css={{ maxWidth: 1366 }}
+      m='0 auto'
+      py={[2, 3, 4]}
+    >
       <Box width={1 / 2}>
-        <Box>
-          { isMobile ? <Symbol /> : <Logo /> }
-        </Box>
+        {/* <Box>{isMobile ? <Symbol /> : <Logo />}</Box> */}
       </Box>
-      <Flex alignItems='baseline' color='White' width={1 / 2} justifyContent='flex-end'>
+      <Flex
+        alignItems='baseline'
+        color='White'
+        width={1 / 2}
+        justifyContent='flex-end'
+      >
         <NavLink>Info</NavLink>
         <NavLink>Contact</NavLink>
-        <Button>
-          Shop
-        </Button>
+        <Button>Shop</Button>
       </Flex>
     </Flex>
   </Container>
 )
 
 const mapSizesToProps = ({ width }: HeaderProps) => ({
-  isMobile: width < 900,
+  isMobile: width < 900
 })
 
 const Container = styled(Box)`
@@ -44,7 +48,7 @@ const Container = styled(Box)`
 `
 
 const Logo = styled(LogoType)`
-  width: 180px;
+  
 `
 
 const Symbol = styled(LogoSymbol)`
