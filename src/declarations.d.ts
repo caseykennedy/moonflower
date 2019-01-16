@@ -17,13 +17,15 @@ declare module 'disqus-react' {
   }, {}> { }
 }
 
-//
+// These packages do not have @types
 declare module 'rebass'
 declare module 'gray-percentage'
 declare module 'compass-vertical-rhythm'
 declare module 'typography-theme-de-young'
+declare module 'styled-breakpoints'
+declare module 'react-sizes'
 
-
+// Image Type Declarations
 declare module '*.svg'
 declare module '*.png'
 declare module '*.jpg'

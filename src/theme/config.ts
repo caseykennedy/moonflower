@@ -12,25 +12,30 @@ export default {
   author: 'Casey Kennedy',
   siteLogo: '/assets/logo.png',
 
-  Breakpoint: {
-    Sm: 464,
-    Md: 1024,
-    Lg: 1367,
-    Xl: 1620
+  breakpoints: {
+    xs: 320,
+    sm: 464,
+    md: 1024,
+    lg: 1367,
+    xl: 1620
   },
 
-  Color: {
-    Black: '#000000',
-    White: '#ffffff',
-    LightGrey: '#f3f3f3',
-    DarkGrey: '#ededed',
+  colors: {
 
-    DarkSky: '#11111b',
-    PurpleRain: '#202136',
-    OgPurp: '#7175a2',
-    Lavendar: '#7175a2',
-    GoldBloom: '#e9c564',
-    PaleMoon: '#d7ddf7'
+    // Common Colors
+    black: '#000000',
+    white: '#ffffff',
+    lightGrey: '#f3f3f3',
+    darkGrey: '#ededed',
+
+    // Brand Colors
+    darkSky: '#11111b',
+    purpleRain: '#202136',
+    ogPurp: '#404471',
+    lavendar: '#7175a2',
+    goldBloom: '#e9c564',
+    paleMoon: '#d7ddf7',
+    superNova: '#f6f6f8'
   },
 
   // Settings for typography.ts

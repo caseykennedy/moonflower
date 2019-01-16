@@ -187,6 +187,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: TransatLight;
     padding-bottom: 2.6em;
   }
+
+  a { transition: all 0.2s; }
   
 `
 export default GlobalStyle
