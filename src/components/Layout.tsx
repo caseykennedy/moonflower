@@ -4,9 +4,9 @@ import { Provider } from 'react-redux'
 import { store } from '../store'
 
 import GlobalStyle from '../styles/global'
-import '../css/responsive.css'
+// import '../css/responsive.css'
 // import "../css/semantic.min.css"
-import 'prismjs/themes/prism-okaidia.css'
+// import 'prismjs/themes/prism-okaidia.css'
 
 import { Box } from 'rebass'
 import { Segment, Icon, Container, Sidebar } from 'semantic-ui-react'
