@@ -2,57 +2,57 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
-  @font-face {
+@font-face {
     font-family: 'TransatMedium';
-    src: url('TransatTextMedium.eot');
-    src: url('TransatTextMedium.woff2') format('woff2'),
-        url('TransatTextMedium.woff') format('woff'),
-        url('TransatTextMedium.ttf') format('truetype'),
-        url('TransatTextMedium.otf') format('opentype'),
-        url('TransatTextMedium.svg#TransatTextMedium') format('svg'),
-        url('TransatTextMedium.eot?#iefix') format('embedded-opentype');
+    src: url('./fonts/TransatTextMedium.eot');
+    src: url('./fonts/TransatTextMedium.woff2') format('woff2'),
+        url('./fonts/TransatTextMedium.woff') format('woff'),
+        url('./fonts/TransatTextMedium.ttf') format('truetype'),
+        url('./fonts/TransatTextMedium.otf') format('opentype'),
+        url('./fonts/TransatTextMedium.svg#TransatTextMedium') format('svg'),
+        url('./fonts/TransatTextMedium.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatStandard';
-    src: url('TransatTextStandard.eot');
-    src: url('TransatTextStandard.woff2') format('woff2'),
-        url('TransatTextStandard.woff') format('woff'),
-        url('TransatTextStandard.ttf') format('truetype'),
-        url('TransatTextStandard.otf') format('opentype'),
-        url('TransatTextStandard.svg#TransatTextMedium') format('svg'),
-        url('TransatTextStandard.eot?#iefix') format('embedded-opentype');
+    src: url('./fonts/TransatTextStandard.eot');
+    src: url('./fonts/TransatTextStandard.woff2') format('woff2'),
+        url('./fonts/TransatTextStandard.woff') format('woff'),
+        url('./fonts/TransatTextStandard.ttf') format('truetype'),
+        url('./fonts/TransatTextStandard.otf') format('opentype'),
+        url('./fonts/TransatTextStandard.svg#TransatTextMedium') format('svg'),
+        url('./fonts/TransatTextStandard.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
-@font-face {
-  font-family: 'TransatBold';
-  src: url('TransatTextBold.eot');
-  src: url('TransatTextBold.woff2') format('woff2'),
-      url('TransatTextBold.woff') format('woff'),
-      url('TransatTextBold.ttf') format('truetype'),
-      url('TransatTextBold.otf') format('opentype'),
-      url('TransatTextBold.svg#TransatTextMedium') format('svg'),
-      url('TransatTextBold.eot?#iefix') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'TransatBold';
+    src: url('./fonts/TransatTextBold.eot');
+    src: url('./fonts/TransatTextBold.woff2') format('woff2'),
+        url('./fonts/TransatTextBold.woff') format('woff'),
+        url('./fonts/TransatTextBold.ttf') format('truetype'),
+        url('./fonts/TransatTextBold.otf') format('opentype'),
+        url('./fonts/TransatTextBold.svg#TransatTextMedium') format('svg'),
+        url('./fonts/TransatTextBold.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: 'TransatLight';
-  src: url('TransatTextLight.eot');
-  src: url('TransatTextLight.woff2') format('woff2'),
-      url('TransatTextLight.woff') format('woff'),
-      url('TransatTextLight.ttf') format('truetype'),
-      url('TransatTextLight.otf') format('opentype'),
-      url('TransatTextLight.svg#TransatTextMedium') format('svg'),
-      url('TransatTextLight.eot?#iefix') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'TransatLight';
+    src: url('./fonts/TransatTextLight.eot');
+    src: url('./fonts/TransatTextLight.woff2') format('woff2'),
+        url('./fonts/TransatTextLight.woff') format('woff'),
+        url('./fonts/TransatTextLight.ttf') format('truetype'),
+        url('./fonts/TransatTextLight.otf') format('opentype'),
+        url('./fonts/TransatTextLight.svg#TransatTextMedium') format('svg'),
+        url('./fonts/TransatTextLight.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -144,7 +144,7 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     font-size: 10px;
-    font-family: TransatStandard;
+    font-family: 'TransatStandard', sans-serif;
     letter-spacing: 0.1rem;
   }
 

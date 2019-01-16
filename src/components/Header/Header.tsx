@@ -15,15 +15,14 @@ interface HeaderProps {
 }
 
 const Header = ({
-  isMobile,
-  width
+  isMobile
 }: HeaderProps) => (
   <Container as='header' width={1} px={[2, 3, 4, 4]}>
     <Flex alignItems='center' css={{ maxWidth: 1366 }} m='0 auto' py={[2, 3, 4]}>
       <Box width={1 / 2}>
-        <Heading as='h1' color='white' pb={0}>
+        <Box>
           { isMobile ? <Symbol /> : <Logo /> }
-        </Heading>
+        </Box>
       </Box>
       <Flex alignItems='baseline' color='White' width={1 / 2} justifyContent='flex-end'>
         <NavLink>Info</NavLink>
@@ -37,7 +36,7 @@ const Header = ({
 )
 
 const mapSizesToProps = ({ width }: HeaderProps) => ({
-  isMobile: width < 480,
+  isMobile: width < 900,
 })
 
 const Container = styled(Box)`
