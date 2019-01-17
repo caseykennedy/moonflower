@@ -1,31 +1,31 @@
 import { createGlobalStyle } from 'styled-components'
 
 // Transat Light
-import transatTextLightEot from './fonts/transatTextLight.eot'
-import transatTextLightWoff2 from './fonts/transatTextLight.woff2'
-import transatTextLightWoff from './fonts/transatTextLight.woff'
-import transatTextLightOtf from './fonts/transatTextLight.otf'
+import transatTextLightEot from './static/transatTextLight.eot'
+import transatTextLightWoff2 from './static/transatTextLight.woff2'
+import transatTextLightWoff from './static/transatTextLight.woff'
+import transatTextLightOtf from './static/transatTextLight.otf'
 import transatTextLightSvg from './fonts/transatTextLight.svg'
 
 // Transat Medium
-import transatTextMediumEot from './fonts/TransatTextMedium.eot'
-import transatTextMediumWoff2 from './fonts/TransatTextMedium.woff2'
-import transatTextMediumWoff from './fonts/TransatTextMedium.woff'
-import transatTextMediumOtf from './fonts/TransatTextMedium.otf'
+import transatTextMediumEot from './static/TransatTextMedium.eot'
+import transatTextMediumWoff2 from './static/TransatTextMedium.woff2'
+import transatTextMediumWoff from './static/TransatTextMedium.woff'
+import transatTextMediumOtf from './static/TransatTextMedium.otf'
 import transatTextMediumSvg from './fonts/TransatTextMedium.svg'
 
 // Transat Standard
-import transatTextStandardEot from './fonts/TransatTextStandard.eot'
-import transatTextStandardWoff2 from './fonts/TransatTextStandard.woff2'
-import transatTextStandardWoff from './fonts/TransatTextStandard.woff'
-import transatTextStandardOtf from './fonts/TransatTextStandard.otf'
+import transatTextStandardEot from './static/TransatTextStandard.eot'
+import transatTextStandardWoff2 from './static/TransatTextStandard.woff2'
+import transatTextStandardWoff from './static/TransatTextStandard.woff'
+import transatTextStandardOtf from './static/TransatTextStandard.otf'
 import transatTextStandardSvg from './fonts/TransatTextStandard.svg'
 
 // Transat Bold
-import transatTextBoldEot from './fonts/transatTextBold.eot'
-import transatTextBoldWoff2 from './fonts/transatTextBold.woff2'
-import transatTextBoldWoff from './fonts/transatTextBold.woff'
-import transatTextBoldOtf from './fonts/transatTextBold.otf'
+import transatTextBoldEot from './static/transatTextBold.eot'
+import transatTextBoldWoff2 from './static/transatTextBold.woff2'
+import transatTextBoldWoff from './static/transatTextBold.woff'
+import transatTextBoldOtf from './static/transatTextBold.otf'
 import transatTextBoldSvg from './fonts/transatTextBold.svg'
 
 const GlobalStyle = createGlobalStyle`
