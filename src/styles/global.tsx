@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 // Transat Light
-import transatTextLightWoff2 from './fonts/transatTextLight.woff2'
-import transatTextLightWoff from './fonts/transatTextLight.woff'
+import transatTextLightWoff2 from './fonts/TransatTextLight.woff2'
+import transatTextLightWoff from './fonts/TransatTextLight.woff'
 
 // Transat Medium
 import transatTextMediumWoff2 from './fonts/TransatTextMedium.woff2'
@@ -13,8 +13,8 @@ import transatTextStandardWoff2 from './fonts/TransatTextStandard.woff2'
 import transatTextStandardWoff from './fonts/TransatTextStandard.woff'
 
 // Transat Bold
-import transatTextBoldWoff2 from './fonts/transatTextBold.woff2'
-import transatTextBoldWoff from './fonts/transatTextBold.woff'
+import transatTextBoldWoff2 from './fonts/TransatTextBold.woff2'
+import transatTextBoldWoff from './fonts/TransatTextBold.woff'
 
 const GlobalStyle = createGlobalStyle`
 
