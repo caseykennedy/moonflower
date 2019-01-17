@@ -175,6 +175,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3 {
+    letter-spacing: 0rem;
     padding-bottom: 0.4em
   }
 
