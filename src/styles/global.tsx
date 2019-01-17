@@ -30,7 +30,7 @@ import transatTextBoldSvg from './fonts/transatTextBold.svg'
 
 const GlobalStyle = createGlobalStyle`
 
-@font-face {
+/* @font-face {
     font-family: 'TransatMedium';
     src: url(${transatTextMediumEot});
     src: url(${transatTextMediumWoff2}) format('woff2'),
@@ -72,7 +72,7 @@ const GlobalStyle = createGlobalStyle`
         url(${transatTextLightEot}?#iefix) format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
-  }
+  } */
 
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
