@@ -1,48 +1,36 @@
 import { createGlobalStyle } from 'styled-components'
 
-// // Transat Light
-// import transatTextLightEot from './fonts/transatTextLight.eot'
-// import transatTextLightWoff2 from './fonts/transatTextLight.woff2'
-// import transatTextLightWoff from './fonts/transatTextLight.woff'
-// import transatTextLightOtf from './fonts/transatTextLight.otf'
-// import transatTextLightSvg from './fonts/transatTextLight.svg'
+// Transat Light
+import transatTextLightWoff2 from './fonts/transatTextLight.woff2'
+import transatTextLightWoff from './fonts/transatTextLight.woff'
 
-// // Transat Medium
-// import transatTextMediumEot from './fonts/TransatTextMedium.eot'
-// import transatTextMediumWoff2 from './fonts/TransatTextMedium.woff2'
-// import transatTextMediumWoff from './fonts/TransatTextMedium.woff'
-// import transatTextMediumOtf from './fonts/TransatTextMedium.otf'
-// import transatTextMediumSvg from './fonts/TransatTextMedium.svg'
+// Transat Medium
+import transatTextMediumWoff2 from './fonts/TransatTextMedium.woff2'
+import transatTextMediumWoff from './fonts/TransatTextMedium.woff'
 
-// // Transat Standard
-// import transatTextStandardEot from './fonts/TransatTextStandard.eot'
-// import transatTextStandardWoff2 from './fonts/TransatTextStandard.woff2'
-// import transatTextStandardWoff from './fonts/TransatTextStandard.woff'
-// import transatTextStandardOtf from './fonts/TransatTextStandard.otf'
-// import transatTextStandardSvg from './fonts/TransatTextStandard.svg'
+// Transat Standard
+import transatTextStandardWoff2 from './fonts/TransatTextStandard.woff2'
+import transatTextStandardWoff from './fonts/TransatTextStandard.woff'
 
-// // Transat Bold
-// import transatTextBoldEot from './fonts/transatTextBold.eot'
-// import transatTextBoldWoff2 from './fonts/transatTextBold.woff2'
-// import transatTextBoldWoff from './fonts/transatTextBold.woff'
-// import transatTextBoldOtf from './fonts/transatTextBold.otf'
-// import transatTextBoldSvg from './fonts/transatTextBold.svg'
+// Transat Bold
+import transatTextBoldWoff2 from './fonts/transatTextBold.woff2'
+import transatTextBoldWoff from './fonts/transatTextBold.woff'
 
 const GlobalStyle = createGlobalStyle`
 
-@font-face {
+  @font-face {
     font-family: 'Transat';
-    src: url('//caseykennedy.me/fonts/TransatTextMedium.woff2') format('woff2'),
-        url('//caseykennedy.me/fonts/TransatTextMedium.woff') format('woff');
-    font-weight: 500;
+    src: url('${transatTextLightWoff2}') format('woff2'),
+        url('${transatTextLightWoff}') format('woff');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
     font-family: 'Transat';
-    src: url('//caseykennedy.me/fonts/TransatTextStandard.woff2') format('woff2'),
-        url('//caseykennedy.me/fonts/TransatTextStandard.woff') format('woff');
+    src: url('${transatTextStandardWoff2}') format('woff2'),
+        url('${transatTextStandardWoff}') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -50,18 +38,18 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Transat';
-    src: url('//caseykennedy.me/fonts/TransatTextBold.woff2') format('woff2'),
-        url('//caseykennedy.me/fonts/TransatTextBold.woff') format('woff');
-    font-weight: 600;
+    src: url('${transatTextMediumWoff2}') format('woff2'),
+        url('${transatTextMediumWoff}') format('woff');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
     font-family: 'Transat';
-    src: url('//caseykennedy.me/fonts/TransatTextLight.woff2') format('woff2'),
-        url('//caseykennedy.me/fonts/TransatTextLight.woff') format('woff');
-    font-weight: 300;
+    src: url('${transatTextBoldWoff2}') format('woff2'),
+        url('${transatTextBoldWoff}') format('woff');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
