@@ -67,6 +67,7 @@ const Button = styled.a`
   font-size: 1.2rem;
   padding: 1.6rem 2.6rem 1.4rem;
   text-transform: uppercase;
+  line-height: 1;
 
   &:hover {
     background-color: ${props => props.theme.colors.lavendar};

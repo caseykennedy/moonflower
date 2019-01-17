@@ -1,4 +1,8 @@
+const config = './src/theme/config';
+// Const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+
 module.exports = {
+  pathPrefix: '/',
   siteMetadata: {
     title: `My website`,
     googleVerification: `abcdefz`,
@@ -85,6 +89,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Moonflower Delivery`,
+        description: config.siteDescription,
         short_name: `Moonflower`,
         start_url: `/`,
         background_color: `#202136`,

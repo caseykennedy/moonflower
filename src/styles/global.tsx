@@ -32,44 +32,44 @@ const GlobalStyle = createGlobalStyle`
 
 @font-face {
     font-family: 'TransatMedium';
-    src: url('${transatTextMediumEot}');
-    src: url('${transatTextMediumWoff2}') format('woff2'),
-        url('${transatTextMediumWoff}') format('woff'),
-        url('${transatTextMediumOtf}') format('opentype'),
-        url('${transatTextMediumEot}?#iefix') format('embedded-opentype');
+    src: url(${transatTextMediumEot});
+    src: url(${transatTextMediumWoff2}) format('woff2'),
+        url(${transatTextMediumWoff}) format('woff'),
+        url(${transatTextMediumOtf}) format('opentype'),
+        url(${transatTextMediumEot}?#iefix) format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatStandard';
-    src: url('${transatTextStandardEot}');
-    src: url('${transatTextStandardWoff2}') format('woff2'),
-        url('${transatTextStandardWoff}') format('woff'),
-        url('${transatTextStandardOtf}') format('opentype'),
-        url('${transatTextStandardEot}?#iefix') format('embedded-opentype');
+    src: url(${transatTextStandardEot});
+    src: url(${transatTextStandardWoff2}) format('woff2'),
+        url(${transatTextStandardWoff}) format('woff'),
+        url(${transatTextStandardOtf}) format('opentype'),
+        url(${transatTextStandardEot}?#iefix) format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatBold';
-    src: url('${transatTextBoldEot}');
-    src: url('${transatTextBoldWoff2}') format('woff2'),
-        url('${transatTextBoldWoff}') format('woff'),
-        url('${transatTextBoldOtf}') format('opentype'),
-        url('${transatTextBoldEot}?#iefix') format('embedded-opentype');
+    src: url(${transatTextBoldEot});
+    src: url(${transatTextBoldWoff2}) format('woff2'),
+        url(${transatTextBoldWoff}) format('woff'),
+        url(${transatTextBoldOtf}) format('opentype'),
+        url(${transatTextBoldEot}?#iefix) format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatLight';
-    src: url('${transatTextLightEot}');
-    src: url('${transatTextLightWoff2}') format('woff2'),
-        url('${transatTextLightWoff}') format('woff'),
-        url('${transatTextLightOtf}') format('opentype'),
-        url('${transatTextLightEot}?#iefix') format('embedded-opentype');
+    src: url(${transatTextLightEot});
+    src: url(${transatTextLightWoff2}) format('woff2'),
+        url(${transatTextLightWoff}) format('woff'),
+        url(${transatTextLightOtf}) format('opentype'),
+        url(${transatTextLightEot}?#iefix) format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
@@ -171,6 +171,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'TransatStandard', sans-serif;
     letter-spacing: 0.1rem;
     text-rendering: optimizeLegibility;
+    /* -webkit-font-smoothing: antialiased; */
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: "pnum";
+    font-feature-settings: "pnum";
+    font-variant-numeric: proportional-nums;
   }
 
   h1, h2, h3 {

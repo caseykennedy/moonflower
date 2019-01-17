@@ -1,6 +1,5 @@
 export default {
   pathPrefix: '/',
-
   siteTitle: 'Moonflower Medical Cannabis Delivery Service',
   siteTitleAlt: 'Moonflower Delivery | Marin & Sonoma Counties',
   siteUrl: 'https://moonflowerdelivery.com',
@@ -8,7 +7,7 @@ export default {
   siteBanner: '/assets/banner.jpg',
   defaultBg: '/assets/bg.png',
   favicon: 'src/favicon.png',
-  siteDescription: '',
+  siteDescription: 'Moonflower Medical Cannabis Delivery Service',
   author: 'Casey Kennedy',
   siteLogo: '/assets/logo.png',
 

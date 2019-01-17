@@ -1,21 +1,15 @@
-import { Link } from 'gatsby'
 import * as React from 'react'
 import { Provider } from 'react-redux'
 import { store } from '../store'
 
 import GlobalStyle from '../styles/global'
-// import '../css/responsive.css'
-// import "../css/semantic.min.css"
-// import 'prismjs/themes/prism-okaidia.css'
-
-import { Box } from 'rebass'
-import { Segment, Icon, Container, Sidebar } from 'semantic-ui-react'
-
-import Header from './Header/Header'
-import SidebarMenu from './SidebarMenu/SidebarMenu'
-
 import { ThemeProvider } from 'styled-components'
 import theme from '../theme/theme'
+
+import 'prismjs/themes/prism-okaidia.css'
+import { Segment, Sidebar } from 'semantic-ui-react'
+
+import Header from './Header/Header'
 
 // export const menuItems = [
 //   { name: 'Home', path: '/', exact: true, icon: 'home', inverted: true },
