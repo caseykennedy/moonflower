@@ -1,78 +1,78 @@
 import { createGlobalStyle } from 'styled-components'
 
-// Transat Light
-import transatTextLightEot from './static/transatTextLight.eot'
-import transatTextLightWoff2 from './static/transatTextLight.woff2'
-import transatTextLightWoff from './static/transatTextLight.woff'
-import transatTextLightOtf from './static/transatTextLight.otf'
-import transatTextLightSvg from './fonts/transatTextLight.svg'
+// // Transat Light
+// import transatTextLightEot from './fonts/transatTextLight.eot'
+// import transatTextLightWoff2 from './fonts/transatTextLight.woff2'
+// import transatTextLightWoff from './fonts/transatTextLight.woff'
+// import transatTextLightOtf from './fonts/transatTextLight.otf'
+// import transatTextLightSvg from './fonts/transatTextLight.svg'
 
-// Transat Medium
-import transatTextMediumEot from './static/TransatTextMedium.eot'
-import transatTextMediumWoff2 from './static/TransatTextMedium.woff2'
-import transatTextMediumWoff from './static/TransatTextMedium.woff'
-import transatTextMediumOtf from './static/TransatTextMedium.otf'
-import transatTextMediumSvg from './fonts/TransatTextMedium.svg'
+// // Transat Medium
+// import transatTextMediumEot from './fonts/TransatTextMedium.eot'
+// import transatTextMediumWoff2 from './fonts/TransatTextMedium.woff2'
+// import transatTextMediumWoff from './fonts/TransatTextMedium.woff'
+// import transatTextMediumOtf from './fonts/TransatTextMedium.otf'
+// import transatTextMediumSvg from './fonts/TransatTextMedium.svg'
 
-// Transat Standard
-import transatTextStandardEot from './static/TransatTextStandard.eot'
-import transatTextStandardWoff2 from './static/TransatTextStandard.woff2'
-import transatTextStandardWoff from './static/TransatTextStandard.woff'
-import transatTextStandardOtf from './static/TransatTextStandard.otf'
-import transatTextStandardSvg from './fonts/TransatTextStandard.svg'
+// // Transat Standard
+// import transatTextStandardEot from './fonts/TransatTextStandard.eot'
+// import transatTextStandardWoff2 from './fonts/TransatTextStandard.woff2'
+// import transatTextStandardWoff from './fonts/TransatTextStandard.woff'
+// import transatTextStandardOtf from './fonts/TransatTextStandard.otf'
+// import transatTextStandardSvg from './fonts/TransatTextStandard.svg'
 
-// Transat Bold
-import transatTextBoldEot from './static/transatTextBold.eot'
-import transatTextBoldWoff2 from './static/transatTextBold.woff2'
-import transatTextBoldWoff from './static/transatTextBold.woff'
-import transatTextBoldOtf from './static/transatTextBold.otf'
-import transatTextBoldSvg from './fonts/transatTextBold.svg'
+// // Transat Bold
+// import transatTextBoldEot from './fonts/transatTextBold.eot'
+// import transatTextBoldWoff2 from './fonts/transatTextBold.woff2'
+// import transatTextBoldWoff from './fonts/transatTextBold.woff'
+// import transatTextBoldOtf from './fonts/transatTextBold.otf'
+// import transatTextBoldSvg from './fonts/transatTextBold.svg'
 
 const GlobalStyle = createGlobalStyle`
 
-/* @font-face {
+@font-face {
     font-family: 'TransatMedium';
-    src: url(${transatTextMediumEot});
-    src: url(${transatTextMediumWoff2}) format('woff2'),
-        url(${transatTextMediumWoff}) format('woff'),
-        url(${transatTextMediumOtf}) format('opentype'),
-        url(${transatTextMediumEot}?#iefix) format('embedded-opentype');
+    src: url('http://caseykennedy.me/fonts/TransatTextMedium.eot');
+    src: url('http://caseykennedy.me/fonts/TransatTextMedium.woff2') format('woff2'),
+        url('http://caseykennedy.me/fonts/TransatTextMedium.woff') format('woff'),
+        url('http://caseykennedy.me/fonts/TransatTextMedium.otf') format('opentype'),
+        url('http://caseykennedy.me/fonts/TransatTextMedium.eot#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatStandard';
-    src: url(${transatTextStandardEot});
-    src: url(${transatTextStandardWoff2}) format('woff2'),
-        url(${transatTextStandardWoff}) format('woff'),
-        url(${transatTextStandardOtf}) format('opentype'),
-        url(${transatTextStandardEot}?#iefix) format('embedded-opentype');
+    src: url('http://caseykennedy.me/fonts/TransatTextStandard.eot');
+    src: url('http://caseykennedy.me/fonts/TransatTextStandard.woff2') format('woff2'),
+        url('http://caseykennedy.me/fonts/TransatTextStandard.woff') format('woff'),
+        url('http://caseykennedy.me/fonts/TransatTextStandard.otf') format('opentype'),
+        url('http://caseykennedy.me/fonts/TransatTextStandard.eot#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatBold';
-    src: url(${transatTextBoldEot});
-    src: url(${transatTextBoldWoff2}) format('woff2'),
-        url(${transatTextBoldWoff}) format('woff'),
-        url(${transatTextBoldOtf}) format('opentype'),
-        url(${transatTextBoldEot}?#iefix) format('embedded-opentype');
+    src: url('http://caseykennedy.me/fonts/TransatTextBold.eot');
+    src: url('http://caseykennedy.me/fonts/TransatTextBold.woff2') format('woff2'),
+        url('http://caseykennedy.me/fonts/TransatTextBold.woff') format('woff'),
+        url('http://caseykennedy.me/fonts/TransatTextBold.otf') format('opentype'),
+        url('http://caseykennedy.me/fonts/TransatTextBold.eot#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatLight';
-    src: url(${transatTextLightEot});
-    src: url(${transatTextLightWoff2}) format('woff2'),
-        url(${transatTextLightWoff}) format('woff'),
-        url(${transatTextLightOtf}) format('opentype'),
-        url(${transatTextLightEot}?#iefix) format('embedded-opentype');
+    src: url('http://caseykennedy.me/fonts/TransatTextLight.eot');
+    src: url('http://caseykennedy.me/fonts/TransatTextLight.woff2') format('woff2'),
+        url('http://caseykennedy.me/fonts/TransatTextLight.woff') format('woff'),
+        url('http://caseykennedy.me/fonts/TransatTextLight.otf') format('opentype'),
+        url('http://caseykennedy.me/fonts/TransatTextLight.eot#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
-  } */
+  }
 
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
