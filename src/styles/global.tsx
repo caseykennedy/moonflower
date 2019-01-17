@@ -30,7 +30,49 @@ import transatTextBoldSvg from './fonts/transatTextBold.svg'
 
 const GlobalStyle = createGlobalStyle`
 
+@font-face {
+    font-family: 'TransatMedium';
+    src: url(${transatTextMediumEot});
+    src: url(${transatTextMediumWoff2}) format('woff2'),
+        url(${transatTextMediumWoff}) format('woff'),
+        url(${transatTextMediumOtf}) format('opentype'),
+        url('${transatTextMediumEot}?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
+  @font-face {
+    font-family: 'TransatStandard';
+    src: url(${transatTextStandardEot});
+    src: url(${transatTextStandardWoff2}) format('woff2'),
+        url(${transatTextStandardWoff}) format('woff'),
+        url(${transatTextStandardOtf}) format('opentype'),
+        url('${transatTextStandardEot}?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TransatBold';
+    src: url(${transatTextBoldEot});
+    src: url(${transatTextBoldWoff2}) format('woff2'),
+        url(${transatTextBoldWoff}) format('woff'),
+        url(${transatTextBoldOtf}) format('opentype'),
+        url('${transatTextBoldEot}?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TransatLight';
+    src: url(${transatTextLightEot});
+    src: url(${transatTextLightWoff2}) format('woff2'),
+        url(${transatTextLightWoff}) format('woff'),
+        url(${transatTextLightOtf}) format('opentype'),
+        url('${transatTextLightEot}?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -126,6 +168,7 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     font-size: 10px;
+    font-family: 'TransatStandard', sans-serif;
     letter-spacing: 0.1rem;
     text-rendering: optimizeLegibility;
   }
@@ -167,6 +210,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     font-size: 1.8rem;
     line-height: 1.8;
+    font-family: TransatLight;
     padding-bottom: 2.6em;
   }
 

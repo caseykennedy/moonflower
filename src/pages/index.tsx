@@ -17,7 +17,7 @@ const IndexPage: React.SFC<Props> = () => (
   <React.Fragment>
     <Hero>
       <Box width={[ 7/8, 3/4, 3/5, 5/12 ]}>
-        <Heading as='h1' fontSize={[ 8, 9, 9, 9 ]} color='superNova'>
+        <Heading as='h1' fontSize={[ 8, 9, 9, 9 ]} color='superNova' fontFamily='transatLight'>
           Honest Medical Cannabis, at your doorstep.
         </Heading>
         <Box mt={[ 6, 8, 10 ]}>

@@ -18,12 +18,12 @@ const theme = {
   //   xl: 1620
   // },
 
-  // fonts: {
-  //   transatLight: 'TransatLight, sans-serif',
-  //   transatStandard: 'TransatStandard, sans-serif',
-  //   transatMedium: 'TransatMedium, sans-serif',
-  //   transatBold: 'TransatBold, sans-serif'
-  // },
+  fonts: {
+    transatLight: 'TransatLight, sans-serif',
+    transatStandard: 'TransatStandard, sans-serif',
+    transatMedium: 'TransatMedium, sans-serif',
+    transatBold: 'TransatBold, sans-serif'
+  },
 
   Heading: {
     fontWeight: 'normal'
