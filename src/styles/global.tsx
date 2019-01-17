@@ -32,10 +32,10 @@ const GlobalStyle = createGlobalStyle`
 
 @font-face {
     font-family: 'TransatMedium';
-    src: url(${transatTextMediumEot});
-    src: url(${transatTextMediumWoff2}) format('woff2'),
-        url(${transatTextMediumWoff}) format('woff'),
-        url(${transatTextMediumOtf}) format('opentype'),
+    src: url('${transatTextMediumEot}');
+    src: url('${transatTextMediumWoff2}') format('woff2'),
+        url('${transatTextMediumWoff}') format('woff'),
+        url('${transatTextMediumOtf}') format('opentype'),
         url('${transatTextMediumEot}?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
@@ -43,10 +43,10 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'TransatStandard';
-    src: url(${transatTextStandardEot});
-    src: url(${transatTextStandardWoff2}) format('woff2'),
-        url(${transatTextStandardWoff}) format('woff'),
-        url(${transatTextStandardOtf}) format('opentype'),
+    src: url('${transatTextStandardEot}');
+    src: url('${transatTextStandardWoff2}') format('woff2'),
+        url('${transatTextStandardWoff}') format('woff'),
+        url('${transatTextStandardOtf}') format('opentype'),
         url('${transatTextStandardEot}?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
@@ -54,10 +54,10 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'TransatBold';
-    src: url(${transatTextBoldEot});
-    src: url(${transatTextBoldWoff2}) format('woff2'),
-        url(${transatTextBoldWoff}) format('woff'),
-        url(${transatTextBoldOtf}) format('opentype'),
+    src: url('${transatTextBoldEot}');
+    src: url('${transatTextBoldWoff2}') format('woff2'),
+        url('${transatTextBoldWoff}') format('woff'),
+        url('${transatTextBoldOtf}') format('opentype'),
         url('${transatTextBoldEot}?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
@@ -65,10 +65,10 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'TransatLight';
-    src: url(${transatTextLightEot});
-    src: url(${transatTextLightWoff2}) format('woff2'),
-        url(${transatTextLightWoff}) format('woff'),
-        url(${transatTextLightOtf}) format('opentype'),
+    src: url('${transatTextLightEot}');
+    src: url('${transatTextLightWoff2}') format('woff2'),
+        url('${transatTextLightWoff}') format('woff'),
+        url('${transatTextLightOtf}') format('opentype'),
         url('${transatTextLightEot}?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;

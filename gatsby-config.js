@@ -10,7 +10,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
 
-    'gatsby-plugin-react-svg',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /src/
+        }
+      }
+    },
 
     // Global Typography
     // {
