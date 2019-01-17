@@ -176,7 +176,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     letter-spacing: 0.1rem;
     text-rendering: optimizeLegibility;
-    /* -webkit-font-smoothing: antialiased; */
+    -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-feature-settings: "pnum";
@@ -186,7 +186,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3 {
     letter-spacing: 0rem;
-    padding-bottom: 0.4em
+    padding-bottom: 0.4em;
   }
 
   h4, h5, h6 {
