@@ -1,4 +1,4 @@
-import Section from "./Section"
+import Hero from './Hero'
 
 
-export default Section
+export default Hero

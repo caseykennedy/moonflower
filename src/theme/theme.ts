@@ -9,7 +9,7 @@ const theme = {
     `${config.breakpoints.lg}px`,
     `${config.breakpoints.xl}px`
   ],
-  
+
   // && {
   //   xs: 320,
   //   sm: 464,
@@ -30,14 +30,17 @@ const theme = {
   },
 
   fontSizes: [
-    '1em',
-    '1.4em',
-    '1.6em',
-    '1.8em',
-    '2em',
+    '1rem',
+    '1.4rem',
+    '1.6rem',
+    '1.8rem',
+    '2rem',
     '2.4rem',
-    '2.8em',
-    '3em'
+    '2.8rem',
+    '3rem',
+    '4rem',
+    '5rem',
+    '6rem'
   ],
 
   fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],

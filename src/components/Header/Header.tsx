@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { Box, Heading, Flex, Link } from 'rebass'
 import withSizes from 'react-sizes'
+import { up, down, between, only } from 'styled-breakpoints'
 
 import LogoType from './assets/logo.svg'
-
 import LogoSymbol from './assets/logo-symbol.svg'
 
 interface HeaderProps {
@@ -14,7 +14,7 @@ interface HeaderProps {
   width: any
 }
 
-const Header = ({ isMobile }: HeaderProps) => (
+const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
   <Container as='header' width={1} px={[2, 3, 4, 4]}>
     <Flex
       alignItems='center'
@@ -61,13 +61,26 @@ const Button = styled.a`
   color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
   font-family: ${props => props.theme.fonts.transatMedium};
-  font-size: 1.4rem;
-  padding: 2rem 3.5rem 1.8rem;
+  font-size: 1.2rem;
+  padding: 1.6rem 2.6rem 1.4rem;
   text-transform: uppercase;
 
   &:hover {
     background-color: ${props => props.theme.colors.lavendar};
     color: ${props => props.theme.colors.superNova};
+  }
+
+  ${between('0', '1')} {
+    font-size: 1.4rem;
+    padding: 2rem 3.5rem 1.8rem;
+  }
+  ${between('1', '2')} {
+    font-size: 1.4rem;
+    padding: 2rem 3.5rem 1.8rem;
+  }
+  ${up('2')} {
+    font-size: 1.4rem;
+    padding: 2rem 3.5rem 1.8rem;
   }
 `
 
@@ -75,12 +88,17 @@ const NavLink = styled(Link)`
   color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
   font-family: ${props => props.theme.fonts.transatMedium};
-  font-size: 1.4rem;
-  margin-right: 3rem;
+  font-size: 1.2rem;
+  margin-right: 1.6rem;
   text-transform: uppercase;
 
   &:hover {
     color: ${props => props.theme.colors.goldBloom};
+  }
+
+  ${up('0')} {
+    font-size: 1.4rem;
+    margin-right: 3rem;
   }
 `
 
