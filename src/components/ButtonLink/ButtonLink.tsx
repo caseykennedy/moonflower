@@ -27,10 +27,10 @@ const sizes = {
     padding: 1.6rem 2rem 1.4rem;
   `,
   default: css`
-    font-size: 1.4rem;
-    padding: 2rem 3.5rem 1.8rem;
+    font-size: 1.2rem;
+    padding: 1.6rem 2.6rem 1.4rem;
 
-    /* ${between('0', '1')} {
+    ${between('0', '1')} {
       font-size: 1.4rem;
       padding: 2rem 3.5rem 1.8rem;
     }
@@ -41,7 +41,7 @@ const sizes = {
     ${up('2')} {
       font-size: 1.4rem;
       padding: 2rem 3.5rem 1.8rem;
-    } */
+    }
   `,
   big: css`
     font-size: 1.2rem;

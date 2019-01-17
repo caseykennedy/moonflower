@@ -26,7 +26,6 @@ const IndexPage: React.SFC<Props> = () => (
             size='default'
             variant='solid'
             radius={100}
-            m='0 1.6rem 0 0'
             to='/'>
             Browse the menu
           </ButtonLink>
@@ -36,6 +35,7 @@ const IndexPage: React.SFC<Props> = () => (
               size='default'
               variant='outline'
               radius={100}
+              m='0 0 0 1.6rem'
               to='/'>
               Best Sellers
             </ButtonLink>
