@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import { up, down, between, only } from 'styled-breakpoints'
 
 // Transat Light
 import transatTextLightEot from './fonts/transatTextLight.eot'
@@ -165,6 +164,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /* ••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
   html,
   body {

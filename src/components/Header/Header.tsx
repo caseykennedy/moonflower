@@ -53,6 +53,9 @@ const Logo = styled(LogoType)`
 
 const Symbol = styled(LogoSymbol)`
   width: 43px;
+  -webkit-animation:spin 7s linear infinite;
+  -moz-animation:spin 7s linear infinite;
+  animation: spin 7s linear infinite;
 `
 
 const Button = styled.a`

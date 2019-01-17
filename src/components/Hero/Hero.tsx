@@ -49,7 +49,7 @@ const Container = styled(Flex)`
     min-height: 70vh;
   }
   ${up('2')} {
-    min-height: 70vh;
+    min-height: 80vh;
   }
 `
 
