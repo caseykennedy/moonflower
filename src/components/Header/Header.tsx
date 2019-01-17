@@ -23,8 +23,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
       py={[2, 3, 4]}
     >
       <Box width={1 / 2}>
-        {/* <Box>{ !isMobile ? <Logo /> : <Symbol />}</Box> */}
-        <Logo />
+        <Box>{ !isMobile ? <Logo /> : <Symbol />}</Box>
       </Box>
       <Flex
         alignItems='baseline'
