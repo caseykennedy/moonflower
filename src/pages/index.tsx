@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import HeaderMenu from '../components/HeaderMenu/HeaderMenu'
-import { withLayout, LayoutProps } from '../components/Layout'
+import Layout from '../components/Layout'
 import styled from 'styled-components'
 import { up, down, between, only } from 'styled-breakpoints'
 import { Box, Heading } from 'rebass'
@@ -14,7 +14,7 @@ interface Props {
 }
 
 const IndexPage: React.SFC<Props> = () => (
-  <React.Fragment>
+  <Layout>
     <Hero>
       <Box width={[ 7/8, 3/4, 3/5, 5/12 ]}>
         <Heading as='h1' fontSize={[ 8, 9, 9, 9 ]} color='superNova' fontFamily='transatLight'>
@@ -43,7 +43,7 @@ const IndexPage: React.SFC<Props> = () => (
         </Box>
       </Box>
     </Hero>
-  </React.Fragment>
+  </Layout>
 )
 
 const BoxHide = styled.span`
@@ -72,4 +72,4 @@ const Main = styled(Box)`
   } */
 `
 
-export default withLayout(IndexPage)
+export default IndexPage
