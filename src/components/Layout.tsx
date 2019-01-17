@@ -31,7 +31,6 @@ const Layout = (props: LayoutProps) => {
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
-        <Provider store={store}>
           <Sidebar.Pushable as={Segment}>
             {/* <SidebarMenu
               Link={Link}
@@ -51,7 +50,6 @@ const Layout = (props: LayoutProps) => {
               <div>{props.children}</div>
             </Sidebar.Pusher>
           </Sidebar.Pushable>
-        </Provider>
       </ThemeProvider>
       <GlobalStyle />
     </React.Fragment>
