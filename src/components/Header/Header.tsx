@@ -20,7 +20,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
       alignItems='center'
       css={{ maxWidth: 1366 }}
       m='0 auto'
-      py={[2, 3, 4]}
+      py={[2, 2, 3, 4]}
     >
       <Box width={1 / 2}>
         <Box>{ !isMobile ? <Logo /> : <Symbol />}</Box>
@@ -63,7 +63,7 @@ const Button = styled.a`
   border-radius: 100px;
   color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
-  font-family: ${props => props.theme.fonts.transatMedium};
+  /* font-family: ${props => props.theme.fonts.transatMedium}; */
   font-size: 1.2rem;
   padding: 1.6rem 2.6rem 1.4rem;
   text-transform: uppercase;
@@ -90,7 +90,7 @@ const Button = styled.a`
 const NavLink = styled(Link)`
   color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
-  font-family: ${props => props.theme.fonts.transatMedium};
+  /* font-family: ${props => props.theme.fonts.transatMedium}; */
   font-size: 1.2rem;
   margin-right: 1.6rem;
   text-transform: uppercase;
