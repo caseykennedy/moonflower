@@ -32,49 +32,49 @@ const GlobalStyle = createGlobalStyle`
 
 @font-face {
     font-family: 'TransatMedium';
-    src: url('http://caseykennedy.me/fonts/TransatTextMedium.eot');
-    src: url('http://caseykennedy.me/fonts/TransatTextMedium.woff2') format('woff2'),
-        url('http://caseykennedy.me/fonts/TransatTextMedium.woff') format('woff'),
-        url('http://caseykennedy.me/fonts/TransatTextMedium.otf') format('opentype'),
-        url('http://caseykennedy.me/fonts/TransatTextMedium.eot#iefix') format('embedded-opentype');
+    src: url('//caseykennedy.me/fonts/TransatTextMedium.eot');
+    src: url('//caseykennedy.me/fonts/TransatTextMedium.woff2') format('woff2'),
+        url('//caseykennedy.me/fonts/TransatTextMedium.woff') format('woff'),
+        url('//caseykennedy.me/fonts/TransatTextMedium.otf') format('opentype'),
+        url('//caseykennedy.me/fonts/TransatTextMedium.eot#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatStandard';
-    src: url('http://caseykennedy.me/fonts/TransatTextStandard.eot');
-    src: url('http://caseykennedy.me/fonts/TransatTextStandard.woff2') format('woff2'),
-        url('http://caseykennedy.me/fonts/TransatTextStandard.woff') format('woff'),
-        url('http://caseykennedy.me/fonts/TransatTextStandard.otf') format('opentype'),
-        url('http://caseykennedy.me/fonts/TransatTextStandard.eot#iefix') format('embedded-opentype');
+    src: url('//caseykennedy.me/fonts/TransatTextStandard.eot');
+    src: url('//caseykennedy.me/fonts/TransatTextStandard.woff2') format('woff2'),
+        url('//caseykennedy.me/fonts/TransatTextStandard.woff') format('woff'),
+        url('//caseykennedy.me/fonts/TransatTextStandard.otf') format('opentype'),
+        url('//caseykennedy.me/fonts/TransatTextStandard.eot#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatBold';
-    src: url('http://caseykennedy.me/fonts/TransatTextBold.eot');
-    src: url('http://caseykennedy.me/fonts/TransatTextBold.woff2') format('woff2'),
-        url('http://caseykennedy.me/fonts/TransatTextBold.woff') format('woff'),
-        url('http://caseykennedy.me/fonts/TransatTextBold.otf') format('opentype'),
-        url('http://caseykennedy.me/fonts/TransatTextBold.eot#iefix') format('embedded-opentype');
+    src: url('//caseykennedy.me/fonts/TransatTextBold.eot');
+    src: url('//caseykennedy.me/fonts/TransatTextBold.woff2') format('woff2'),
+        url('//caseykennedy.me/fonts/TransatTextBold.woff') format('woff'),
+        url('//caseykennedy.me/fonts/TransatTextBold.otf') format('opentype'),
+        url('//caseykennedy.me/fonts/TransatTextBold.eot#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'TransatLight';
-    src: url('http://caseykennedy.me/fonts/TransatTextLight.eot');
-    src: url('http://caseykennedy.me/fonts/TransatTextLight.woff2') format('woff2'),
-        url('http://caseykennedy.me/fonts/TransatTextLight.woff') format('woff'),
-        url('http://caseykennedy.me/fonts/TransatTextLight.otf') format('opentype'),
-        url('http://caseykennedy.me/fonts/TransatTextLight.eot#iefix') format('embedded-opentype');
+    src: url('//caseykennedy.me/fonts/TransatTextLight.eot');
+    src: url('//caseykennedy.me/fonts/TransatTextLight.woff2') format('woff2'),
+        url('//caseykennedy.me/fonts/TransatTextLight.woff') format('woff'),
+        url('//caseykennedy.me/fonts/TransatTextLight.otf') format('opentype'),
+        url('//caseykennedy.me/fonts/TransatTextLight.eot#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
   }
 
-  /* http://meyerweb.com/eric/tools/css/reset/
+  /* //meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
   */
