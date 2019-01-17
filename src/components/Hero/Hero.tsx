@@ -1,25 +1,56 @@
-import * as React from "react"
-import { Box, Flex } from "rebass"
-import styled from "styled-components"
+import * as React from 'react'
+import { Box, Flex } from 'rebass'
+import styled from 'styled-components'
+import { up, down, between, only } from 'styled-breakpoints'
 
-interface Props {
-
+interface HeroProps {
+  children: any
 }
 
-const PullQuote: React.SFC<Props> = ({
-
-}) => (
-  <React.Fragment>
-    
-  </React.Fragment>
+const Hero: React.SFC<HeroProps> = ({ children }) => (
+  <Container
+    bg='purpleRain'
+    pt={[220, 160, 160, 160]}
+    pb={[140, 100, 100, 100]}
+    px={[2, 3, 4, 4]}
+  >
+    <FlexBox
+      justifyContent={['center', 'flex-start']}
+      width={1}
+      mx='auto'
+    >
+      {children}
+    </FlexBox>
+  </Container>
 )
 
-PullQuote.defaultProps = {
+Hero.defaultProps = {}
 
-}
+const FlexBox = styled(Flex)`
+  max-width: 1366px;
+  text-align: center;
 
-const Section = styled(Box)`
-
+  ${up('0')} {
+    text-align: left;
+  }
 `
 
-export default Section
+const Container = styled(Flex)`
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  ${between('0', '1')} {
+    min-height: 70vh;
+  }
+  ${between('1', '2')} {
+    min-height: 70vh;
+  }
+  ${up('2')} {
+    min-height: 70vh;
+  }
+`
+
+export default Hero

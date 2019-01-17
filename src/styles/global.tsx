@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { up, down, between, only } from 'styled-breakpoints'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -158,15 +159,15 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 8rem;
-    line-height: 1.1
+    line-height: 1.3
   }
   h2 {
     font-size: 6rem;
-    line-height: 1.1
+    line-height: 1.3
   }
   h3 {
     font-size: 4rem;
-    line-height: 1.1
+    line-height: 1.3
   }
   h4 {
     font-size: 3rem;
@@ -188,7 +189,7 @@ const GlobalStyle = createGlobalStyle`
     padding-bottom: 2.6em;
   }
 
-  a { transition: all 0.2s; }
+  a { transition: all 0.2s ease; }
   
 `
 export default GlobalStyle

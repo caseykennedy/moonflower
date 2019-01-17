@@ -1,28 +1,28 @@
-import * as React from "react"
-import { Box, Flex } from "rebass"
-import styled from "styled-components"
+import * as React from 'react'
+import { Box, Flex } from 'rebass'
+import styled from 'styled-components'
 
 interface Props {
-  bg?: string,
-  px?: any,
-  py?: any,
+  bg?: string
+  px?: any
+  py?: any
   pageWidth?: number
 }
 
 export class Section extends React.Component<Props> {
   static defaultProps: Partial<Props> = {
-    bg: "",
-    px: [3, 4, 4],
+    bg: '',
+    px: [2, 3, 4, 4],
     py: 6,
-    pageWidth: 1170
+    pageWidth: 1366
   }
   public render() {
     const { children, bg, px, py, pageWidth } = this.props
     return (
-      <Flex
-        flexWrap="wrap"
-        flexDirection="row"
-        justifyContent="center"
+      <Flex as='section'
+        flexWrap='wrap'
+        flexDirection='row'
+        justifyContent='center'
         bg={bg}
         px={px}
         py={py}>
