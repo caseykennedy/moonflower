@@ -8,10 +8,10 @@ interface IntroProps {
 }
 
 const Intro: React.SFC<IntroProps> = ({ children }) => (
-  <Container bg='superNova'>
+  <Container bg='white'>
     <GridContainer>
       <FlexCol width={[ 1, 1, 1/2 ]} bg='superNova' p={[ 3, 3, 4 ]}>
-        <Text as='p' fontSize={5}>
+        <Text as='p' fontSize={5} pb={400}>
           Tab list
         </Text>
         <Text as='p' fontSize={5}><strong>moonflower</strong> is an online dispensary that thoughtfully curates &amp; delivers cannabis products directly to your doorstep. We’ve tried every product, checked every ingredient, and hand-selected the finest quality the Golden State has to offer.</Text>
