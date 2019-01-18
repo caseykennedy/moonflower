@@ -16,7 +16,7 @@ export default {
     sm: 464,
     md: 1024,
     lg: 1367,
-    xl: 1620
+    xl: 1440
   },
 
   colors: {
@@ -36,6 +36,8 @@ export default {
     paleMoon: '#d7ddf7',
     superNova: '#f6f6f8'
   },
+
+  maxWidth: 1440,
 
   // Settings for typography.ts
   headerFontFamily: 'TransatStandard',

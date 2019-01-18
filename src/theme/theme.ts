@@ -85,8 +85,7 @@ const theme = {
   },
 
   widths: {
-    maxWidth: '1366px',
-    maxWidthCentered: '650px'
+    max: '1440px'
   }
 }
 

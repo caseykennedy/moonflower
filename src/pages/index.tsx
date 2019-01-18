@@ -4,11 +4,12 @@ import HeaderMenu from '../components/HeaderMenu/HeaderMenu'
 import { withLayout, LayoutProps } from '../components/Layout'
 import styled from 'styled-components'
 import { up, down, between, only } from 'styled-breakpoints'
-import { Box, Heading } from 'rebass'
+import { Box, Heading, Flex } from 'rebass'
 
 import Hero from '../components/Hero'
 import Intro from '../sections/Intro'
 import ButtonLink from '../components/ButtonLink'
+import Section from '../components/Section'
 
 interface Props {
   children: any
@@ -43,6 +44,15 @@ const IndexPage: React.SFC<Props> = () => (
       </Box>
     </Hero>
     <Intro />
+
+    <Section bg='darkSky' py={[ 220 ]}>
+    </Section>
+
+    <Section py={[ 120 ]} pageWidth={1200}>
+      <Heading as='h2' fontSize={8} mb={0} textAlign='center'>
+        <strong>moonflower</strong> is an online dispensary that thoughtfully curates &amp; delivers cannabis products directly to your doorstep. We’ve tried every product, checked every ingredient, and hand-selected the finest quality the Golden State has to offer.
+      </Heading>
+    </Section>
     <Box width={1} css={{ height: '60vh'}} />
   </React.Fragment>
 )

@@ -1,12 +1,13 @@
 import * as React from 'react'
 import { Box, Flex } from 'rebass'
 import styled from 'styled-components'
+import theme from '../../theme/theme'
 
 interface Props {
   bg?: string
   px?: any
   py?: any
-  pageWidth?: number
+  pageWidth?: number | string
 }
 
 export class Section extends React.Component<Props> {
@@ -14,7 +15,7 @@ export class Section extends React.Component<Props> {
     bg: '',
     px: [2, 3, 4, 4],
     py: 6,
-    pageWidth: 1366
+    pageWidth: '100%'
   }
   public render() {
     const { children, bg, px, py, pageWidth } = this.props
@@ -25,7 +26,10 @@ export class Section extends React.Component<Props> {
         justifyContent='center'
         bg={bg}
         px={px}
-        py={py}>
+        py={py}
+        css={{
+          maxWidth: theme.widths.max
+        }}>
 
         <PageWidth pageWidth={pageWidth}>
           {children}
@@ -38,7 +42,7 @@ export class Section extends React.Component<Props> {
 
 const PageWidth = styled(Box)`
   width: ${p => p.pageWidth}px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 `
 
 export default Section
