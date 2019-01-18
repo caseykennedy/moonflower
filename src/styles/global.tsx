@@ -181,7 +181,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-feature-settings: "pnum";
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
-    line-height: 1.1
+    line-height: 1.1;
   }
 
   strong {

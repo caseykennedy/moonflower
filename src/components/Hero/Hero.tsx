@@ -19,7 +19,6 @@ const Hero: React.SFC<HeroProps> = ({ children }) => (
     <FlexBox
       justifyContent={['center', 'flex-start']}
       width={1}
-      mx='auto'
     >
       <Box width={[ 7/8, 3/4, 3/5, 5/12 ]}>
         {children}
@@ -40,10 +39,8 @@ const FlexBox = styled(Flex)`
 `
 
 const Container = styled(Flex)`
-  background-image: ${bgImage};
   min-height: 100%;
   align-items: center;
-  justify-content: center;
   align-content: center;
   flex-wrap: wrap;
 

@@ -18,8 +18,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
   <Container as='header' width={1} px={[2, 3, 4, 4]}>
     <Flex
       alignItems='center'
-      css={{ maxWidth: 1366 }}
-      m='0 auto'
+      css={{ maxWidth: 1440 }}
       py={[2, 2, 3, 4]}
     >
       <Box width={1 / 2}>
@@ -31,8 +30,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
         width={1 / 2}
         justifyContent='flex-end'
       >
-        <NavLink>Info</NavLink>
-        <NavLink>Contact</NavLink>
+        <NavLink>Info + Contact</NavLink>
         <Button>Place Order</Button>
       </Flex>
     </Flex>
@@ -98,6 +96,7 @@ const NavLink = styled(Link)`
   font-weight: 500;
   margin-right: 1.4rem;
   text-transform: uppercase;
+  white-space: nowrap;
 
   &:hover {
     color: ${props => props.theme.colors.superNova};
