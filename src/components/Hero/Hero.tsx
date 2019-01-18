@@ -3,6 +3,8 @@ import { Box, Flex } from 'rebass'
 import styled from 'styled-components'
 import { up, down, between, only } from 'styled-breakpoints'
 
+import bgImage from './assets/bgBridge.jpg'
+
 interface HeroProps {
   children: any
 }
@@ -38,7 +40,7 @@ const FlexBox = styled(Flex)`
 `
 
 const Container = styled(Flex)`
-
+  background-image: ${bgImage};
   min-height: 100%;
   align-items: center;
   justify-content: center;
