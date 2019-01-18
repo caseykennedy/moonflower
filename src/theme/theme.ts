@@ -19,7 +19,7 @@ const theme = {
   // },
 
   fonts: {
-    transat: 'Transat, sans-serif',
+    transat: '"Transat", sans-serif',
   },
 
   Heading: {

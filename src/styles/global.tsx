@@ -173,8 +173,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 10px;
     font-family: 'Transat', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0rem;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -182,11 +181,17 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-feature-settings: "pnum";
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
+    line-height: 1.1
+  }
+
+  strong {
+    font-weight: 500;
   }
 
   h1, h2, h3 {
     letter-spacing: 0rem;
     padding-bottom: 0.4em;
+    font-weight: 600;
   }
 
   h4, h5, h6 {
@@ -195,7 +200,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 8rem;
-    line-height: 1.3
+    line-height: 1.1
   }
   h2 {
     font-size: 6rem;
@@ -219,10 +224,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-family: 'Transat', sans-serif;
-    font-weight: 300;
-    line-height: 1.8;
+    font-weight: 400;
+    line-height: 1.3;
     padding-bottom: 2.6em;
   }
 

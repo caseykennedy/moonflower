@@ -11,7 +11,7 @@ const Hero: React.SFC<HeroProps> = ({ children }) => (
   <Container
     bg='purpleRain'
     pt={[220, 160, 160, 160]}
-    pb={[140, 100, 100, 100]}
+    pb={[140, 100, 100, 200]}
     px={[2, 3, 4, 4]}
   >
     <FlexBox
@@ -19,7 +19,9 @@ const Hero: React.SFC<HeroProps> = ({ children }) => (
       width={1}
       mx='auto'
     >
-      {children}
+      <Box width={[ 7/8, 3/4, 3/5, 5/12 ]}>
+        {children}
+      </Box>
     </FlexBox>
   </Container>
 )
@@ -36,6 +38,7 @@ const FlexBox = styled(Flex)`
 `
 
 const Container = styled(Flex)`
+
   min-height: 100%;
   align-items: center;
   justify-content: center;
@@ -49,7 +52,7 @@ const Container = styled(Flex)`
     min-height: 70vh;
   }
   ${up('2')} {
-    min-height: 80vh;
+    min-height: 100vh;
   }
 `
 

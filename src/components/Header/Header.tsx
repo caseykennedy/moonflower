@@ -23,7 +23,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
       py={[2, 2, 3, 4]}
     >
       <Box width={1 / 2}>
-        <Box>{ !isMobile ? <Logo /> : <Symbol />}</Box>
+        <Box>{ isMobile ? <Symbol /> : <Logo />}</Box>
       </Box>
       <Flex
         alignItems='baseline'
@@ -33,7 +33,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
       >
         <NavLink>Info</NavLink>
         <NavLink>Contact</NavLink>
-        <Button>Shop</Button>
+        <Button>Place Order</Button>
       </Flex>
     </Flex>
   </Container>
@@ -65,9 +65,11 @@ const Button = styled.a`
   cursor: pointer;
   /* font-family: ${props => props.theme.fonts.transatMedium}; */
   font-size: 1.2rem;
+  font-weight: 600;
   padding: 1.6rem 2.6rem 1.4rem;
   text-transform: uppercase;
   line-height: 1;
+  white-space: nowrap;
 
   &:hover {
     background-color: ${props => props.theme.colors.lavendar};
@@ -93,11 +95,12 @@ const NavLink = styled(Link)`
   cursor: pointer;
   /* font-family: ${props => props.theme.fonts.transatMedium}; */
   font-size: 1.2rem;
-  margin-right: 1.6rem;
+  font-weight: 500;
+  margin-right: 1.4rem;
   text-transform: uppercase;
 
   &:hover {
-    color: ${props => props.theme.colors.goldBloom};
+    color: ${props => props.theme.colors.superNova};
   }
 
   ${up('0')} {

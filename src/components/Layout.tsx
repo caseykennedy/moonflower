@@ -18,7 +18,7 @@ import Header from './Header/Header'
 // ]
 
 export interface LayoutProps {
-  location?: {
+  location: {
     pathname: string
   }
   children: any

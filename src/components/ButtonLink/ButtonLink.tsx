@@ -126,7 +126,8 @@ const ButtonLink = styled(Button)`
   border-radius: ${({ radius = 300 }) => radius}px;
   cursor: pointer;
   display: inline-block;
-  font-family: ${props => props.theme.fonts.transatBold};
+  /* font-family: ${props => props.theme.fonts.transat}; */
+  font-weight: 600;
   letter-spacing: 0.3em;
   margin: ${p => p.m};
   text-decoration: none;
