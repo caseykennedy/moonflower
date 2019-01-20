@@ -12,7 +12,7 @@ interface IntroProps {
 
 const Intro: React.SFC<IntroProps> = ({ children }) => (
   <Container bg='purpleRain'>
-    <GridContainer mt={[ 0, 0, -8, -8 ]}>
+    <Grid mt={[ 0, 0, -8, -8 ]}>
       <FlexCol width={[ 1, 1, 1/2 ]} bg='superNova' p={[ 3, 3, 4 ]}>
         <Carousel data={data} />
       </FlexCol>
@@ -33,13 +33,14 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
           </Text>
         </Box>
       </FlexCol>
-    </GridContainer>
+    </Grid>
   </Container>
 )
 
 Intro.defaultProps = {}
 
-const GridContainer = styled(Flex)`
+const Grid = styled(Flex)`
+  /* box-shadow: 0 0 20rem rgba(0, 0, 0, 0.6); */
   flex-grow: 1;
   flex-wrap: wrap;
   justify-content: center;
