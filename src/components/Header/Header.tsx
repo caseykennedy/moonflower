@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { Box, Heading, Flex, Link } from 'rebass'
 import withSizes from 'react-sizes'
 import { up, down, between, only } from 'styled-breakpoints'
+import Headroom from 'react-headroom'
 
 import LogoType from './assets/logo.svg'
 import LogoSymbol from './assets/logo-symbol.svg'
@@ -18,7 +19,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
   <Container as='header' width={1} px={[2, 3, 4, 4]}>
     <Flex
       alignItems='center'
-      css={{ maxWidth: 1440 }}
+      css={{ maxWidth: 1400 }}
       py={[2, 2, 3, 4]}
     >
       <Box width={1 / 2}>
@@ -61,7 +62,6 @@ const Button = styled.a`
   border-radius: 100px;
   color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
-  /* font-family: ${props => props.theme.fonts.transatMedium}; */
   font-size: 1.2rem;
   font-weight: 600;
   padding: 1.6rem 2.6rem 1.4rem;

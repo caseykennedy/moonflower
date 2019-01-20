@@ -12,8 +12,8 @@ interface HeroProps {
 const Hero: React.SFC<HeroProps> = ({ children }) => (
   <Container
     bg='purpleRain'
-    pt={[220, 160, 160, 160]}
-    pb={[140, 100, 100, 200]}
+    pt={[220, 160, 160, 120]}
+    pb={[140, 100, 160, 200]}
     px={[2, 3, 4, 4]}
   >
     <FlexBox
@@ -30,7 +30,7 @@ const Hero: React.SFC<HeroProps> = ({ children }) => (
 Hero.defaultProps = {}
 
 const FlexBox = styled(Flex)`
-  max-width: 1366px;
+  max-width: 1440px;
   text-align: center;
 
   ${up('0')} {
@@ -39,6 +39,8 @@ const FlexBox = styled(Flex)`
 `
 
 const Container = styled(Flex)`
+  background-image: url('http://caseykennedy.me/bg-bridge.jpg');
+  background-size: cover;
   min-height: 100%;
   align-items: center;
   align-content: center;
@@ -48,7 +50,7 @@ const Container = styled(Flex)`
     min-height: 70vh;
   }
   ${between('1', '2')} {
-    min-height: 70vh;
+    min-height: 80vh;
   }
   ${up('2')} {
     min-height: 100vh;

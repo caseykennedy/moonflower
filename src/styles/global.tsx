@@ -1,3 +1,4 @@
+import config from '../theme/config'
 import { createGlobalStyle } from 'styled-components'
 
 // Transat Light
@@ -131,7 +132,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: white;
+    background: ${config.colors.white};
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;

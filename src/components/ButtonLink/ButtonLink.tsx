@@ -128,7 +128,7 @@ const ButtonLink = styled(Button)`
   display: inline-block;
   /* font-family: ${props => props.theme.fonts.transat}; */
   font-weight: 600;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.1em;
   margin: ${p => p.m};
   text-decoration: none;
   text-transform: uppercase;

@@ -11,15 +11,13 @@ import Intro from '../sections/Intro'
 import ButtonLink from '../components/ButtonLink'
 import Section from '../components/Section'
 
-interface Props {
-  children: any
-}
+interface Props {}
 
 const IndexPage: React.SFC<Props> = () => (
   <React.Fragment>
     <Hero>
       <Heading as='h1' fontSize={[ 8, 9, 9, 9 ]} color='superNova'>
-        Honest Medical Cannabis, at your doorstep.
+        Mindfully curated<br />cannabis, delivered.
       </Heading>
       <Box mt={[ 6, 8, 10 ]}>
         <ButtonLink
@@ -45,13 +43,16 @@ const IndexPage: React.SFC<Props> = () => (
     </Hero>
     <Intro />
 
-    <Section bg='darkSky' py={[ 220 ]}>
+    <Section bg='darkSky' py={[ 100 ]}>
     </Section>
 
-    <Section py={[ 120 ]} pageWidth={1200}>
-      <Heading as='h2' fontSize={8} mb={0} textAlign='center'>
-        <strong>moonflower</strong> is an online dispensary that thoughtfully curates &amp; delivers cannabis products directly to your doorstep. We’ve tried every product, checked every ingredient, and hand-selected the finest quality the Golden State has to offer.
-      </Heading>
+    <Section bg='darkSky' py={[ 120 ]}>
+      <Box width={1/3}>
+        <Heading as='h2' fontSize={8} mb={0} color='paleMoon'>
+          <strong>moonflower</strong> is an online dispensary that thoughtfully curates &amp; delivers cannabis products directly to your doorstep. We’ve tried every product, checked every ingredient, and hand-selected the finest quality the Golden State has to offer.
+        </Heading>
+      </Box>
+      
     </Section>
     <Box width={1} css={{ height: '60vh'}} />
   </React.Fragment>
@@ -73,11 +74,9 @@ const Main = styled(Box)`
   ${between('sm', 'md')} {
     border-right: 6px solid ${props => props.theme.colors.ogPurp};
   }
-
   ${between('md', 'lg')} {
     border-right: 6px solid ${props => props.theme.colors.superNova};
   }
-
   ${up('lg')} {
     border-right: 6px solid ${props => props.theme.colors.goldBloom};
   } */
