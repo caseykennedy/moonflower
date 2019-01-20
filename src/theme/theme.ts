@@ -86,7 +86,7 @@ const theme = {
   },
 
   widths: {
-    max: '1440px'
+    max: `${config.maxWidth}`
   }
 }
 

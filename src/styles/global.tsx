@@ -107,12 +107,12 @@ const GlobalStyle = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
-  @media screen and (min-width: 35em) {
+  /* @media screen and (min-width: 35em) {
     html {
       margin-right: calc(-100vw + 100%);
       overflow-x: hidden;
     }
-  }
+  } */
   ol, ul, li {
     list-style: none;
   }
@@ -192,7 +192,7 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3 {
     letter-spacing: 0rem;
     padding-bottom: 0.4em;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   h4, h5, h6 {

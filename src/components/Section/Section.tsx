@@ -15,7 +15,7 @@ const Section: React.SFC<Props> = ({ children, bg, px, py, pageWidth }) => (
     as='section'
     flexWrap='wrap'
     flexDirection='row'
-    justifyContent='center'
+    justifyContent='flex-start'
     bg={bg}
     px={px}
     py={py}

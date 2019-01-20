@@ -92,9 +92,9 @@ const Button = styled.a`
 const NavLink = styled(Link)`
   color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
-  /* font-family: ${props => props.theme.fonts.transatMedium}; */
   font-size: 1.2rem;
   font-weight: 500;
+  letter-spacing: 0.1rem;
   margin-right: 1.4rem;
   text-transform: uppercase;
   white-space: nowrap;

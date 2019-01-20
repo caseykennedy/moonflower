@@ -46,18 +46,16 @@ const IndexPage: React.SFC<Props> = () => (
     </Hero>
     <Intro />
 
-    <Section bg='darkSky' py={[ 100 ]}>
-    </Section>
-
-    <Section bg='darkSky' py={[ 120 ]}>
-      <Box width={4/10}>
-        <Fade>
-          <Heading as='h2' fontSize={8} mb={0} color='paleMoon'>
-            <strong>moonflower</strong> is an online dispensary that thoughtfully curates &amp; delivers cannabis products directly to your doorstep. We’ve tried every product, checked every ingredient, and hand-selected the finest quality the Golden State has to offer.
-          </Heading>
-        </Fade>
-      </Box>
-      
+    <Section bg='' py={[ 8 ]} pageWidth={1360}>
+      <Flex width={1} justifyContent='flex-end'>
+        <Box width={1/2}>
+          <Fade>
+            <Heading as='h2' fontSize={8} mb={0} color='paleMoon'>
+              <strong>moonflower</strong> is an online dispensary that thoughtfully curates &amp; delivers cannabis products directly to your doorstep. We’ve tried every product, checked every ingredient, and hand-selected the finest quality the Golden State has to offer.
+            </Heading>
+          </Fade>
+        </Box>
+      </Flex>
     </Section>
     <Box width={1} css={{ height: '60vh'}} />
   </React.Fragment>

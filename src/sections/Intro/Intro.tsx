@@ -19,17 +19,17 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
       <FlexCol width={[ 1, 1, 1/2 ]}>
         <Box width={1} bg='lavendar' css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
           <Text fontSize={5}>
-            Tab list
+            
           </Text>
         </Box>
-        <Box width={1/2} bg='goldBloom'  css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
+        <Box width={1/2} bg='paleMoon'  css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
           <Text fontSize={5}>
-            Tab list
+            
           </Text>
         </Box>
         <Box width={1/2} bg='superNova'  css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
           <Text fontSize={5}>
-            Tab list
+            
           </Text>
         </Box>
       </FlexCol>

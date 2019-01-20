@@ -9,7 +9,7 @@ import theme from '../theme/theme'
 import 'prismjs/themes/prism-okaidia.css'
 import { Segment, Sidebar } from 'semantic-ui-react'
 
-import Header from './Header/Header'
+import Header from './Header'
 
 // export const menuItems = [
 //   { name: 'Home', path: '/', exact: true, icon: 'home', inverted: true },
@@ -32,25 +32,10 @@ const Layout = (props: LayoutProps) => {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <Provider store={store}>
-          <Sidebar.Pushable as={Segment}>
-            {/* <SidebarMenu
-              Link={Link}
-              pathname={pathname}
-              items={menuItems}
-              visible={false}
-            /> */}
-            <Sidebar.Pusher style={{ minHeight: '100vh' }}>
-              {/* Header */}
-              {/* {isHome ? null : (
-                <HeaderMenu Link={Link} pathname={pathname} items={menuItems} />
-              )} */}
-
-              <Header />
-
-              {/* Render children pages */}
-              <div>{props.children}</div>
-            </Sidebar.Pusher>
-          </Sidebar.Pushable>
+          <div>
+            <Header />
+            {props.children}
+          </div>
         </Provider>
       </ThemeProvider>
       <GlobalStyle />

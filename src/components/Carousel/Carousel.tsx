@@ -20,17 +20,22 @@ export class Carousel extends React.Component<CarouselProps> {
     return (
       <CarouselContainer
         naturalSlideWidth={100}
-        naturalSlideHeight={105}
+        naturalSlideHeight={100}
         totalSlides={3}
         isPlaying={true}
         interval={9000}
       >
-        <Slider>
+        <Slider classNameAnimation='slider-fade'>
           {data.map(slide => (
             <Slide index={slide.id} key={slide.id}>
-              <Text fontSize={7} pb={8} dangerouslySetInnerHTML={{ __html: slide.title }} />
               <Text
-                as='span'
+                as='h3'
+                fontSize={7}
+                pb={140}
+                dangerouslySetInnerHTML={{ __html: slide.title }}
+              />
+              <Text
+                as='p'
                 fontSize={5}
                 mb={0}
                 dangerouslySetInnerHTML={{ __html: slide.content }}
@@ -68,13 +73,13 @@ const GlobalStyle = createGlobalStyle`
 .carousel__slide--visible {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.3s linear;
+  transition: opacity 1s linear;
 }
 
 .carousel__slide--hidden {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 0.3s, opacity 0.3s linear;
+  transition: visibility 0s 0.7s, opacity 0.7s linear;
 }
 `
 
