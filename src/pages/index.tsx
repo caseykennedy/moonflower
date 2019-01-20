@@ -19,7 +19,7 @@ const IndexPage: React.SFC<Props> = () => (
       <Heading as='h1' fontSize={[ 8, 9, 9, 9 ]} color='superNova'>
         Mindfully curated<br />cannabis, delivered.
       </Heading>
-      <Box mt={[ 6, 8, 10 ]}>
+      <Box mt={[ 4, 6, 8 ]}>
         <ButtonLink
           look='primary'
           size='default'

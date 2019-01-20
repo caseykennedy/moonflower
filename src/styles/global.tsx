@@ -132,7 +132,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: ${config.colors.white};
+    background: ${config.colors.purpleRain};
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;

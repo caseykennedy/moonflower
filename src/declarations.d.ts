@@ -24,6 +24,7 @@ declare module 'compass-vertical-rhythm'
 declare module 'typography-theme-de-young'
 declare module 'styled-breakpoints'
 declare module 'react-sizes'
+declare module 'react-responsive-tabs'
 
 // Image Type Declarations
 declare module '*.svg'

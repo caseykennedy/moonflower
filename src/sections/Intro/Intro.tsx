@@ -8,7 +8,7 @@ interface IntroProps {
 }
 
 const Intro: React.SFC<IntroProps> = ({ children }) => (
-  <Container bg='darkSky'>
+  <Container bg='purpleRain'>
     <GridContainer mt={[ 0, 0, -8, -8 ]}>
       <FlexCol width={[ 1, 1, 1/2 ]} bg='superNova' p={[ 3, 3, 4 ]}>
         <Text fontSize={5} pb={600}>

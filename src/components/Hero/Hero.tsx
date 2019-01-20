@@ -39,7 +39,7 @@ const FlexBox = styled(Flex)`
 `
 
 const Container = styled(Flex)`
-  background-image: url('http://caseykennedy.me/bg-bridge.jpg');
+  background-image: url('http://caseykennedy.me/bg-bridge-2.jpg');
   background-size: cover;
   min-height: 100%;
   align-items: center;

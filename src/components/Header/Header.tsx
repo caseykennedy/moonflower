@@ -66,6 +66,7 @@ const Button = styled.a`
   font-weight: 600;
   padding: 1.6rem 2.6rem 1.4rem;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   line-height: 1;
   white-space: nowrap;
 
