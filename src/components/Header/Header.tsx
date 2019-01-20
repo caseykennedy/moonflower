@@ -32,7 +32,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
         justifyContent='flex-end'
       >
         <NavLink>Info + Contact</NavLink>
-        <Button>Place Order</Button>
+        <Button>Place An Order</Button>
       </Flex>
     </Flex>
   </Container>

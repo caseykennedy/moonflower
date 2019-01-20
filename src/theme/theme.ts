@@ -72,8 +72,9 @@ const theme = {
   colors: {
     black: `${config.colors.black}`,
     white: `${config.colors.white}`,
-    lightGrey: `${config.colors.lightGrey}`,
-    darkGrey: `${config.colors.darkGrey}`,
+    gray: `${config.colors.gray}`,
+    lightGrey: `${config.colors.lightGray}`,
+    darkGrey: `${config.colors.darkGray}`,
 
     darkSky: `${config.colors.darkSky}`,
     purpleRain: `${config.colors.purpleRain}`,

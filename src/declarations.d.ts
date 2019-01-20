@@ -25,6 +25,8 @@ declare module 'typography-theme-de-young'
 declare module 'styled-breakpoints'
 declare module 'react-sizes'
 declare module 'react-responsive-tabs'
+declare module 'react-reveal/Fade'
+declare module 'pure-react-carousel'
 
 // Image Type Declarations
 declare module '*.svg'
@@ -39,3 +41,4 @@ declare module '*.eot'
 declare module '*.woff'
 declare module '*.woff2'
 declare module '*.otf'
+declare module '*.json'

@@ -24,8 +24,9 @@ export default {
     // Common Colors
     black: '#000000',
     white: '#ffffff',
-    lightGrey: '#f3f3f3',
-    darkGrey: '#ededed',
+    gray: '#c0c0c0',
+    lightGray: '#f3f3f3',
+    darkGray: '#ededed',
 
     // Brand Colors
     darkSky: '#11111b',

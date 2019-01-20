@@ -10,34 +10,28 @@ interface Props {
   pageWidth?: number | string
 }
 
-export class Section extends React.Component<Props> {
-  static defaultProps: Partial<Props> = {
-    bg: '',
-    px: [2, 3, 4, 4],
-    py: 6,
-    pageWidth: '100%'
-  }
-  public render() {
-    const { children, bg, px, py, pageWidth } = this.props
-    return (
-      <Flex as='section'
-        flexWrap='wrap'
-        flexDirection='row'
-        justifyContent='center'
-        bg={bg}
-        px={px}
-        py={py}
-        css={{
-          maxWidth: theme.widths.max
-        }}>
+const Section: React.SFC<Props> = ({ children, bg, px, py, pageWidth }) => (
+  <Flex
+    as='section'
+    flexWrap='wrap'
+    flexDirection='row'
+    justifyContent='center'
+    bg={bg}
+    px={px}
+    py={py}
+    css={{
+      maxWidth: theme.widths.max
+    }}
+  >
+    <Box width={pageWidth}>{children}</Box>
+  </Flex>
+)
 
-        <PageWidth pageWidth={pageWidth}>
-          {children}
-        </PageWidth>
-
-      </Flex>
-    )
-  }
+Section.defaultProps = {
+  bg: '',
+  px: [2, 3, 4, 4],
+  py: 6,
+  pageWidth: '100%'
 }
 
 const PageWidth = styled(Box)`
