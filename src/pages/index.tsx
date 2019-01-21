@@ -58,18 +58,25 @@ const IndexPage: React.SFC<Props> = () => (
 
     <Section pageWidth={1360}>
       <Fade>
-        <Flex width={1} alignItems='baseline' pb={420} pl={4}>
-          <Box width={2 / 4}>
+        <Flex
+          width={1}
+          alignItems='baseline'
+          flexWrap='wrap'
+          pb={420}
+          pl={[0, 0, 4]}
+        >
+          <Box width={[1, 1, 1 / 2, 1 / 2]}>
             <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
               <strong>moonflower</strong>
             </Heading>
           </Box>
-          <Box width={2 / 4} pl={8}>
+          <Box width={[1, 1, 1 / 2, 1 / 2]} pl={[0, 0, 8]}>
             <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
               <strong>moonflower</strong> is an online dispensary that
               thoughtfully curates &amp; delivers cannabis products directly to
-              your doorstep. We’ve tried every product, checked every ingredient,
-              and hand-selected the finest quality the Golden State has to offer.
+              your doorstep. We’ve tried every product, checked every
+              ingredient, and hand-selected the finest quality the Golden State
+              has to offer.
             </Heading>
           </Box>
         </Flex>
@@ -110,18 +117,25 @@ const IndexPage: React.SFC<Props> = () => (
     </Section>
     <Section pageWidth={1360} bg='darkSky'>
       <Fade>
-        <Flex width={1} alignItems='baseline' pb={420} pl={4}>
-          <Box width={2 / 4}>
+        <Flex
+          width={1}
+          alignItems='baseline'
+          flexWrap='wrap'
+          pb={420}
+          pl={[0, 0, 4]}
+        >
+          <Box width={[1, 1, 1 / 2, 1 / 2]}>
             <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
               <strong>moonflower</strong>
             </Heading>
           </Box>
-          <Box width={2 / 4} pl={8}>
+          <Box width={[1, 1, 1 / 2, 1 / 2]} pl={[0, 0, 8]}>
             <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
               <strong>moonflower</strong> is an online dispensary that
               thoughtfully curates &amp; delivers cannabis products directly to
-              your doorstep. We’ve tried every product, checked every ingredient,
-              and hand-selected the finest quality the Golden State has to offer.
+              your doorstep. We’ve tried every product, checked every
+              ingredient, and hand-selected the finest quality the Golden State
+              has to offer.
             </Heading>
           </Box>
         </Flex>
