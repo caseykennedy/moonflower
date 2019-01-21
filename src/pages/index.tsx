@@ -51,31 +51,45 @@ const IndexPage: React.SFC<Props> = () => (
     </Hero>
 
     <Section bg='' pageWidth={1360}>
-      <Fade distance='3rem' bottom>
+      <Fade distance='2rem' bottom>
         <Intro />
       </Fade>
     </Section>
 
     <Section pageWidth={1360}>
-      <Flex width={1} alignItems='baseline' pb={220} pl={4}>
-        <Box width={2 / 4}>
-          <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
-            <strong>moonflower</strong>
-          </Heading>
-        </Box>
-        <Box width={2 / 4} pl={8}>
-          <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
-            <strong>moonflower</strong> is an online dispensary that
-            thoughtfully curates &amp; delivers cannabis products directly to
-            your doorstep. We’ve tried every product, checked every ingredient,
-            and hand-selected the finest quality the Golden State has to offer.
-          </Heading>
-        </Box>
-      </Flex>
+      <Fade>
+        <Flex width={1} alignItems='baseline' pb={420} pl={4}>
+          <Box width={2 / 4}>
+            <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
+              <strong>moonflower</strong>
+            </Heading>
+          </Box>
+          <Box width={2 / 4} pl={8}>
+            <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
+              <strong>moonflower</strong> is an online dispensary that
+              thoughtfully curates &amp; delivers cannabis products directly to
+              your doorstep. We’ve tried every product, checked every ingredient,
+              and hand-selected the finest quality the Golden State has to offer.
+            </Heading>
+          </Box>
+        </Flex>
+      </Fade>
     </Section>
 
-    <Section bg='lavendar' pageWidth={1360}>
-      <Fade distance='3rem' bottom>
+    <Section bg='paleMoon' pageWidth={1360}>
+      <Fade distance='2rem' bottom>
+        <Flex width={1} alignItems='flex-end' mb={140}>
+          <Flex bg='superNova' width={'100%'} p={4} alignItems='stretch'>
+            <Heading as='h2' fontSize={6} mb={1600} color='paleMoon'>
+              <strong>moonflower</strong>
+            </Heading>
+          </Flex>
+        </Flex>
+      </Fade>
+    </Section>
+
+    <Section bg='darkSky' pageWidth={1360}>
+      <Fade distance='2rem' bottom>
         <Flex width={1} alignItems='flex-end' mt={-220}>
           <Flex bg='superNova' width={'100%'} p={4} alignItems='stretch'>
             <Box width={1 / 2} pr={8}>
@@ -91,6 +105,25 @@ const IndexPage: React.SFC<Props> = () => (
               }}
             />
           </Flex>
+        </Flex>
+      </Fade>
+    </Section>
+    <Section pageWidth={1360} bg='darkSky'>
+      <Fade>
+        <Flex width={1} alignItems='baseline' pb={420} pl={4}>
+          <Box width={2 / 4}>
+            <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
+              <strong>moonflower</strong>
+            </Heading>
+          </Box>
+          <Box width={2 / 4} pl={8}>
+            <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
+              <strong>moonflower</strong> is an online dispensary that
+              thoughtfully curates &amp; delivers cannabis products directly to
+              your doorstep. We’ve tried every product, checked every ingredient,
+              and hand-selected the finest quality the Golden State has to offer.
+            </Heading>
+          </Box>
         </Flex>
       </Fade>
     </Section>
