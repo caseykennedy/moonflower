@@ -3,6 +3,7 @@ import { Box, Flex, Text, Heading } from 'rebass'
 import styled from 'styled-components'
 import { up, down, between, only } from 'styled-breakpoints'
 import Carousel from '../../components/Carousel'
+import Fade from 'react-reveal/Fade'
 
 import data from './data/slides.json'
 
@@ -16,20 +17,22 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
       <FlexCol width={[ 1, 1, 1/2 ]} bg='superNova' p={[ 3, 3, 4 ]}>
         <Carousel data={data} />
       </FlexCol>
-      <FlexCol width={[ 1, 1, 1/2 ]}>
-        <Box width={1} bg='lavendar' css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
-          <Text fontSize={5}>
-            
-          </Text>
-        </Box>
-        <Box width={1/2} bg='paleMoon'  css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
-          <Text fontSize={5}>
-            
+      <FlexCol width={[ 1, 1, 1/2 ]} justifyContent='flex-end' alignItems='flex-end'>
+        <Flashcard width={1} p={[ 3, 3, 4 ]}>
+          <Box width={[ 1, 2/3, 1/2 ]}>
+            <Text fontSize={10} color='superNova'>
+              Now delivering in Marin & Sonoma
+            </Text>
+          </Box>
+        </Flashcard>
+        <Box width={1/2} bg='paleMoon' css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
+          <Text as='p' fontSize={[ 3, 5 ]} color='superNova'>
+            Delivery<br /> Schedule
           </Text>
         </Box>
         <Box width={1/2} bg='superNova'  css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
-          <Text fontSize={5}>
-            
+          <Text as='p' fontSize={[ 3, 5 ]}>
+            Medical <br /> Cards
           </Text>
         </Box>
       </FlexCol>
@@ -49,7 +52,6 @@ const Grid = styled(Flex)`
 `
 
 const FlexCol = styled(Flex)`
-  flex-grow: 1;
   flex-wrap: wrap;
 `
 
@@ -62,6 +64,20 @@ const Container = styled(Flex)`
   }
   ${up('2')} {
     margin-top: -80px;
+  }
+`
+
+const Flashcard = styled(Flex)`
+  background: url('https://res.cloudinary.com/moonflower/image/upload/v1548097460/bg-featurecard.jpg');
+  background-size: cover;
+  height: initial;
+  
+  ${between('0', '1')} {
+  }
+  ${between('1', '2')} {
+  }
+  ${up('1')} {
+    height: 50%;
   }
 `
 

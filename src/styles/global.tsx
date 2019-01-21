@@ -107,12 +107,12 @@ const GlobalStyle = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
-  @media screen and (min-width: 35em) {
+  /* @media screen and (min-width: 35em) {
     html {
       margin-right: calc(-100vw + 100%);
       overflow-x: hidden;
     }
-  }
+  } */
   ol, ul, li {
     list-style: none;
   }

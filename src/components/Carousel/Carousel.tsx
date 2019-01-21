@@ -31,7 +31,7 @@ export class Carousel extends React.Component<CarouselProps> {
               <Text
                 as='h3'
                 fontSize={7}
-                pb={140}
+                pb={300}
                 dangerouslySetInnerHTML={{ __html: slide.title }}
               />
               <Text
@@ -70,17 +70,17 @@ const GlobalStyle = createGlobalStyle`
     border-color: #404471;
   }
 
-.carousel__slide--visible {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 1s linear;
-}
+  .carousel__slide--visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+  }
 
-.carousel__slide--hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 0.7s, opacity 0.7s linear;
-}
+  .carousel__slide--hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.7s 0.7s, opacity 0.7s linear;
+  }
 `
 
 export default Carousel

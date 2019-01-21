@@ -38,8 +38,8 @@ const FlexBox = styled(Flex)`
 `
 
 const Container = styled(Flex)`
-  background-color: ${p => p.theme.colors.purpleRain};
-  background-image: url('http://caseykennedy.me/bg-bridge-2.jpg');
+  background-color: ${p => p.theme.colors.darkSky};
+  background-image: url('https://res.cloudinary.com/moonflower/image/upload/v1548095489/bg-bridge-2.jpg');
   background-size: cover;
   min-height: 100%;
   align-items: center;
