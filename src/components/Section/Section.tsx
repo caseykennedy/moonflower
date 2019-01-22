@@ -29,8 +29,8 @@ const Section: React.SFC<Props> = ({ children, bg, px, py, pageWidth }) => (
 
 Section.defaultProps = {
   bg: '',
-  px: [2, 3, 4, 4],
-  py: 6,
+  px: [1, 3, 4, 4],
+  py: [1, 3, 4, 4],
   pageWidth: '100%'
 }
 

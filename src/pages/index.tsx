@@ -97,20 +97,21 @@ const IndexPage: React.SFC<Props> = () => (
 
     <Section bg='darkSky' pageWidth={1360}>
       <Fade distance='2rem' bottom>
-        <Flex width={1} alignItems='flex-end' mt={-220}>
-          <Flex bg='superNova' width={'100%'} p={4} alignItems='stretch'>
-            <Box width={1 / 2} pr={8}>
-              <Carousel data={data} />
-            </Box>
+        <Flex width={1} alignItems='flex-end' mt={[ -150, 0, 0, -180 ]}>
+          <Flex bg='superNova' flexWrap='wrap' flexDirection='row-reverse' width={'100%'} p={[ 1, 2, 4, 4 ]} alignItems='stretch'>
             <Box
-              width={1 / 2}
+              width={[ 1, 1, 1, 1/2 ]}
               bg='paleMoon'
               css={{
                 backgroundImage:
                   'url(https://res.cloudinary.com/moonflower/image/upload/v1548102305/bg-square.jpg)',
-                backgroundSize: 'cover'
+                backgroundSize: 'cover',
+                height: 600
               }}
             />
+            <Box width={[ 1, 1, 1, 1/2 ]} pr={[ 0, 0, 0, 8 ]}>
+              <Carousel data={data} />
+            </Box>
           </Flex>
         </Flex>
       </Fade>
@@ -141,7 +142,7 @@ const IndexPage: React.SFC<Props> = () => (
         </Flex>
       </Fade>
     </Section>
-    <Box bg='superNova' width={1} css={{ height: '60vh' }} />
+    <Box bg='purpleRain' width={1} css={{ height: '60vh' }} />
   </React.Fragment>
 )
 
