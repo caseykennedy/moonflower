@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
-import { darken, em, shade } from 'polished'
+import { lighten, em, shade } from 'polished'
 import { up, down, between, only } from 'styled-breakpoints'
 
 interface ButtonProps {
@@ -62,27 +62,27 @@ const variants = {
 
 const looks = {
   primary: css`
-    background-color: ${props => props.theme.colors.paleMoon};
-    border: 2px solid ${p => p.theme.colors.paleMoon};
-    color: ${props => props.theme.colors.darkSky};
+    background-color: ${props => props.theme.colors.spaceDust};
+    border: 2px solid ${p => p.theme.colors.spaceDust};
+    color: ${props => props.theme.colors.superNova};
 
     &:hover {
       background-color: ${p =>
-        p.theme.colors.superNova && shade(0.1, p.theme.colors.superNova)};
+        p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
       border-color: ${p =>
-        p.theme.colors.superNova && shade(0.1, p.theme.colors.superNova)};
+        p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
     }
     &:active {
       background-color: ${p =>
-        p.theme.colors.superNova && shade(0.2, p.theme.colors.superNova)};
+        p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
       border-color: ${p =>
-        p.theme.colors.superNova && shade(0.2, p.theme.colors.superNova)};
+        p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
     }
   `,
   dark: css`
-    background-color: ${props => props.theme.colors.paleMoon};
-    border: 2px solid ${p => p.theme.colors.paleMoon};
-    color: ${props => props.theme.colors.darkSky};
+    background-color: ${props => props.theme.colors.darkSky};
+    border: 2px solid ${p => p.theme.colors.darkSky};
+    color: ${props => props.theme.colors.paleMoon};
 
     &:hover {
       background-color: ${p =>
@@ -121,8 +121,7 @@ const ButtonLink = styled(Button)`
   ${({ size = 'default' }) => sizes[size]};
   ${({ look = 'primary' }) => looks[look]};
   ${({ variant = 'solid' }) => variants[variant]};
-
-  border: 2px solid ${props => props.theme.colors.paleMoon};
+  
   border-radius: ${({ radius = 300 }) => radius}px;
   cursor: pointer;
   display: inline-block;

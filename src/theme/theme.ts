@@ -78,11 +78,13 @@ const theme = {
 
     darkSky: `${config.colors.darkSky}`,
     purpleRain: `${config.colors.purpleRain}`,
+    pulse: `${config.colors.pulse}`,
     ogPurp: `${config.colors.ogPurp}`,
     lavendar: `${config.colors.lavendar}`,
     goldBloom: `${config.colors.goldBloom}`,
     paleMoon: `${config.colors.paleMoon}`,
-    superNova: `${config.colors.superNova}`
+    superNova: `${config.colors.superNova}`,
+    spaceDust: `${config.colors.spaceDust}`
   },
 
   widths: {

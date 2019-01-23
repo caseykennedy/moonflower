@@ -31,11 +31,13 @@ export default {
     // Brand Colors
     darkSky: '#11111b',
     purpleRain: '#202136',
+    pulse: '#260e4a',
     ogPurp: '#404471',
     lavendar: '#7175a2',
     goldBloom: '#e9c564',
     paleMoon: '#d7ddf7',
-    superNova: '#f6f6f8'
+    superNova: '#f6f6f8',
+    spaceDust: '#7c6e92'
   },
 
   maxWidth: 1440,

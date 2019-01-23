@@ -11,15 +11,14 @@ interface HeroProps {
 
 const Hero: React.SFC<HeroProps> = ({ children }) => (
   <Container
-    pt={[220, 160, 160, 120]}
-    pb={[140, 100, 160, 200]}
+    pt={[220, 120, 120, 120]}
+    pb={[80, 0, 0, 0]}
     px={[2, 3, 4, 4]}
   >
     <FlexBox
       justifyContent={['center', 'flex-start']}
-      width={1}
     >
-      <Box width={[ 7/8, 3/4, 3/5, 5/12 ]}>
+      <Box width={[ 1, 5/8 ]}>
         {children}
       </Box>
     </FlexBox>
@@ -38,8 +37,8 @@ const FlexBox = styled(Flex)`
 `
 
 const Container = styled(Flex)`
-  background-color: ${p => p.theme.colors.darkSky};
-  background-image: url('https://res.cloudinary.com/moonflower/image/upload/v1548095489/bg-bridge-2.jpg');
+  background-color: ${p => p.theme.colors.superNova};
+  /* background-image: url('https://res.cloudinary.com/moonflower/image/upload/v1548095489/bg-bridge-2.jpg'); */
   background-size: cover;
   min-height: 100%;
   align-items: center;
@@ -53,7 +52,7 @@ const Container = styled(Flex)`
     min-height: 80vh;
   }
   ${up('2')} {
-    min-height: 100vh;
+    min-height: 90vh;
   }
 `
 

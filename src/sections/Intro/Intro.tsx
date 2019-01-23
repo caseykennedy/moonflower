@@ -12,21 +12,21 @@ interface IntroProps {
 }
 
 const Intro: React.SFC<IntroProps> = ({ children }) => (
-  <Container bg='purpleRain'>
-    <Grid mt={[ 0, 0, -8, -8 ]}>
+  <Container>
+    <Grid>
       <FlexCol width={[ 1, 1, 1/2 ]} bg='superNova' p={[ 3, 3, 4 ]}>
         <Carousel data={data} />
       </FlexCol>
       <FlexCol width={[ 1, 1, 1/2 ]} justifyContent='flex-end' alignItems='flex-end'>
         <Flashcard width={1} p={[ 3, 3, 4 ]}>
           <Box width={[ 1, 2/3, 1/2 ]}>
-            <Text fontSize={10} color='superNova'>
+            <Text fontSize={8} color='superNova'>
               Now delivering in Marin & Sonoma
             </Text>
           </Box>
         </Flashcard>
         <Box width={1/2} bg='paleMoon' css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
-          <Text as='p' fontSize={[ 3, 5 ]} color='superNova'>
+          <Text as='p' fontSize={[ 3, 5 ]}>
             Delivery<br /> Schedule
           </Text>
         </Box>
@@ -43,7 +43,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
 Intro.defaultProps = {}
 
 const Grid = styled(Flex)`
-  /* box-shadow: 0 0 20rem rgba(0, 0, 0, 0.6); */
+  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.07);
   flex-grow: 1;
   flex-wrap: wrap;
   justify-content: center;
@@ -63,12 +63,11 @@ const Container = styled(Flex)`
   ${between('1', '2')} {
   }
   ${up('2')} {
-    margin-top: -80px;
   }
 `
 
 const Flashcard = styled(Flex)`
-  background: url('https://res.cloudinary.com/moonflower/image/upload/v1548097460/bg-featurecard.jpg');
+  background: ${p => p.theme.colors.white} url('');
   background-size: cover;
   height: initial;
   

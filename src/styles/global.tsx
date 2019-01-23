@@ -132,7 +132,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: ${config.colors.purpleRain};
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;
@@ -172,6 +171,7 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body {
+    background: ${config.colors.superNova};
     font-size: 10px;
     font-family: 'Transat', sans-serif;
     letter-spacing: 0rem;
@@ -183,6 +183,7 @@ const GlobalStyle = createGlobalStyle`
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
     line-height: 1.1;
+    color: ${config.colors.darkSky};
   }
 
   strong {
@@ -190,7 +191,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3 {
-    letter-spacing: 0rem;
     padding-bottom: 0.4em;
     font-weight: 400;
   }
@@ -220,7 +220,9 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.1
   }
   h6 {
-    font-size: 1.4rem;
+    font-size: 0.4rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
     line-height: 1.1
   }
 
@@ -229,7 +231,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Transat', sans-serif;
     font-weight: 400;
     line-height: 1.3;
-    padding-bottom: 2.6em;
+    /* padding-bottom: 2.6em; */
   }
 
   a { transition: all 0.2s ease; }

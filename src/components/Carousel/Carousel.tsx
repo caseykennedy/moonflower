@@ -29,8 +29,8 @@ export class Carousel extends React.Component<CarouselProps> {
           {data.map(slide => (
             <Slide index={slide.id} key={slide.id}>
               <Text
-                as='h3'
-                fontSize={7}
+                as='h4'
+                fontSize={5}
                 pb={300}
                 dangerouslySetInnerHTML={{ __html: slide.title }}
               />

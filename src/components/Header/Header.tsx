@@ -6,6 +6,7 @@ import { Box, Heading, Flex, Link } from 'rebass'
 import withSizes from 'react-sizes'
 import { up, down, between, only } from 'styled-breakpoints'
 import Headroom from 'react-headroom'
+import { lighten } from 'polished'
 
 import LogoType from './assets/logo.svg'
 import LogoSymbol from './assets/logo-symbol.svg'
@@ -17,13 +18,9 @@ interface HeaderProps {
 
 const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
   <Container as='header' width={1} px={[2, 3, 4, 4]}>
-    <Flex
-      alignItems='center'
-      css={{ maxWidth: 1400 }}
-      py={[2, 2, 3, 4]}
-    >
+    <Flex alignItems='center' py={[2, 2, 3, 4]}>
       <Box width={1 / 2}>
-        <Box>{ isMobile ? <Symbol /> : <Logo />}</Box>
+        <Box>{isMobile ? <Symbol /> : <Logo />}</Box>
       </Box>
       <Flex
         alignItems='baseline'
@@ -52,15 +49,15 @@ const Logo = styled(LogoType)`
 
 const Symbol = styled(LogoSymbol)`
   width: 43px;
-  -webkit-animation:spin 7s linear infinite;
-  -moz-animation:spin 7s linear infinite;
+  -webkit-animation: spin 7s linear infinite;
+  -moz-animation: spin 7s linear infinite;
   animation: spin 7s linear infinite;
 `
 
 const Button = styled.a`
-  border: 2px solid ${props => props.theme.colors.lavendar};
+  border: 2px solid ${props => props.theme.colors.pulse};
   border-radius: 100px;
-  color: ${props => props.theme.colors.paleMoon};
+  color: ${props => props.theme.colors.pulse};
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 600;
@@ -71,26 +68,20 @@ const Button = styled.a`
   white-space: nowrap;
 
   &:hover {
-    background-color: ${props => props.theme.colors.lavendar};
+    background-color: ${props => props.theme.colors.pulse};
     color: ${props => props.theme.colors.superNova};
   }
 
-  ${between('0', '1')} {
-    font-size: 1.4rem;
-    padding: 2rem 3.5rem 1.8rem;
-  }
-  ${between('1', '2')} {
-    font-size: 1.4rem;
-    padding: 2rem 3.5rem 1.8rem;
-  }
-  ${up('2')} {
-    font-size: 1.4rem;
-    padding: 2rem 3.5rem 1.8rem;
+  &:active {
+    background-color: ${p =>
+      p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
+    border-color: ${p =>
+      p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
   }
 `
 
 const NavLink = styled(Link)`
-  color: ${props => props.theme.colors.paleMoon};
+  color: ${props => props.theme.colors.pulse};
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 500;
@@ -100,7 +91,7 @@ const NavLink = styled(Link)`
   white-space: nowrap;
 
   &:hover {
-    color: ${props => props.theme.colors.superNova};
+    color: ${p => p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
   }
 
   ${up('0')} {
