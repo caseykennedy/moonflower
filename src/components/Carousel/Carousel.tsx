@@ -3,8 +3,6 @@ import { Box, Text, Flex } from 'rebass'
 import styled, { createGlobalStyle } from 'styled-components'
 import Carousel from 'nuka-carousel'
 
-import Fade from 'react-reveal/Fade'
-
 interface Props {
   data: Array<{
     id: number
@@ -31,7 +29,8 @@ export class CarouselText extends React.Component<Props, State> {
     return (
       <React.Fragment>
         <Carousel
-          autoplayInterval={100}
+          autoplay={true}
+          autoplayInterval={9000}
           heightMode='first'
           transitionMode='fade'
           withoutControls={true}
@@ -39,7 +38,7 @@ export class CarouselText extends React.Component<Props, State> {
           slideIndex={this.state.slideIndex}
           swiping={true}
           wrapAround={true}
-          speed={400}
+          speed={1000}
         >
           {data.map(slide => (
             <Slide key={slide.id}>
@@ -73,7 +72,7 @@ export class CarouselText extends React.Component<Props, State> {
 }
 
 const Slide = styled.div`
-  min-height: 60rem;
+  min-height: 40rem;
 `
 
 const DotDot = styled.button`
@@ -82,6 +81,7 @@ const DotDot = styled.button`
   margin-right: 0.5rem;
   padding: 3rem 0 0;
   width: 6rem;
+  transition: border-color 0.2s ease-in;
 
   &:hover {
     border-color: ${props => props.theme.colors.purpleRain};

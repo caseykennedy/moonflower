@@ -205,15 +205,15 @@ const GlobalStyle = createGlobalStyle`
   }
   h2 {
     font-size: 6rem;
-    line-height: 1.3
+    line-height: 1.2
   }
   h3 {
     font-size: 4rem;
-    line-height: 1.3
+    line-height: 1.2
   }
   h4 {
     font-size: 3rem;
-    line-height: 1.1
+    line-height: 1.2
   }
   h5 {
     font-size: 2rem;
@@ -230,7 +230,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2.4rem;
     font-family: 'Transat', sans-serif;
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 1.2;
     /* padding-bottom: 2.6em; */
   }
 
