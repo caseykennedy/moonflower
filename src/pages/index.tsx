@@ -13,6 +13,9 @@ import Intro from '../sections/Intro'
 import ButtonLink from '../components/ButtonLink'
 import Section from '../components/Section'
 
+import IconCc from '../assets/icon-card.svg'
+import IconProcess from '../assets/icon-processing.svg'
+import IconDelivery from '../assets/icon-delivery.svg'
 import data from '../sections/Intro/data/slides.json'
 
 interface Props {}
@@ -64,7 +67,7 @@ const IndexPage: React.SFC<Props> = () => (
               as='h2'
               fontSize={[6, 7, 8, 8]}
               mb={0}
-              color='spaceDust'
+              color='pulse'
               textAlign='left'
             >
               Online dispensary that thoughtfully curates &amp; delivers
@@ -80,14 +83,15 @@ const IndexPage: React.SFC<Props> = () => (
           flexWrap={['wrap', 'wrap', 'nowrap', 'nowrap']}
           alignItems='stretch'
         >
-          <Fade distance='3rem' duration={1000} cascade bottom>
-            <Card bg='white' p={4} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
+          
+            <Card p={4} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
+              <IconCard />
               <Heading
                 as='h4'
                 fontSize={6}
                 color='pulse'
                 pb={4}
-                mb={200}
+                mb={80}
                 css={{ alignSelf: 'flex-start' }}
               >
                 Must have a<br />
@@ -97,7 +101,7 @@ const IndexPage: React.SFC<Props> = () => (
                 as='p'
                 fontSize={4}
                 mb={0}
-                color='spaceDust'
+                color='pulse'
                 css={{ alignSelf: 'flex-end' }}
               >
                 Patients are responsible for having an ID and medical cannabis
@@ -105,13 +109,14 @@ const IndexPage: React.SFC<Props> = () => (
                 phone or online to make an order.
               </Text>
             </Card>
-            <Card bg='white' p={4} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
+            <Card p={4} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
+              <IconProcessing />
               <Heading
                 as='h4'
                 fontSize={6}
                 color='pulse'
                 pb={4}
-                mb={200}
+                mb={80}
                 css={{ alignSelf: 'flex-start' }}
               >
                 Verification
@@ -122,20 +127,21 @@ const IndexPage: React.SFC<Props> = () => (
                 as='p'
                 fontSize={4}
                 mb={0}
-                color='spaceDust'
+                color='pulse'
                 css={{ alignSelf: 'flex-end' }}
               >
                 Moonflower must verify each patient and upon completion can pack
                 up the order and get ready for delivery
               </Text>
             </Card>
-            <Card bg='white' p={4}>
+            <Card p={4}>
+              <IconTruck />
               <Heading
                 as='h4'
                 fontSize={6}
                 color='pulse'
                 pb={4}
-                mb={200}
+                mb={80}
                 css={{ alignSelf: 'flex-start' }}
               >
                 Online
@@ -146,7 +152,7 @@ const IndexPage: React.SFC<Props> = () => (
                 as='p'
                 fontSize={4}
                 mb={0}
-                color='spaceDust'
+                color='pulse'
                 css={{ alignSelf: 'flex-end' }}
               >
                 Delivered directly to you either at work, home, anywhere with an
@@ -155,7 +161,7 @@ const IndexPage: React.SFC<Props> = () => (
                 carry excess change or product.
               </Text>
             </Card>
-          </Fade>
+          
         </Flex>
       </Flex>
     </Section>
@@ -231,6 +237,24 @@ const IndexPage: React.SFC<Props> = () => (
   </React.Fragment>
 )
 
+const IconCard = styled(IconCc)`
+  width: 6rem;
+  margin-bottom: 2rem;
+  margin-top: 8rem;
+`
+
+const IconProcessing = styled(IconProcess)`
+  width: 6rem;
+  margin-bottom: 2rem;
+  margin-top: 8rem;
+`
+
+const IconTruck = styled(IconDelivery)`
+  width: 6rem;
+  margin-bottom: 2rem;
+  margin-top: 8rem;
+`
+
 const BoxHide = styled.span`
   display: none;
 
@@ -240,10 +264,12 @@ const BoxHide = styled.span`
 `
 
 const Card = styled(Box)`
+  background-color: #e4e8f9;
   flex-grow: 1;
-  transition: box-shadow 0.3s ease-out;
+  transition: all 0.6s ease-out;
 
   &:hover {
+    background-color: white;
     box-shadow: 0 0 10rem rgba(0, 0, 0, 0.07);
   }
 `
