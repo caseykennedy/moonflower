@@ -84,7 +84,8 @@ const theme = {
     goldBloom: `${config.colors.goldBloom}`,
     paleMoon: `${config.colors.paleMoon}`,
     superNova: `${config.colors.superNova}`,
-    spaceDust: `${config.colors.spaceDust}`
+    spaceDust: `${config.colors.spaceDust}`,
+    lunar: `${config.colors.lunar}`
   },
 
   widths: {

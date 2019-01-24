@@ -62,7 +62,7 @@ const IndexPage: React.SFC<Props> = () => (
     <Section pageWidth={1360}>
       <Flex width={1} alignItems='baseline' flexWrap='wrap' pb={0}>
         <Fade>
-          <Box width={[1, 1, 1, 2 / 3]} p={[4, 6, 8]} mb={4}>
+          <Box width={[1, 1, 1, 6 / 8]} p={[4, 6, 8]} mb={3}>
             <Heading
               as='h2'
               fontSize={[6, 7, 8, 8]}
@@ -70,21 +70,19 @@ const IndexPage: React.SFC<Props> = () => (
               color='pulse'
               textAlign='left'
             >
-              Online dispensary that thoughtfully curates &amp; delivers
-              cannabis products directly to your doorstep. We’ve tried every
-              product, checked every ingredient, and hand-selected the finest
-              quality the Golden State has to offer.
+              How does <strong>moonflower</strong> work? Doc, she's beautiful.
+              She's crazy about me. Look at this, look what she wrote me, Doc.
+              That says it all. Doc, you're my only hope.
             </Heading>
           </Box>
         </Fade>
-
-        <Flex
-          width={[1]}
-          flexWrap={['wrap', 'wrap', 'nowrap', 'nowrap']}
-          alignItems='stretch'
-        >
-          
-            <Card p={4} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
+        <Fade bottom cascade distance='2rem'>
+          <Flex
+            width={[1]}
+            flexWrap={['wrap', 'wrap', 'nowrap', 'nowrap']}
+            alignItems='stretch'
+          >
+            <Card p={[2, 3, 4, 4]} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
               <IconCard />
               <Heading
                 as='h4'
@@ -95,7 +93,7 @@ const IndexPage: React.SFC<Props> = () => (
                 css={{ alignSelf: 'flex-start' }}
               >
                 Must have a<br />
-                valid ID and medical card
+                valid ID &amp; medical card
               </Heading>
               <Text
                 as='p'
@@ -109,7 +107,7 @@ const IndexPage: React.SFC<Props> = () => (
                 phone or online to make an order.
               </Text>
             </Card>
-            <Card p={4} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
+            <Card p={[2, 3, 4, 4]} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
               <IconProcessing />
               <Heading
                 as='h4'
@@ -121,7 +119,7 @@ const IndexPage: React.SFC<Props> = () => (
               >
                 Verification
                 <br />
-                and processing
+                &amp; processing
               </Heading>
               <Text
                 as='p'
@@ -134,7 +132,7 @@ const IndexPage: React.SFC<Props> = () => (
                 up the order and get ready for delivery
               </Text>
             </Card>
-            <Card p={4}>
+            <Card p={[2, 3, 4, 4]}>
               <IconTruck />
               <Heading
                 as='h4'
@@ -144,9 +142,9 @@ const IndexPage: React.SFC<Props> = () => (
                 mb={80}
                 css={{ alignSelf: 'flex-start' }}
               >
-                Online
+                Shop
                 <br />
-                order and delivery
+                online &amp; delivery
               </Heading>
               <Text
                 as='p'
@@ -161,12 +159,12 @@ const IndexPage: React.SFC<Props> = () => (
                 carry excess change or product.
               </Text>
             </Card>
-          
-        </Flex>
+          </Flex>
+        </Fade>
       </Flex>
     </Section>
 
-    <Section bg='paleMoon' pageWidth={1360}>
+    <Section bg='lunar' pageWidth={1360}>
       <Fade distance='2rem' bottom>
         <Flex width={1} alignItems='flex-end' mb={140}>
           <Flex bg='superNova' width={'100%'} p={4} alignItems='stretch'>
@@ -200,7 +198,7 @@ const IndexPage: React.SFC<Props> = () => (
                 height: 600
               }}
             />
-            <Box width={[1, 1, 1, 1 / 2]} pr={[0, 0, 0, 8]} pt={[ 4, 4, 4, 0]}>
+            <Box width={[1, 1, 1, 1 / 2]} pr={[0, 0, 0, 8]} pt={[4, 4, 4, 0]}>
               <Carousel data={data} />
             </Box>
           </Flex>
@@ -233,7 +231,7 @@ const IndexPage: React.SFC<Props> = () => (
         </Flex>
       </Fade>
     </Section>
-    <Box bg='pulse' width={1} css={{ height: '60vh' }} />
+    <Box bg='lunar' width={1} css={{ height: '60vh' }} />
   </React.Fragment>
 )
 
@@ -264,13 +262,13 @@ const BoxHide = styled.span`
 `
 
 const Card = styled(Box)`
-  background-color: #e4e8f9;
+  background-color: ${p => p.theme.colors.lunar};
   flex-grow: 1;
-  transition: all 0.6s ease-out;
+  transition: all 0.4s ease-out;
 
   &:hover {
-    background-color: white;
-    box-shadow: 0 0 10rem rgba(0, 0, 0, 0.07);
+    background-color: ${p => p.theme.colors.superNova};
+    box-shadow: 0 0 7rem rgba(0, 0, 0, 0.06);
   }
 `
 

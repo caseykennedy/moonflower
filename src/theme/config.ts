@@ -37,7 +37,8 @@ export default {
     goldBloom: '#e9c564',
     paleMoon: '#d7ddf7',
     superNova: '#f6f6f8',
-    spaceDust: '#7c6e92'
+    spaceDust: '#7c6e92',
+    lunar: '#e9edfb'
   },
 
   maxWidth: 1440,
