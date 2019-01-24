@@ -26,7 +26,7 @@ declare module 'styled-breakpoints'
 declare module 'react-sizes'
 declare module 'react-responsive-tabs'
 declare module 'react-reveal/Fade'
-declare module 'pure-react-carousel'
+declare module 'nuka-carousel'
 
 // Image Type Declarations
 declare module '*.svg'

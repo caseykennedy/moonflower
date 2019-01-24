@@ -1,12 +1,11 @@
 import * as React from 'react'
-import { Box, Text } from 'rebass'
+import { Box, Text, Flex } from 'rebass'
 import styled, { createGlobalStyle } from 'styled-components'
-import { CarouselProvider, Slider, Slide, Dot } from 'pure-react-carousel'
-import 'pure-react-carousel/dist/react-carousel.es.css'
+import Carousel from 'nuka-carousel'
 
 import Fade from 'react-reveal/Fade'
 
-interface CarouselProps {
+interface Props {
   data: Array<{
     id: number
     title: string
@@ -14,73 +13,86 @@ interface CarouselProps {
   }>
 }
 
-export class Carousel extends React.Component<CarouselProps> {
+interface State {
+  slideIndex: number
+}
+
+export class CarouselText extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+
+    this.state = {
+      slideIndex: 0
+    }
+  }
+
   public render() {
     const { data } = this.props
     return (
-      <CarouselContainer
-        naturalSlideWidth={100}
-        naturalSlideHeight={100}
-        totalSlides={3}
-        isPlaying={true}
-        interval={9000}
-      >
-        <Slider classNameAnimation='slider-fade'>
+      <React.Fragment>
+        <Carousel
+          autoplayInterval={100}
+          heightMode='first'
+          transitionMode='fade'
+          withoutControls={true}
+          slidesToShow={1}
+          slideIndex={this.state.slideIndex}
+          swiping={true}
+          wrapAround={true}
+          speed={400}
+        >
           {data.map(slide => (
-            <Slide index={slide.id} key={slide.id}>
-              <Text
-                as='h4'
-                fontSize={5}
-                pb={300}
-                dangerouslySetInnerHTML={{ __html: slide.title }}
-              />
-              <Text
-                as='p'
-                fontSize={5}
-                mb={0}
-                dangerouslySetInnerHTML={{ __html: slide.content }}
-              />
+            <Slide key={slide.id}>
+              <Flex flexWrap='wrap' css={{ minHeight: 600 }}>
+                <Text
+                  as='h4'
+                  fontSize={5}
+                  dangerouslySetInnerHTML={{ __html: slide.title }}
+                />
+                <Text
+                  as='p'
+                  fontSize={5}
+                  mb={4}
+                  css={{ alignSelf: 'flex-end' }}
+                  dangerouslySetInnerHTML={{ __html: slide.content }}
+                />
+              </Flex>
             </Slide>
           ))}
-        </Slider>
+        </Carousel>
         {data.map(slide => (
-          <DotDot slide={slide.id} key={slide.id} />
+          <DotDot
+            onClick={() => this.setState({ slideIndex: slide.id})}
+            key={slide.id}
+          />
         ))}
         <GlobalStyle />
-      </CarouselContainer>
+      </React.Fragment>
     )
   }
 }
 
-const CarouselContainer = styled(CarouselProvider)`
-  display: block;
-  height: 100%;
-  width: 100%;
+const Slide = styled.div`
+  min-height: 60rem;
 `
 
-const DotDot = styled(Dot)`
+const DotDot = styled.button`
   border-bottom: 1px solid ${props => props.theme.colors.gray};
+  cursor: pointer;
   margin-right: 0.5rem;
-  padding: 0.5rem 0;
+  padding: 3rem 0 0;
   width: 6rem;
+
+  &:hover {
+    border-color: ${props => props.theme.colors.purpleRain};
+  }
 `
 
 const GlobalStyle = createGlobalStyle`
-  .carousel__dot--selected {
-    border-color: #404471;
-  }
-
-  .carousel__slide--visible {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 1s linear;
-  }
-
-  .carousel__slide--hidden {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.7s 0.7s, opacity 0.7s linear;
+  .slider-control-centerright,
+  .slider-control-centerleft {
+    display: none;
   }
 `
 
-export default Carousel
+export default CarouselText

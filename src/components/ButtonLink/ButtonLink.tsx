@@ -62,8 +62,8 @@ const variants = {
 
 const looks = {
   primary: css`
-    background-color: ${props => props.theme.colors.spaceDust};
-    border: 2px solid ${p => p.theme.colors.spaceDust};
+    background-color: ${props => props.theme.colors.pulse};
+    border: 2px solid ${p => p.theme.colors.pulse};
     color: ${props => props.theme.colors.superNova};
 
     &:hover {

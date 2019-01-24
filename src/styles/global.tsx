@@ -183,7 +183,7 @@ const GlobalStyle = createGlobalStyle`
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
     line-height: 1.1;
-    color: ${config.colors.darkSky};
+    color: ${config.colors.pulse};
   }
 
   strong {
