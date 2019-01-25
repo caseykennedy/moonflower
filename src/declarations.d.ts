@@ -27,6 +27,7 @@ declare module 'react-sizes'
 declare module 'react-responsive-tabs'
 declare module 'react-reveal/Fade'
 declare module 'nuka-carousel'
+declare module 'redux-burger-menu'
 
 // Image Type Declarations
 declare module '*.svg'

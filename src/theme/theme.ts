@@ -1,4 +1,5 @@
 import config from './config'
+import { lighten } from 'polished'
 
 const theme = {
   // Rebass theme options
@@ -24,6 +25,17 @@ const theme = {
 
   Heading: {
     fontWeight: 'normal'
+  },
+
+  Link: {
+    color: config.colors.pulse,
+    cursor: 'pointer',
+    transition: 'all 0.3s eas-in',
+
+    '&:hover': {
+      color: config.colors.goldBloom,
+      borderBottom: 'none'
+    }
   },
 
   fontSizes: [
@@ -70,26 +82,26 @@ const theme = {
   ],
 
   colors: {
-    black: `${config.colors.black}`,
-    white: `${config.colors.white}`,
-    gray: `${config.colors.gray}`,
-    lightGrey: `${config.colors.lightGray}`,
-    darkGrey: `${config.colors.darkGray}`,
+    black: config.colors.black,
+    white: config.colors.white,
+    gray: config.colors.gray,
+    lightGrey: config.colors.lightGray,
+    darkGrey: config.colors.darkGray,
 
-    darkSky: `${config.colors.darkSky}`,
-    purpleRain: `${config.colors.purpleRain}`,
-    pulse: `${config.colors.pulse}`,
-    ogPurp: `${config.colors.ogPurp}`,
-    lavendar: `${config.colors.lavendar}`,
-    goldBloom: `${config.colors.goldBloom}`,
-    paleMoon: `${config.colors.paleMoon}`,
-    superNova: `${config.colors.superNova}`,
-    spaceDust: `${config.colors.spaceDust}`,
-    lunar: `${config.colors.lunar}`
+    darkSky: config.colors.darkSky,
+    purpleRain: config.colors.purpleRain,
+    pulse: config.colors.pulse,
+    ogPurp: config.colors.ogPurp,
+    lavendar: config.colors.lavendar,
+    goldBloom: config.colors.goldBloom,
+    paleMoon: config.colors.paleMoon,
+    superNova: config.colors.superNova,
+    spaceDust: config.colors.spaceDust,
+    lunar: config.colors.lunar
   },
 
   widths: {
-    max: `${config.maxWidth}`
+    max: config.maxWidth
   }
 }
 

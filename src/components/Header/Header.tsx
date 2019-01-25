@@ -8,8 +8,10 @@ import { up, down, between, only } from 'styled-breakpoints'
 import Headroom from 'react-headroom'
 import { lighten } from 'polished'
 
-import LogoType from './assets/logo.svg'
-import LogoSymbol from './assets/logo-symbol.svg'
+import LogoSymbol from '../LogoSymbol'
+
+import LogoType from '../../assets/logo.svg'
+import IconMenu from '../../assets/menu.svg'
 
 interface HeaderProps {
   isMobile: boolean
@@ -20,7 +22,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
   <Container as='header' width={1} px={[2, 3, 4, 4]}>
     <Flex alignItems='center' py={[2, 2, 3, 4]}>
       <Box width={1 / 2}>
-        <Box>{isMobile ? <Symbol /> : <Logo />}</Box>
+        <Box>{isMobile ? <LogoSymbol /> : <Logo />}</Box>
       </Box>
       <Flex
         alignItems='baseline'
@@ -28,8 +30,11 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
         width={1 / 2}
         justifyContent='flex-end'
       >
-        <NavLink>Info + Contact</NavLink>
+        <NavLink>info + contact</NavLink>
         <Button>Place An Order</Button>
+        {/* <BurgerBox ml={[ 2, 3, 4, 4 ]}>
+          <IconMenu />
+        </BurgerBox> */}
       </Flex>
     </Flex>
   </Container>
@@ -47,11 +52,9 @@ const Logo = styled(LogoType)`
   width: 180px;
 `
 
-const Symbol = styled(LogoSymbol)`
-  width: 43px;
-  -webkit-animation: spin 7s linear infinite;
-  -moz-animation: spin 7s linear infinite;
-  animation: spin 7s linear infinite;
+const BurgerBox = styled(Flex)`
+  align-self: center;
+  height: 100%;
 `
 
 const Button = styled.a`
@@ -59,7 +62,8 @@ const Button = styled.a`
   border-radius: 100px;
   color: ${props => props.theme.colors.pulse};
   cursor: pointer;
-  font-size: 1.2rem;
+  display: none;
+  font-size: 1.4rem;
   font-weight: 600;
   padding: 1.6rem 2.6rem 1.4rem;
   text-transform: uppercase;
@@ -68,7 +72,10 @@ const Button = styled.a`
   white-space: nowrap;
 
   &:hover {
-    background-color: ${props => props.theme.colors.pulse};
+    background-color: ${p =>
+        p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
+    border-color: ${p =>
+        p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
     color: ${props => props.theme.colors.superNova};
   }
 
@@ -78,24 +85,34 @@ const Button = styled.a`
     border-color: ${p =>
       p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
   }
+
+  ${up('0')} {
+    display: inherit;
+  }
 `
 
 const NavLink = styled(Link)`
   color: ${props => props.theme.colors.pulse};
   cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
-  margin-right: 1.4rem;
-  text-transform: uppercase;
+  display: none;
+  font-size: 1.4rem;
+  margin-right: 2rem;
+  /* text-transform: uppercase; */
   white-space: nowrap;
 
   &:hover {
     color: ${p => p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
   }
 
+  ${between('0','1')} {
+    margin-right: 2rem;
+  }
   ${up('0')} {
-    font-size: 1.4rem;
+    display: inherit;
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+  ${up('1')} {
     margin-right: 3rem;
   }
 `

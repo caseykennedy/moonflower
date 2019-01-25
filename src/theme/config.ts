@@ -11,6 +11,9 @@ export default {
   author: 'Casey Kennedy',
   siteLogo: '/assets/logo.png',
 
+  // Animations
+  spinRate: '20s',
+
   breakpoints: {
     xs: 320,
     sm: 464,

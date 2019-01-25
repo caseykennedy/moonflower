@@ -27,7 +27,7 @@ const sizes = {
     padding: 1.6rem 2rem 1.4rem;
   `,
   default: css`
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 1.6rem 2.6rem 1.4rem;
 
     ${between('0', '1')} {

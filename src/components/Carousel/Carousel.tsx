@@ -42,7 +42,7 @@ export class CarouselText extends React.Component<Props, State> {
         >
           {data.map(slide => (
             <Slide key={slide.id}>
-              <Flex flexWrap='wrap' css={{ minHeight: 600 }}>
+              <Flex flexWrap='wrap' css={{ minHeight: 500 }}>
                 <Text
                   as='h4'
                   fontSize={5}

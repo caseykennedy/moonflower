@@ -1,5 +1,6 @@
 import config from '../theme/config'
 import { createGlobalStyle } from 'styled-components'
+import { lighten } from 'polished'
 
 // Transat Light
 import transatTextLightEot from './fonts/TransatTextLight.eot'
@@ -234,7 +235,7 @@ const GlobalStyle = createGlobalStyle`
     /* padding-bottom: 2.6em; */
   }
 
-  a { transition: all 0.2s ease; }
+  a { color: ${config.colors.pulse}; transition: all 0.2s ease; }
   
 `
 export default GlobalStyle
