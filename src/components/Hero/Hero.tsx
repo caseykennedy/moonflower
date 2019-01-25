@@ -46,13 +46,13 @@ const Container = styled(Flex)`
   flex-wrap: wrap;
 
   ${between('0', '1')} {
-    min-height: 70vh;
-  }
-  ${between('1', '2')} {
     min-height: 80vh;
   }
+  ${between('1', '2')} {
+    min-height: 86vh;
+  }
   ${up('2')} {
-    min-height: 90vh;
+    min-height: 80vh;
   }
 `
 

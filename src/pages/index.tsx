@@ -85,6 +85,18 @@ const IndexPage: React.SFC<Props> = () => (
       </Box>
     </Section>
 
+    {/* <Section
+      bg='darkSky'
+      pageWidth={1360}
+      bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548102305/bg-square.jpg'
+    >
+      <Box pt={[0, 0, 160, 200]}>
+        <Fade distance='2rem' bottom>
+          <Intro />
+        </Fade>
+      </Box>
+    </Section> */}
+
     <HowItWorks />
 
     <Section bg='lunar' pageWidth={1360}>
@@ -116,12 +128,7 @@ const IndexPage: React.SFC<Props> = () => (
         </Box>
       </Fade>
       <Fade>
-        <Flex
-          width={1}
-          alignItems='baseline'
-          flexWrap='wrap'
-          px={[4, 6, 8]}
-        >
+        <Flex width={1} alignItems='baseline' flexWrap='wrap' px={[4, 6, 8]}>
           <Flex
             width={[1, 1 / 2, 1 / 2, 1 / 2]}
             alignItems='baseline'
@@ -169,12 +176,7 @@ const IndexPage: React.SFC<Props> = () => (
         </Flex>
       </Fade>
       <Fade>
-        <Flex
-          width={1}
-          alignItems='baseline'
-          flexWrap='wrap'
-          px={[4, 6, 8]}
-        >
+        <Flex width={1} alignItems='baseline' flexWrap='wrap' px={[4, 6, 8]}>
           <Flex
             width={[1, 1 / 2, 1 / 2, 1 / 2]}
             alignItems='baseline'
