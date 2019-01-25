@@ -47,7 +47,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
     <Row width={1} mb={[6, 6, 140, 140]} justifyContent='center'>
       <Text
         width={[1, 1, 1 / 2, 1 / 2]}
-        fontSize={9}
+        fontSize={[ 6, 6, 8, 9 ]}
         as='div'
         textAlign='center'
       >

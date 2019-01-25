@@ -120,14 +120,14 @@ const IndexPage: React.SFC<Props> = () => (
           width={1}
           alignItems='baseline'
           flexWrap='wrap'
-          pb={160}
           px={[4, 6, 8]}
         >
           <Flex
             width={[1, 1 / 2, 1 / 2, 1 / 2]}
             alignItems='baseline'
             flexWrap='wrap'
-            pr={4}
+            pr={[0, 0, 3, 4]}
+            pb={[8, 8, 160, 160]}
           >
             <Box width={[1, 1, 1 / 2, 1 / 3]}>
               <Heading as='h2' fontSize={4} color='lavendar'>
@@ -148,7 +148,8 @@ const IndexPage: React.SFC<Props> = () => (
             width={[1, 1 / 2, 1 / 2, 1 / 2]}
             alignItems='baseline'
             flexWrap='wrap'
-            pl={4}
+            pl={[0, 0, 3, 4]}
+            pb={[8, 8, 160, 160]}
           >
             <Box width={[1, 1, 1 / 2, 1 / 3]}>
               <Heading as='h2' fontSize={4} color='lavendar'>
@@ -172,14 +173,14 @@ const IndexPage: React.SFC<Props> = () => (
           width={1}
           alignItems='baseline'
           flexWrap='wrap'
-          pb={160}
           px={[4, 6, 8]}
         >
           <Flex
             width={[1, 1 / 2, 1 / 2, 1 / 2]}
             alignItems='baseline'
             flexWrap='wrap'
-            pr={4}
+            pr={[0, 0, 3, 4]}
+            pb={[8, 8, 160, 160]}
           >
             <Box width={[1, 1, 1 / 2, 1 / 3]}>
               <Heading as='h2' fontSize={4} color='lavendar'>
@@ -200,7 +201,8 @@ const IndexPage: React.SFC<Props> = () => (
             width={[1, 1 / 2, 1 / 2, 1 / 2]}
             alignItems='baseline'
             flexWrap='wrap'
-            pl={4}
+            pl={[0, 0, 3, 4]}
+            pb={[8, 8, 160, 160]}
           >
             <Box width={[1, 1, 1 / 2, 1 / 3]}>
               <Heading as='h2' fontSize={4} color='lavendar'>
