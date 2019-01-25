@@ -30,7 +30,11 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
         width={1 / 2}
         justifyContent='flex-end'
       >
-        <NavLink>info + contact</NavLink>
+        
+        <NavLink>delivery</NavLink>
+        <NavLink>faq</NavLink>
+        <NavLink>contact</NavLink>
+
         <Button>Place An Order</Button>
         {/* <BurgerBox ml={[ 2, 3, 4, 4 ]}>
           <IconMenu />

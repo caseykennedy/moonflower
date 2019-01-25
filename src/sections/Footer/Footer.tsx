@@ -32,11 +32,12 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
         as='div'
         textAlign='center'
       >
-        <Box width={1} mb={4}>
-          <LogoSymbol width={56} />
+        <Box width={1} mb={[8, 8, 160, 160]}>
+          <LogoSymbol width={53} />
         </Box>
-        Feel free to <Link>place an order</Link>. If you need a medical card we
-        can help you <Link>meet a doctor</Link>.
+        Feel free to <LinkHighlight>place an order</LinkHighlight>. If you need
+        a medical card we can help you{' '}
+        <LinkHighlight>meet a doctor</LinkHighlight>.
       </Text>
     </Row>
 
@@ -47,7 +48,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
         as='div'
         textAlign='center'
       >
-        +1 707 313 1337
+        +1 (707) 313 1337
       </Text>
     </Row>
 
@@ -81,7 +82,8 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
           color='pulse'
           as='span'
         >
-          <Link>faq</Link>&nbsp;&nbsp;/&nbsp;&nbsp;<Link>legal</Link>&nbsp;&nbsp;/&nbsp;&nbsp;<Link>contact</Link>
+          <Link>faq</Link>&nbsp;&nbsp;/&nbsp;&nbsp;<Link>legal</Link>
+          &nbsp;&nbsp;/&nbsp;&nbsp;<Link>contact</Link>
         </Flex>
         <Flex
           width={[1, 1, 1 / 3, 1 / 3]}
@@ -116,6 +118,10 @@ const IconBox = styled(Box)`
       fill: ${p => p.theme.colors.goldBloom};
     }
   }
+`
+
+const LinkHighlight = styled(Link)`
+  text-decoration: underline;
 `
 
 const Row = styled(Flex)`
