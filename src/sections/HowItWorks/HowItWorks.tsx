@@ -18,109 +18,122 @@ interface IntroProps {
 
 const Intro: React.SFC<IntroProps> = ({ children }) => (
   <Section pageWidth={1360}>
-      <Flex width={1} alignItems='baseline' flexWrap='wrap' pb={0}>
-        <Fade>
-          <Box width={[1, 1, 1, 6 / 8]} p={[4, 6, 8]} mb={3}>
+    <Flex width={1} alignItems='baseline' flexWrap='wrap' pb={0}>
+      <Fade>
+        <Box width={[1, 1, 1, 6 / 8]} px={[4, 6, 8]} py={[6, 10, 200]} mb={3}>
+          <Heading
+            as='h2'
+            fontSize={[6, 7, 8, 8]}
+            pb={0}
+            color='pulse'
+          >
+            How does <strong>moonflower</strong> work? Doc, she's beautiful.
+            She's crazy about me. Look at this, look what she wrote me, Doc.
+            That says it all. Doc, you're my only hope.
+          </Heading>
+        </Box>
+      </Fade>
+      <Fade bottom cascade distance='2rem'>
+        <Box width={1} mb={0}>
+          <Heading
+            as='h4'
+            color='superNova'
+            px={1}
+            pt={1}
+            pb={'0.8rem'}
+            bg='pulse'
+            fontSize={2}
+            css={{ fontWeight: 500 }}
+          >
+            How it works
+          </Heading>
+        </Box>
+        <Flex
+          width={[1]}
+          flexWrap={['wrap', 'wrap', 'nowrap', 'nowrap']}
+          alignItems='stretch'
+        >
+          <Card p={[2, 3, 4, 4]} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
+            <CardIcon />
             <Heading
-              as='h2'
-              fontSize={[6, 7, 8, 8]}
+              as='h4'
+              fontSize={6}
+              color='pulse'
+              pb={4}
+              mb={80}
+              css={{ alignSelf: 'flex-start' }}
+            >
+              Must have a<br />
+              valid ID &amp; medical card
+            </Heading>
+            <Text
+              as='p'
+              fontSize={4}
               mb={0}
               color='pulse'
-              textAlign='left'
+              css={{ alignSelf: 'flex-end' }}
             >
-              How does <strong>moonflower</strong> work? Doc, she's beautiful.
-              She's crazy about me. Look at this, look what she wrote me, Doc.
-              That says it all. Doc, you're my only hope.
+              Patients are responsible for having an ID and medical cannabis
+              card from a doctor. The patients then can contact Moonflower via
+              phone or online to make an order.
+            </Text>
+          </Card>
+          <Card p={[2, 3, 4, 4]} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
+            <IconProcessing />
+            <Heading
+              as='h4'
+              fontSize={6}
+              color='pulse'
+              pb={4}
+              mb={80}
+              css={{ alignSelf: 'flex-start' }}
+            >
+              Verification
+              <br />
+              &amp; processing
             </Heading>
-          </Box>
-        </Fade>
-        <Fade bottom cascade distance='2rem'>
-          <Flex
-            width={[1]}
-            flexWrap={['wrap', 'wrap', 'nowrap', 'nowrap']}
-            alignItems='stretch'
-          >
-            <Card p={[2, 3, 4, 4]} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
-              <IconCard />
-              <Heading
-                as='h4'
-                fontSize={6}
-                color='pulse'
-                pb={4}
-                mb={80}
-                css={{ alignSelf: 'flex-start' }}
-              >
-                Must have a<br />
-                valid ID &amp; medical card
-              </Heading>
-              <Text
-                as='p'
-                fontSize={4}
-                mb={0}
-                color='pulse'
-                css={{ alignSelf: 'flex-end' }}
-              >
-                Patients are responsible for having an ID and medical cannabis
-                card from a doctor. The patients then can contact Moonflower via
-                phone or online to make an order.
-              </Text>
-            </Card>
-            <Card p={[2, 3, 4, 4]} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
-              <IconProcessing />
-              <Heading
-                as='h4'
-                fontSize={6}
-                color='pulse'
-                pb={4}
-                mb={80}
-                css={{ alignSelf: 'flex-start' }}
-              >
-                Verification
-                <br />
-                &amp; processing
-              </Heading>
-              <Text
-                as='p'
-                fontSize={4}
-                mb={0}
-                color='pulse'
-                css={{ alignSelf: 'flex-end' }}
-              >
-                Moonflower must verify each patient and upon completion can pack
-                up the order and get ready for delivery
-              </Text>
-            </Card>
-            <Card p={[2, 3, 4, 4]}>
-              <IconTruck />
-              <Heading
-                as='h4'
-                fontSize={6}
-                color='pulse'
-                pb={4}
-                mb={80}
-                css={{ alignSelf: 'flex-start' }}
-              >
-                Shop
-                <br />
-                online &amp; delivery
-              </Heading>
-              <Text
-                as='p'
-                fontSize={4}
-                mb={0}
-                color='pulse'
-                css={{ alignSelf: 'flex-end' }}
-              >
-                Delivered directly to you either at work, home, anywhere with an
-                address really. Driver’s will check ID on on arrival for first
-                time orders. Payment occurs at the delivery. Drivers do not
-                carry excess change or product.
-              </Text>
-            </Card>
-          </Flex>
-        </Fade>
-      </Flex>
-    </Section>
+            <Text
+              as='p'
+              fontSize={4}
+              mb={0}
+              color='pulse'
+              css={{ alignSelf: 'flex-end' }}
+            >
+              Moonflower must verify each patient and upon completion can pack
+              up the order and get ready for delivery
+            </Text>
+          </Card>
+          <Card p={[2, 3, 4, 4]}>
+            <IconTruck />
+            <Heading
+              as='h4'
+              fontSize={6}
+              color='pulse'
+              pb={4}
+              mb={80}
+              css={{ alignSelf: 'flex-start' }}
+            >
+              Shop
+              <br />
+              online &amp; delivery
+            </Heading>
+            <Text
+              as='p'
+              fontSize={4}
+              mb={0}
+              color='pulse'
+              css={{ alignSelf: 'flex-end' }}
+            >
+              Delivered directly to you either at work, home, anywhere with an
+              address really. Driver’s will check ID on on arrival for first
+              time orders. Payment occurs at the delivery. Drivers do not carry
+              excess change or product.
+            </Text>
+          </Card>
+        </Flex>
+      </Fade>
+    </Flex>
+  </Section>
 )
 
 Intro.defaultProps = {}
@@ -136,7 +149,7 @@ const Container = styled(Flex)`
   }
 `
 
-const IconCard = styled(IconCc)`
+const CardIcon = styled(IconCc)`
   width: 6rem;
   margin-bottom: 2rem;
   margin-top: 8rem;

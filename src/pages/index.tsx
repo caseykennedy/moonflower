@@ -11,6 +11,7 @@ import Fade from 'react-reveal/Fade'
 import Hero from '../components/Hero'
 import ButtonLink from '../components/ButtonLink'
 import Section from '../components/Section'
+import LogoSymbol from '../components/LogoSymbol'
 
 import Intro from '../sections/Intro'
 import HowItWorks from '../sections/HowItWorks'
@@ -20,6 +21,7 @@ import IconCc from '../assets/icon-card.svg'
 import IconProcess from '../assets/icon-processing.svg'
 import IconDelivery from '../assets/icon-delivery.svg'
 import data from '../sections/Intro/data/slides.json'
+import theme from '../theme/theme'
 
 interface Props {}
 
@@ -34,7 +36,7 @@ const IndexPage: React.SFC<Props> = () => (
           color='pulse'
           mt={8}
         >
-          Mindfully curated medical cannabis
+          Curated Cali cannabis, swiftly delivered
         </Heading>
         <Box mt={[4]}>
           <ButtonLink
@@ -52,12 +54,33 @@ const IndexPage: React.SFC<Props> = () => (
 
     <Section
       bg='darkSky'
-      pageWidth={1360}
+      pageWidth={'100%'}
       bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548102305/bg-square.jpg'
     >
-      <Box pt={[0, 0, 160, 200]}>
+      <Box mt={[160, 200, 200, 300]}>
         <Fade distance='2rem' bottom>
-          <Intro />
+          <Flex width={1} justifyContent='center'>
+            <Box
+              width={[1, 2 / 3, 1 / 2, 1 / 2]}
+              bg='superNova'
+              p={[2, 4, 6, 6]}
+            >
+              <Box width={1} mb={[2, 4, 6, 6]} css={{ textAlign: 'center' }}>
+                <LogoSymbol width={53} fill={theme.colors.pulse} />
+              </Box>
+              <Heading
+                as='h2'
+                fontSize={[4, 5, 6, 6]}
+                color='pulse'
+                textAlign='center'
+                pb={0}
+              >
+                moonflower's purpose is to encourage others to think differently
+                about cannabis and break the age old stigma that it was once
+                plagued with.
+              </Heading>
+            </Box>
+          </Flex>
         </Fade>
       </Box>
     </Section>
@@ -66,7 +89,7 @@ const IndexPage: React.SFC<Props> = () => (
 
     <Section bg='lunar' pageWidth={1360}>
       <Fade distance='2rem' bottom>
-        <Flex width={1} alignItems='flex-end' mb={140}>
+        <Flex width={1} alignItems='flex-end'>
           <Flex bg='superNova' width={'100%'} p={4} alignItems='stretch'>
             <Heading as='h2' fontSize={6} mb={1600} color='paleMoon'>
               eCommerce iFrame
@@ -76,9 +99,130 @@ const IndexPage: React.SFC<Props> = () => (
       </Fade>
     </Section>
 
+    <Section pageWidth={1360} bg='darkSky'>
+      <Fade>
+        <Box width={[1, 1, 1, 6 / 8]} px={[4, 6, 8]} py={[6, 10, 200]} mb={3}>
+          <Heading
+            as='h2'
+            fontSize={[6, 7, 8, 8]}
+            mb={0}
+            color='paleMoon'
+            textAlign={['center', 'center', 'left', 'left']}
+            css={{ fontWeight: '300' }}
+          >
+            Do you need a Doctor's recommendation for a medical cannabis card?
+            Take a look below at our list of highly recommended Doctors.
+          </Heading>
+        </Box>
+      </Fade>
+      <Fade>
+        <Flex
+          width={1}
+          alignItems='baseline'
+          flexWrap='wrap'
+          pb={160}
+          px={[4, 6, 8]}
+        >
+          <Flex
+            width={[1, 1 / 2, 1 / 2, 1 / 2]}
+            alignItems='baseline'
+            flexWrap='wrap'
+            pr={4}
+          >
+            <Box width={[1, 1, 1 / 2, 1 / 3]}>
+              <Heading as='h2' fontSize={4} color='lavendar'>
+                Dr. Frank MD
+              </Heading>
+            </Box>
+            <Box width={[1, 1, 1 / 2, 2 / 3]}>
+              <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
+                Frank Lucido MD has provided Primary Care in the same beautiful
+                location for 35 years, including Nurse Practitioner Maria
+                Mangini PhD, FNP for almost 20 years. We are known as the most
+                legitimate cannabis doctor’s office since Prop. 215 passed in
+                1996.
+              </Heading>
+            </Box>
+          </Flex>
+          <Flex
+            width={[1, 1 / 2, 1 / 2, 1 / 2]}
+            alignItems='baseline'
+            flexWrap='wrap'
+            pl={4}
+          >
+            <Box width={[1, 1, 1 / 2, 1 / 3]}>
+              <Heading as='h2' fontSize={4} color='lavendar'>
+                HelloMD
+              </Heading>
+            </Box>
+            <Box width={[1, 1, 1 / 2, 2 / 3]}>
+              <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
+                Frank Lucido MD has provided Primary Care in the same beautiful
+                location for 35 years, including Nurse Practitioner Maria
+                Mangini PhD, FNP for almost 20 years. We are known as the most
+                legitimate cannabis doctor’s office since Prop. 215 passed in
+                1996.
+              </Heading>
+            </Box>
+          </Flex>
+        </Flex>
+      </Fade>
+      <Fade>
+        <Flex
+          width={1}
+          alignItems='baseline'
+          flexWrap='wrap'
+          pb={160}
+          px={[4, 6, 8]}
+        >
+          <Flex
+            width={[1, 1 / 2, 1 / 2, 1 / 2]}
+            alignItems='baseline'
+            flexWrap='wrap'
+            pr={4}
+          >
+            <Box width={[1, 1, 1 / 2, 1 / 3]}>
+              <Heading as='h2' fontSize={4} color='lavendar'>
+                Dr. Frank MD
+              </Heading>
+            </Box>
+            <Box width={[1, 1, 1 / 2, 2 / 3]}>
+              <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
+                Frank Lucido MD has provided Primary Care in the same beautiful
+                location for 35 years, including Nurse Practitioner Maria
+                Mangini PhD, FNP for almost 20 years. We are known as the most
+                legitimate cannabis doctor’s office since Prop. 215 passed in
+                1996.
+              </Heading>
+            </Box>
+          </Flex>
+          <Flex
+            width={[1, 1 / 2, 1 / 2, 1 / 2]}
+            alignItems='baseline'
+            flexWrap='wrap'
+            pl={4}
+          >
+            <Box width={[1, 1, 1 / 2, 1 / 3]}>
+              <Heading as='h2' fontSize={4} color='lavendar'>
+                HelloMD
+              </Heading>
+            </Box>
+            <Box width={[1, 1, 1 / 2, 2 / 3]}>
+              <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
+                Frank Lucido MD has provided Primary Care in the same beautiful
+                location for 35 years, including Nurse Practitioner Maria
+                Mangini PhD, FNP for almost 20 years. We are known as the most
+                legitimate cannabis doctor’s office since Prop. 215 passed in
+                1996.
+              </Heading>
+            </Box>
+          </Flex>
+        </Flex>
+      </Fade>
+    </Section>
     <Section bg='darkSky' pageWidth={1360}>
       <Fade distance='2rem' bottom>
-        <Flex width={1} alignItems='flex-end' mt={[-150, -160, -170, -180]}>
+        <Flex width={1} alignItems='flex-end'>
           <Flex
             bg='superNova'
             flexWrap='wrap'
@@ -102,33 +246,6 @@ const IndexPage: React.SFC<Props> = () => (
               <Carousel data={data} />
             </Box>
           </Flex>
-        </Flex>
-      </Fade>
-    </Section>
-
-    <Section pageWidth={1360} bg='darkSky'>
-      <Fade>
-        <Flex
-          width={1}
-          alignItems='baseline'
-          flexWrap='wrap'
-          pb={420}
-          pl={[0, 0, 4]}
-        >
-          <Box width={[1, 1, 1 / 2, 1 / 2]}>
-            <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
-              <strong>how it works</strong>
-            </Heading>
-          </Box>
-          <Box width={[1, 1, 1 / 2, 1 / 2]} pl={[0, 0, 8]}>
-            <Heading as='h2' fontSize={6} mb={0} color='paleMoon'>
-              <strong>moonflower</strong> is an online dispensary that
-              thoughtfully curates &amp; delivers cannabis products directly to
-              your doorstep. We’ve tried every product, checked every
-              ingredient, and hand-selected the finest quality the Golden State
-              has to offer.
-            </Heading>
-          </Box>
         </Flex>
       </Fade>
     </Section>

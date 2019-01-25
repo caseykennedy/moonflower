@@ -7,17 +7,22 @@ import Logo from '../../assets/logo-symbol.svg'
 
 interface Props {
   width?: number
+  fill?: string
 }
 
-const LogoSymbol: React.SFC<Props> = ({width}) => <Symbol width={width} />
+const LogoSymbol: React.SFC<Props> = ({ width, fill }) => (
+  <Symbol width={width} fill={fill} />
+)
 
 LogoSymbol.defaultProps = {
-  width: 43
+  width: 43,
+  fill: theme.colors.pulse
 }
 
 const Symbol = styled(Logo)`
-  width: ${(p: Props) => p.width}px;
   animation: spin ${config.spinRate} linear infinite;
+  fill: ${(p: Props) => p.fill};
+  width: ${(p: Props) => p.width}px;
 `
 
 export default LogoSymbol

@@ -28,18 +28,17 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
     <Row width={1} mb={[8, 8, 160, 160]} justifyContent='center'>
       <Text
         width={[1, 8 / 10, 1 / 2, 1 / 2]}
-        fontSize={7}
-        as='div'
+        fontSize={5}
+        lineHeight='1.1'
+        as='span'
         textAlign='center'
       >
-        <Fade bottom cascade distance='2rem' duration={1600}>
+        <Fade duration={1600}>
           <Box width={1} mb={[8, 8, 160, 160]}>
             <LogoSymbol width={53} />
           </Box>
-          <Box width={1} >
-            Feel free to <LinkHighlight>place an order</LinkHighlight>. If you
-            need a medical card we can help you{' '}
-            <LinkHighlight>meet a doctor</LinkHighlight>.
+          <Box width={1} color='pulse'>
+            <strong>moonflower's</strong> purpose is to encourage others to think differently about cannabis and break the age old stigma that it was once plagued with.
           </Box>
         </Fade>
       </Text>
@@ -48,7 +47,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
     <Row width={1} mb={[6, 6, 140, 140]} justifyContent='center'>
       <Text
         width={[1, 1, 1 / 2, 1 / 2]}
-        fontSize={7}
+        fontSize={9}
         as='div'
         textAlign='center'
       >
@@ -128,6 +127,10 @@ const IconBox = styled(Box)`
 
 const LinkHighlight = styled(Link)`
   text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 `
 
 const Row = styled(Flex)`

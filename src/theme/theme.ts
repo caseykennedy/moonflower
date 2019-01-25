@@ -24,7 +24,7 @@ const theme = {
   },
 
   Heading: {
-    fontWeight: 'normal'
+    fontWeight: '400'
   },
 
   Link: {

@@ -221,10 +221,11 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.1
   }
   h6 {
-    font-size: 0.4rem;
+    font-size: 1.2rem;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
-    line-height: 1.1
+    line-height: 1.1;
+    font-weight: 600;
   }
 
   p {
