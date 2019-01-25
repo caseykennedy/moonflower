@@ -48,11 +48,13 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
             How it works
           </Heading>
         </Box>
+        </Fade>
         <Flex
           width={[1]}
           flexWrap={['wrap', 'wrap', 'nowrap', 'nowrap']}
           alignItems='stretch'
         >
+        <Fade bottom cascade distance='2rem'>
           <Card p={[2, 3, 4, 4]} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
             <CardIcon />
             <Heading
@@ -130,8 +132,8 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
               excess change or product.
             </Text>
           </Card>
+          </Fade>
         </Flex>
-      </Fade>
     </Flex>
   </Section>
 )
