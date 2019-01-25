@@ -20,7 +20,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
     width={1}
     bg='lunar'
     pt={[8, 8, 160, 160]}
-    pb={[8, 8, 4, 4]}
+    pb={[8, 8, 3, 3]}
     px={4}
     flexWrap='wrap'
     as='section'
@@ -90,7 +90,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
           color='pulse'
           as='span'
         >
-          © moonflower delivery
+          © moonflower
         </Flex>
       </Flex>
     </Row>
@@ -101,6 +101,10 @@ Intro.defaultProps = {}
 
 const IconBox = styled(Box)`
   margin-right: 1.4rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   & svg {
     cursor: pointer;
