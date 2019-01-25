@@ -36,7 +36,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
           <Box width={1} mb={[8, 8, 160, 160]}>
             <LogoSymbol width={53} />
           </Box>
-          <Box width={1} mb={[8, 8, 160, 160]}>
+          <Box width={1} >
             Feel free to <LinkHighlight>place an order</LinkHighlight>. If you
             need a medical card we can help you{' '}
             <LinkHighlight>meet a doctor</LinkHighlight>.
