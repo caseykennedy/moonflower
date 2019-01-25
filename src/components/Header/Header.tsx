@@ -22,7 +22,8 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
   <Container as='header' width={1} px={[2, 3, 4, 4]}>
     <Flex alignItems='center' py={[2, 2, 3, 4]}>
       <Box width={1 / 2}>
-        <Box>{isMobile ? <LogoSymbol /> : <Logo />}</Box>
+        {/* <Box>{isMobile ? <LogoSymbol /> : <Logo />}</Box> */}
+        <Logo />
       </Box>
       <Flex
         alignItems='baseline'
