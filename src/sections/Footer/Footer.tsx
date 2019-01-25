@@ -32,12 +32,16 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
         as='div'
         textAlign='center'
       >
-        <Box width={1} mb={[8, 8, 160, 160]}>
-          <LogoSymbol width={53} />
-        </Box>
-        Feel free to <LinkHighlight>place an order</LinkHighlight>. If you need
-        a medical card we can help you{' '}
-        <LinkHighlight>meet a doctor</LinkHighlight>.
+        <Fade bottom cascade distance='2rem' duration={1600}>
+          <Box width={1} mb={[8, 8, 160, 160]}>
+            <LogoSymbol width={53} />
+          </Box>
+          <Box width={1} mb={[8, 8, 160, 160]}>
+            Feel free to <LinkHighlight>place an order</LinkHighlight>. If you
+            need a medical card we can help you{' '}
+            <LinkHighlight>meet a doctor</LinkHighlight>.
+          </Box>
+        </Fade>
       </Text>
     </Row>
 
@@ -48,7 +52,9 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
         as='div'
         textAlign='center'
       >
-        +1 (707) 313 1337
+        <Fade bottom cascade distance='2rem' duration={1600}>
+          +1 (707) 313 1337
+        </Fade>
       </Text>
     </Row>
 
