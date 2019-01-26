@@ -20,7 +20,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
   <Section pageWidth={1360}>
     <Flex width={1} alignItems='baseline' flexWrap='wrap' pb={0}>
       <Fade>
-        <Box width={[1, 1, 1, 6 / 8]} px={[4, 6, 8]} py={[6, 10, 200]} mb={3}>
+        <Box width={[1, 1, 1, 6 / 8]} px={[4, 6, 8]} py={[6, 10, 160]} mb={3}>
           <Heading
             as='h2'
             fontSize={[6, 7, 8, 8]}

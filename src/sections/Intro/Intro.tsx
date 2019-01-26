@@ -20,7 +20,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
       <FlexCol width={[ 1, 1, 1/2 ]} justifyContent='flex-end' alignItems='flex-end'>
         <Flashcard width={1} p={[ 3, 3, 4 ]}>
           <Box width={[ 1, 2/3, 1/2 ]}>
-            <Text fontSize={8} color='superNova'>
+            <Text fontSize={8} color='pulse'>
               Now delivering in Marin & Sonoma
             </Text>
           </Box>

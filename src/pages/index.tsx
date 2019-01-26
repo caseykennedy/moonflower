@@ -59,12 +59,8 @@ const IndexPage: React.SFC<Props> = () => (
     >
       <Box mt={[160, 200, 200, 300]}>
         <Fade distance='2rem' bottom>
-          <Flex width={1} justifyContent='center'>
-            <Box
-              width={[1, 2 / 3, 1 / 2, 1 / 2]}
-              bg='superNova'
-              p={[2, 4, 6, 6]}
-            >
+          <Flex width={1} justifyContent='flex-end'>
+            <Box width={[1, 2 / 3, 1 / 2, 1 / 2]} bg='lunar' p={[2, 4, 6, 6]}>
               <Box width={1} mb={[2, 4, 6, 6]} css={{ textAlign: 'center' }}>
                 <LogoSymbol width={53} fill={theme.colors.pulse} />
               </Box>
@@ -75,9 +71,7 @@ const IndexPage: React.SFC<Props> = () => (
                 textAlign='center'
                 pb={0}
               >
-                moonflower's purpose is to encourage others to think differently
-                about cannabis and break the age old stigma that it was once
-                plagued with.
+                Now delviering in Marin &amp; Sonoma
               </Heading>
             </Box>
           </Flex>
@@ -113,116 +107,34 @@ const IndexPage: React.SFC<Props> = () => (
 
     <Section pageWidth={1360} bg='darkSky'>
       <Fade>
-        <Box width={[1, 1, 1, 6 / 8]} px={[4, 6, 8]} py={[6, 10, 200]} mb={3}>
+        <Box width={[1, 1, 1, 6 / 8]} py={[6, 10, 160]} px={[4, 6, 8]}>
           <Heading
             as='h2'
             fontSize={[6, 7, 8, 8]}
-            mb={0}
+            mb={8}
             color='paleMoon'
             textAlign={['center', 'center', 'left', 'left']}
             css={{ fontWeight: '300' }}
           >
-            Do you need a Doctor's recommendation for a medical cannabis card?
-            Take a look below at our list of highly recommended Doctors.
+            Do you need a medical marijuna card? It's easy to get an online
+            medical recommendation from the comfort of your own home.
           </Heading>
+          <Heading as='h2' fontSize={4} color='lavendar'>
+              PrestoDoctor • It's fast, easy &amp; private
+            </Heading>
+          <Box width={[1, 1, 1 / 2, 2 / 3]}>
+            <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
+              PrestoDoctor offers the greatest privacy and convenience while
+              still offering fully qualified medical marijuana recommendations.
+              <br />
+              <br />
+              <br />
+              Schedule an appointment now >
+            </Heading>
+          </Box>
         </Box>
       </Fade>
-      <Fade>
-        <Flex width={1} alignItems='baseline' flexWrap='wrap' px={[4, 6, 8]}>
-          <Flex
-            width={[1, 1 / 2, 1 / 2, 1 / 2]}
-            alignItems='baseline'
-            flexWrap='wrap'
-            pr={[0, 0, 3, 4]}
-            pb={[8, 8, 160, 160]}
-          >
-            <Box width={[1, 1, 1 / 2, 1 / 3]}>
-              <Heading as='h2' fontSize={4} color='lavendar'>
-                Dr. Frank MD
-              </Heading>
-            </Box>
-            <Box width={[1, 1, 1 / 2, 2 / 3]}>
-              <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
-                Frank Lucido MD has provided Primary Care in the same beautiful
-                location for 35 years, including Nurse Practitioner Maria
-                Mangini PhD, FNP for almost 20 years. We are known as the most
-                legitimate cannabis doctor’s office since Prop. 215 passed in
-                1996.
-              </Heading>
-            </Box>
-          </Flex>
-          <Flex
-            width={[1, 1 / 2, 1 / 2, 1 / 2]}
-            alignItems='baseline'
-            flexWrap='wrap'
-            pl={[0, 0, 3, 4]}
-            pb={[8, 8, 160, 160]}
-          >
-            <Box width={[1, 1, 1 / 2, 1 / 3]}>
-              <Heading as='h2' fontSize={4} color='lavendar'>
-                HelloMD
-              </Heading>
-            </Box>
-            <Box width={[1, 1, 1 / 2, 2 / 3]}>
-              <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
-                Frank Lucido MD has provided Primary Care in the same beautiful
-                location for 35 years, including Nurse Practitioner Maria
-                Mangini PhD, FNP for almost 20 years. We are known as the most
-                legitimate cannabis doctor’s office since Prop. 215 passed in
-                1996.
-              </Heading>
-            </Box>
-          </Flex>
-        </Flex>
-      </Fade>
-      <Fade>
-        <Flex width={1} alignItems='baseline' flexWrap='wrap' px={[4, 6, 8]}>
-          <Flex
-            width={[1, 1 / 2, 1 / 2, 1 / 2]}
-            alignItems='baseline'
-            flexWrap='wrap'
-            pr={[0, 0, 3, 4]}
-            pb={[8, 8, 160, 160]}
-          >
-            <Box width={[1, 1, 1 / 2, 1 / 3]}>
-              <Heading as='h2' fontSize={4} color='lavendar'>
-                Dr. Frank MD
-              </Heading>
-            </Box>
-            <Box width={[1, 1, 1 / 2, 2 / 3]}>
-              <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
-                Frank Lucido MD has provided Primary Care in the same beautiful
-                location for 35 years, including Nurse Practitioner Maria
-                Mangini PhD, FNP for almost 20 years. We are known as the most
-                legitimate cannabis doctor’s office since Prop. 215 passed in
-                1996.
-              </Heading>
-            </Box>
-          </Flex>
-          <Flex
-            width={[1, 1 / 2, 1 / 2, 1 / 2]}
-            alignItems='baseline'
-            flexWrap='wrap'
-            pl={[0, 0, 3, 4]}
-            pb={[8, 8, 160, 160]}
-          >
-            <Box width={[1, 1, 1 / 2, 1 / 3]}>
-              <Heading as='h2' fontSize={4} color='lavendar'>
-                HelloMD
-              </Heading>
-            </Box>
-            <Box width={[1, 1, 1 / 2, 2 / 3]}>
-              <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
-                Frank Lucido MD has provided Primary Care in the same beautiful
-                location for 35 years, including Nurse Practitioner Maria
-                Mangini PhD, FNP for almost 20 years. We are known as the most
-                legitimate cannabis doctor’s office since Prop. 215 passed in
-                1996.
-              </Heading>
-            </Box>
-          </Flex>
-        </Flex>
-      </Fade>
+      <Fade />
     </Section>
     <Section bg='darkSky' pageWidth={1360}>
       <Fade distance='2rem' bottom>

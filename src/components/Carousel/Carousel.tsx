@@ -41,17 +41,17 @@ export class CarouselText extends React.Component<Props, State> {
           speed={1000}
         >
           {data.map(slide => (
-            <Slide key={slide.id}>
-              <Flex flexWrap='wrap' css={{ minHeight: 600 }}>
+            <Slide key={slide.id} css={{ height: 500 }}>
+              <Flex flexWrap='wrap'>
                 <Text
                   as='h4'
                   fontSize={5}
+                  mb={4}
                   dangerouslySetInnerHTML={{ __html: slide.title }}
                 />
                 <Text
                   as='p'
                   fontSize={5}
-                  mb={4}
                   css={{ alignSelf: 'flex-end' }}
                   dangerouslySetInnerHTML={{ __html: slide.content }}
                 />
@@ -71,8 +71,8 @@ export class CarouselText extends React.Component<Props, State> {
   }
 }
 
-const Slide = styled.div`
-  min-height: 40rem;
+const Slide = styled(Box)`
+  
 `
 
 const DotDot = styled.button`
