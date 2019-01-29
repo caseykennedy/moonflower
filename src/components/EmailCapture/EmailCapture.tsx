@@ -14,7 +14,7 @@ interface Props {
 }
 
 interface State {
-  email: any
+  email: string
   submitted: boolean
 }
 
@@ -57,7 +57,9 @@ export class EmailCapture extends React.Component<Props, State> {
     e.preventDefault()
   }
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value })
+  handleChange = e => {
+    this.setState({ email: e.currentTarget.value })
+  }
 
   public render() {
     const { email } = this.state
