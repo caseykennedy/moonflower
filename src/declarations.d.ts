@@ -28,6 +28,10 @@ declare module 'react-responsive-tabs'
 declare module 'react-reveal/Fade'
 declare module 'nuka-carousel'
 declare module 'redux-burger-menu'
+declare module 'react-iframe'
+declare module 'react-validation/build/form'
+declare module 'react-validation/build/input'
+declare module 'react-validation/build/button'
 
 // Image Type Declarations
 declare module '*.svg'

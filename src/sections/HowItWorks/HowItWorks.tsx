@@ -21,12 +21,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
     <Flex width={1} alignItems='baseline' flexWrap='wrap' pb={0}>
       <Fade>
         <Box width={[1, 1, 1, 6 / 8]} px={[4, 6, 8]} py={[6, 10, 160]} mb={3}>
-          <Heading
-            as='h2'
-            fontSize={[6, 7, 8, 8]}
-            pb={0}
-            color='pulse'
-          >
+          <Heading as='h2' fontSize={[6, 7, 8, 8]} pb={0} color='pulse'>
             How does <strong>moonflower</strong> work? Doc, she's beautiful.
             She's crazy about me. Look at this, look what she wrote me, Doc.
             That says it all. Doc, you're my only hope.
@@ -48,13 +43,12 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
             How it works
           </Heading>
         </Box>
-        </Fade>
-        <Flex
-          width={[1]}
-          flexWrap={['wrap', 'wrap', 'nowrap', 'nowrap']}
-          alignItems='stretch'
-        >
-        <Fade bottom cascade distance='2rem'>
+      </Fade>
+      <Flex
+        width={[1]}
+        flexWrap={['wrap', 'wrap', 'nowrap', 'nowrap']}
+        alignItems='stretch'
+      >
           <Card p={[2, 3, 4, 4]} mr={[0, 0, 4, 4]} mb={[2, 4, 0, 0]}>
             <CardIcon />
             <Heading
@@ -132,8 +126,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
               excess change or product.
             </Text>
           </Card>
-          </Fade>
-        </Flex>
+      </Flex>
     </Flex>
   </Section>
 )

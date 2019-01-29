@@ -7,21 +7,18 @@ import { up, down, between, only } from 'styled-breakpoints'
 import { Box, Heading, Flex, Text } from 'rebass'
 import Carousel from '../components/Carousel'
 import Fade from 'react-reveal/Fade'
+import Iframe from 'react-iframe'
 
 import Hero from '../components/Hero'
 import ButtonLink from '../components/ButtonLink'
 import Section from '../components/Section'
-import LogoSymbol from '../components/LogoSymbol'
+import Separator from '../components/Separator'
+import TextLink from '../components/TextLink'
+import EmailCapture from '../components/EmailCapture'
 
 import Intro from '../sections/Intro'
 import HowItWorks from '../sections/HowItWorks'
 import Footer from '../sections/Footer'
-
-import IconCc from '../assets/icon-card.svg'
-import IconProcess from '../assets/icon-processing.svg'
-import IconDelivery from '../assets/icon-delivery.svg'
-import data from '../sections/Intro/data/slides.json'
-import theme from '../theme/theme'
 
 interface Props {}
 
@@ -52,7 +49,7 @@ const IndexPage: React.SFC<Props> = () => (
       </Fade>
     </Hero>
 
-    <Section
+    {/* <Section
       bg='darkSky'
       pageWidth={'100%'}
       bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548102305/bg-square.jpg'
@@ -77,9 +74,9 @@ const IndexPage: React.SFC<Props> = () => (
           </Flex>
         </Fade>
       </Box>
-    </Section>
+    </Section> */}
 
-    {/* <Section
+    <Section
       bg='darkSky'
       pageWidth={1360}
       bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548102305/bg-square.jpg'
@@ -89,7 +86,7 @@ const IndexPage: React.SFC<Props> = () => (
           <Intro />
         </Fade>
       </Box>
-    </Section> */}
+    </Section>
 
     <HowItWorks />
 
@@ -97,46 +94,56 @@ const IndexPage: React.SFC<Props> = () => (
       <Fade distance='2rem' bottom>
         <Flex width={1} alignItems='flex-end'>
           <Flex bg='superNova' width={'100%'} p={4} alignItems='stretch'>
-            <Heading as='h2' fontSize={6} mb={1600} color='paleMoon'>
-              eCommerce iFrame
-            </Heading>
+            <Iframe
+              id='blazeIframe'
+              frameborder='0'
+              width='100%'
+              height='100vh'
+              className='myClassname'
+              display='initial'
+              position='relative'
+              allowFullScreen
+            />
           </Flex>
         </Flex>
       </Fade>
     </Section>
 
-    <Section pageWidth={1360} bg='darkSky'>
+    {/* <Section bg='darkSky' py={300}>
+      <Box css={{textAlign: 'center', margin: '0 auto'}} width={'40%'}>
+        <Heading as='h2' fontSize={8} mb={0} color='paleMoon'>
+          Testimonials
+        </Heading>
+      </Box>
+    </Section> */}
+
+    <Section pageWidth={1360} bg='darkSky' py={[6, 10, 200]}>
       <Fade>
-        <Box width={[1, 1, 1, 6 / 8]} py={[6, 10, 160]} px={[4, 6, 8]}>
+        <Box width={[1, 1, 1, 6 / 8]} px={[4, 6, 8]}>
           <Heading
             as='h2'
             fontSize={[6, 7, 8, 8]}
             mb={8}
-            color='paleMoon'
-            textAlign={['center', 'center', 'left', 'left']}
-            css={{ fontWeight: '300' }}
+            color='lavendar'
+            css={{
+              fontWeight: 300
+            }}
           >
-            Do you need a medical marijuna card? It's easy to get an online
-            medical recommendation from the comfort of your own home.
+            <Text as='span' color='paleMoon'>
+              Need a medical marijuana card?
+            </Text>{' '}
+            It's easy to get an online medical recommendation from the comfort
+            of your own home.
           </Heading>
-          <Heading as='h2' fontSize={4} color='lavendar'>
-              PrestoDoctor • It's fast, easy &amp; private
-            </Heading>
-          <Box width={[1, 1, 1 / 2, 2 / 3]}>
-            <Heading as='h2' fontSize={4} mb={0} color='paleMoon'>
-              PrestoDoctor offers the greatest privacy and convenience while
-              still offering fully qualified medical marijuana recommendations.
-              <br />
-              <br />
-              <br />
-              Schedule an appointment now >
-            </Heading>
-          </Box>
+          <Text as='p' color='paleMoon'>
+            <TextLink to='/'>
+              Book a fast &amp; easy online appointment
+            </TextLink>
+          </Text>
         </Box>
       </Fade>
-      <Fade />
     </Section>
-    <Section bg='darkSky' pageWidth={1360}>
+    {/* <Section bg='darkSky' pageWidth={1360}>
       <Fade distance='2rem' bottom>
         <Flex width={1} alignItems='flex-end'>
           <Flex
@@ -164,7 +171,13 @@ const IndexPage: React.SFC<Props> = () => (
           </Flex>
         </Flex>
       </Fade>
-    </Section>
+    </Section> */}
+
+    <Separator />
+
+    <EmailCapture />
+
+    <Separator bg='paleMoon' />
 
     <Footer />
   </React.Fragment>
