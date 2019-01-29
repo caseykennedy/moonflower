@@ -35,10 +35,10 @@ const emailaddress = (value: any) => {
   }
 }
 
-const encode = (obj: any) => {
-  return Object.keys(obj)
-    .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`)
-    .join('&')
+const encode = (data: any) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
 }
 
 export class EmailCapture extends React.Component<Props, State> {
@@ -88,23 +88,19 @@ export class EmailCapture extends React.Component<Props, State> {
     )
   }
 
-  handleChange = (e: React.FormEvent<HTMLInputElement>) => {
-    this.setState({ email: e.currentTarget.value })
-  }
-
-  handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    const email = this.state.email
-
+  handleSubmit = e => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', email })
-    }).then(res => {
-      this.setState({ submitted: true })
+      body: encode({ 'form-name': 'contact', ...this.state })
     })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error))
 
     e.preventDefault()
   }
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
 }
 
 const StyledInput = styled(Input)`
