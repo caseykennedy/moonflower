@@ -5,7 +5,6 @@ import * as React from 'react'
 import { Box, Text, Heading } from 'rebass'
 import styled from 'styled-components'
 import Section from '../Section'
-import Fade from 'react-reveal/Fade'
 
 import { isEmail } from 'validator'
 import theme from '../../theme/theme'
@@ -15,7 +14,7 @@ interface Props {
 }
 
 interface State {
-  email: string
+  email: any
   submitted: boolean
 }
 
@@ -47,11 +46,10 @@ export class EmailCapture extends React.Component<Props, State> {
     this.state = { email: '', submitted: false }
   }
   handleSubmit = e => {
-    const email = this.state.email
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'email_capture_mailchimp', ...this.state })
+      body: encode({ 'form-name': 'emailcapture', ...this.state })
     }).then(res => {
       this.setState({ submitted: true })
     })
@@ -76,7 +74,7 @@ export class EmailCapture extends React.Component<Props, State> {
           </Text>
           {!this.state.submitted && (
             <Form
-              name='email_capture_mailchimp'
+              name='emailcapture'
               method='post'
               data-netlify='true'
               data-netlify-honeypot='bot-field'
@@ -94,12 +92,10 @@ export class EmailCapture extends React.Component<Props, State> {
             </Form>
           )}
           {this.state.submitted && (
-            <Fade>
-              <Box>
+            <Box>
               <p>Thanks for subscribing!</p>
               <p>Check your email for a confirmation message.</p>
             </Box>
-            </Fade>
           )}
         </Box>
       </Section>
