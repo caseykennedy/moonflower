@@ -94,7 +94,7 @@ const IndexPage: React.SFC<Props> = () => (
       <Fade distance='2rem' bottom>
         <Flex width={1} alignItems='flex-end'>
           <Flex bg='superNova' width={'100%'} p={4} alignItems='stretch'>
-            <Iframe
+            {/* <Iframe
               id='blazeIframe'
               frameborder='0'
               width='100%'
@@ -103,7 +103,7 @@ const IndexPage: React.SFC<Props> = () => (
               display='initial'
               position='relative'
               allowFullScreen
-            />
+            /> */}
           </Flex>
         </Flex>
       </Fade>
