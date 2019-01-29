@@ -11,7 +11,6 @@ import theme from '../../theme/theme'
 
 interface Props {
   data: any
-  value: string
 }
 
 interface State {
@@ -19,17 +18,17 @@ interface State {
   submitted: boolean
 }
 
-// const required = ({value, props}: Props) => {
+// const required = (value, props) => {
 //   if (!value || (props.isCheckable && !props.checked)) {
 //     return <span className='form-error is-visible'>Required</span>
 //   }
 // }
 
-const emailaddress = (value: any) => {
+const emailaddress = value => {
   if (!isEmail(value)) {
     return (
       <span className='form-error is-visible'>
-        {value} is not a valid email.
+        ${value} is not a valid email.
       </span>
     )
   }
@@ -41,31 +40,24 @@ const encode = (obj: any) => {
     .join('&')
 }
 
-export class EmailCapture extends React.Component<Props, State> {
+class EmailCapture extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
-
-    this.state = {
-      email: '',
-      submitted: false
-    }
+    this.state = { email: '', submitted: false }
   }
-
-  handleChange = e => this.setState({ [e.target.name]: e.target.value })
-
-  handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    const email = this.state.email
-
+  handleSubmit = e => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', email })
+      body: encode({ 'form-name': 'emailcapture', ...this.state })
     }).then(res => {
       this.setState({ submitted: true })
-    }).then(() => alert(email))
+    })
 
     e.preventDefault()
   }
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   public render() {
     const { email } = this.state
@@ -81,16 +73,22 @@ export class EmailCapture extends React.Component<Props, State> {
             company updates.
           </Text>
           {!this.state.submitted && (
-            <Form name='mailchimp' onSubmit={this.handleSubmit}>
+            <Form
+              name='emailcapture'
+              method='post'
+              data-netlify='true'
+              data-netlify-honeypot='bot-field'
+              onSubmit={this.handleSubmit}
+            >
               <StyledInput
                 placeholder='Email'
                 type='email'
                 name='email'
-                value={this.state.email}
+                value={email}
                 onChange={this.handleChange}
                 validations={[emailaddress]}
               />
-              <SubmitButton type='submit'>Submit</SubmitButton>
+              <SubmitButton className='button'>Submit</SubmitButton>
             </Form>
           )}
           {this.state.submitted && (

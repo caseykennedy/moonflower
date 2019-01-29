@@ -40,7 +40,7 @@ const encode = (obj: any) => {
     .join('&')
 }
 
-export class EmailCapture extends React.Component<Props, State> {
+class EmailCapture extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = { email: '', submitted: false }
@@ -75,9 +75,6 @@ export class EmailCapture extends React.Component<Props, State> {
           {!this.state.submitted && (
             <Form
               name='emailcapture'
-              method='post'
-              data-netlify='true'
-              data-netlify-honeypot='bot-field'
               onSubmit={this.handleSubmit}
             >
               <StyledInput
