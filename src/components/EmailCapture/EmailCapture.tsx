@@ -46,7 +46,7 @@ export class EmailCapture extends React.Component<Props, State> {
     this.state = { email: '', submitted: false }
   }
   handleSubmit = e => {
-
+    const email = this.state.email
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -58,9 +58,7 @@ export class EmailCapture extends React.Component<Props, State> {
     e.preventDefault()
   }
 
-  handleChange = e => {
-    this.setState({ email: e.currentTarget.value })
-  }
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   public render() {
     const { email } = this.state
@@ -77,7 +75,7 @@ export class EmailCapture extends React.Component<Props, State> {
           </Text>
           {!this.state.submitted && (
             <Form
-              name='emailcapture'
+              name='kowabunga'
               method='post'
               data-netlify='true'
               data-netlify-honeypot='bot-field'
