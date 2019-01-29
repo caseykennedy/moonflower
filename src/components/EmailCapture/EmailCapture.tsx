@@ -18,11 +18,11 @@ interface State {
   submitted: boolean
 }
 
-const required = (value, props) => {
-  if (!value || (props.isCheckable && !props.checked)) {
-    return <span className='form-error is-visible'>Required</span>
-  }
-}
+// const required = (value, props) => {
+//   if (!value || (props.isCheckable && !props.checked)) {
+//     return <span className='form-error is-visible'>Required</span>
+//   }
+// }
 
 const emailaddress = value => {
   if (!isEmail(value)) {
@@ -34,9 +34,9 @@ const emailaddress = value => {
   }
 }
 
-const encode = (data: Props) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+const encode = (obj: any) => {
+  return Object.keys(obj)
+    .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`)
     .join('&')
 }
 
