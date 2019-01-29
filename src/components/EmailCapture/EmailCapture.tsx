@@ -34,10 +34,10 @@ const emailaddress = value => {
   }
 }
 
-const encode = (obj: any) => {
-  return Object.keys(obj)
-    .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`)
-    .join('&')
+const encode = (data: any) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
 }
 
 class EmailCapture extends React.Component<Props, State> {
