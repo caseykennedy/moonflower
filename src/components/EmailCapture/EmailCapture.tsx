@@ -57,7 +57,9 @@ export class EmailCapture extends React.Component<Props, State> {
     e.preventDefault()
   }
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value })
+  handleChange(e: React.FormEvent<HTMLInputElement>) {
+    this.setState({ email: e.currentTarget.value })
+  }
 
   public render() {
     const { email } = this.state
@@ -73,13 +75,7 @@ export class EmailCapture extends React.Component<Props, State> {
             company updates.
           </Text>
           {!this.state.submitted && (
-            <Form
-              name='emailcapture'
-              method='post'
-              data-netlify='true'
-              data-netlify-honeypot='bot-field'
-              onSubmit={this.handleSubmit}
-            >
+            <Form onSubmit={this.handleSubmit}>
               <StyledInput
                 placeholder='Email'
                 type='email'
