@@ -25,7 +25,7 @@ interface State {
 //   }
 // }
 
-const emailaddress = value => {
+const emailaddress = (value) => {
   if (!isEmail(value)) {
     return (
       <span className='form-error is-visible'>
@@ -35,7 +35,7 @@ const emailaddress = value => {
   }
 }
 
-const queryString = (obj: any) => {
+const encode = (obj: any) => {
   return Object.keys(obj)
     .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`)
     .join('&')
@@ -50,8 +50,6 @@ export class EmailCapture extends React.Component<Props, State> {
       submitted: false
     }
 
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
   }
 
   public render() {
@@ -77,7 +75,7 @@ export class EmailCapture extends React.Component<Props, State> {
                 onChange={this.handleChange}
                 validations={[emailaddress]}
               />
-              <SubmitButton className='button'>Submit</SubmitButton>
+              <SubmitButton type='submit'>Submit</SubmitButton>
             </Form>
           )}
           {this.state.submitted && (
@@ -96,17 +94,18 @@ export class EmailCapture extends React.Component<Props, State> {
   }
 
   handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
 
     const email = this.state.email
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: queryString({ 'form-name': 'Email Capture', ...this.state })
+      body: encode({ 'form-name': 'contact', ...this.state })
     }).then(res => {
       this.setState({ submitted: true })
     })
+
+    e.preventDefault()
   }
 }
 
