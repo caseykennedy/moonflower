@@ -49,7 +49,6 @@ export class EmailCapture extends React.Component<Props, State> {
       email: '',
       submitted: false
     }
-
   }
 
   public render() {
@@ -94,16 +93,15 @@ export class EmailCapture extends React.Component<Props, State> {
   }
 
   handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-
     const email = this.state.email
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state })
+      body: encode({ 'form-name': 'contact', email })
     }).then(res => {
       this.setState({ submitted: true })
-    }).then(() => alert('Success!'))
+    })
 
     e.preventDefault()
   }
