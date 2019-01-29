@@ -88,7 +88,6 @@ export class EmailCapture extends React.Component<Props, State> {
                 onChange={this.handleChange}
                 validations={[emailaddress]}
               />
-              <input type='hidden' name='emailcapture' value='emailcapture' />
               <SubmitButton className='button'>Submit</SubmitButton>
             </Form>
           )}
