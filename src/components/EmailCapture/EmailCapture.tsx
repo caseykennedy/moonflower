@@ -57,9 +57,7 @@ export class EmailCapture extends React.Component<Props, State> {
     e.preventDefault()
   }
 
-  handleChange(e: React.FormEvent<HTMLInputElement>) {
-    this.setState({ email: e.currentTarget.value })
-  }
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   public render() {
     const { email } = this.state
@@ -75,14 +73,17 @@ export class EmailCapture extends React.Component<Props, State> {
             company updates.
           </Text>
           {!this.state.submitted && (
-            <Form onSubmit={this.handleSubmit}>
+            <Form
+              name='mailchimp'
+              onSubmit={this.handleSubmit}
+            >
               <StyledInput
                 placeholder='Email'
                 type='email'
                 name='email'
                 value={email}
                 onChange={this.handleChange}
-                validations={[required, emailaddress]}
+                validations={[emailaddress]}
               />
               <input type='hidden' name='emailcapture' value='emailcapture' />
               <SubmitButton className='button'>Submit</SubmitButton>
