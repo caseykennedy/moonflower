@@ -53,7 +53,7 @@ export class EmailCapture extends React.Component<Props, State> {
       body: encode({ 'form-name': 'kowabunga', email })
     }).then(res => {
       this.setState({ submitted: true })
-    }).then(() => alert(email))
+    })
 
     e.preventDefault()
   }
