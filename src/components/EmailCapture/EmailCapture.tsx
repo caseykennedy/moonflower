@@ -57,6 +57,8 @@ export class EmailCapture extends React.Component<Props, State> {
     e.preventDefault()
   }
 
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
+
   public render() {
     const { email } = this.state
     const {} = this.props
