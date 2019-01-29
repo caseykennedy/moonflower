@@ -14,7 +14,7 @@ interface Props {
 }
 
 interface State {
-  email: string
+  email: any
   submitted: boolean
 }
 
@@ -46,11 +46,10 @@ export class EmailCapture extends React.Component<Props, State> {
     this.state = { email: '', submitted: false }
   }
   handleSubmit = e => {
-    const email = this.state.email
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'kowabunga', ...this.state })
+      body: encode({ 'form-name': 'emailcapture', ...this.state })
     }).then(res => {
       this.setState({ submitted: true })
     })
@@ -75,7 +74,7 @@ export class EmailCapture extends React.Component<Props, State> {
           </Text>
           {!this.state.submitted && (
             <Form
-              name='kowabunga'
+              name='emailcapture'
               method='post'
               data-netlify='true'
               data-netlify-honeypot='bot-field'
