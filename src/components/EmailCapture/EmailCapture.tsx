@@ -59,9 +59,7 @@ export class EmailCapture extends React.Component<Props, State> {
     e.preventDefault()
   }
 
-  handleChange = (e: any) => {
-    this.setState({ email: e.currentTarget.value })
-  }
+  handleChange = (e: any) => this.setState({ [e.target.name]: e.target.value })
 
   public render() {
     const { email } = this.state
