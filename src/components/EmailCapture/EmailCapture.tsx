@@ -5,6 +5,7 @@ import * as React from 'react'
 import { Box, Text, Heading } from 'rebass'
 import styled from 'styled-components'
 import Section from '../Section'
+import Fade from 'react-reveal/Fade'
 
 import { isEmail } from 'validator'
 import theme from '../../theme/theme'
@@ -45,7 +46,7 @@ export class EmailCapture extends React.Component<Props, State> {
     super(props)
     this.state = { email: '', submitted: false }
   }
-  handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  handleSubmit = (e: any) => {
     const email = this.state.email
     fetch('/', {
       method: 'POST',
@@ -58,7 +59,7 @@ export class EmailCapture extends React.Component<Props, State> {
     e.preventDefault()
   }
 
-  handleChange = (e: React.FormEvent<HTMLFormElement>) => {
+  handleChange = (e: any) => {
     this.setState({ email: e.currentTarget.value })
   }
 
@@ -95,10 +96,12 @@ export class EmailCapture extends React.Component<Props, State> {
             </Form>
           )}
           {this.state.submitted && (
-            <Box>
+            <Fade>
+              <Box>
               <p>Thanks for subscribing!</p>
               <p>Check your email for a confirmation message.</p>
             </Box>
+            </Fade>
           )}
         </Box>
       </Section>
