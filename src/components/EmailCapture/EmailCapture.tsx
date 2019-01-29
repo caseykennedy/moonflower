@@ -25,7 +25,7 @@ interface State {
 //   }
 // }
 
-const emailaddress = (value) => {
+const emailaddress = (value: any) => {
   if (!isEmail(value)) {
     return (
       <span className='form-error is-visible'>
@@ -89,11 +89,11 @@ export class EmailCapture extends React.Component<Props, State> {
     )
   }
 
-  handleChange(e: React.FormEvent<HTMLInputElement>) {
+  handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     this.setState({ email: e.currentTarget.value })
   }
 
-  handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
     const email = this.state.email
 
@@ -103,7 +103,7 @@ export class EmailCapture extends React.Component<Props, State> {
       body: encode({ 'form-name': 'contact', ...this.state })
     }).then(res => {
       this.setState({ submitted: true })
-    })
+    }).then(() => alert('Success!'))
 
     e.preventDefault()
   }
