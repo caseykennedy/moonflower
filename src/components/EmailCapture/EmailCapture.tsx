@@ -46,7 +46,7 @@ export class EmailCapture extends React.Component<Props, State> {
     super(props)
     this.state = { email: '', submitted: false }
   }
-  handleSubmit = (e: any) => {
+  handleSubmit = e => {
     const email = this.state.email
     fetch('/', {
       method: 'POST',
@@ -59,7 +59,7 @@ export class EmailCapture extends React.Component<Props, State> {
     e.preventDefault()
   }
 
-  handleChange = (e: any) => this.setState({ [e.target.name]: e.target.value })
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   public render() {
     const { email } = this.state
