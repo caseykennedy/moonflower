@@ -50,7 +50,7 @@ export class EmailCapture extends React.Component<Props, State> {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'kowabunga', email })
+      body: encode({ 'form-name': 'kowabunga', ...this.state })
     }).then(res => {
       this.setState({ submitted: true })
     })
