@@ -28,9 +28,9 @@ const IndexPage: React.SFC<Props> = () => (
       <Fade>
         <Heading
           as='h1'
-          fontSize={[8, 50, 60, 70]}
+          fontSize={[8, 50, 60, 60]}
           letterSpacing='-0.2rem'
-          color='superNova'
+          color='lunar'
           mt={8}
         >
           Marin county’s premier online dispensary, delivered to you
