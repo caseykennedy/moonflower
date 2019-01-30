@@ -38,7 +38,9 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
             <LogoSymbol width={53} />
           </Box>
           <Box width={1} color='pulse'>
-            <strong>moonflower's</strong> purpose is to encourage others to think differently about cannabis and break the age old stigma that it was once plagued with.
+            <strong>moonflower's</strong> purpose is to encourage others to
+            think differently about cannabis and break the age old stigma that
+            it was once plagued with.
           </Box>
         </Fade>
       </Text>
@@ -47,7 +49,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
     <Row width={1} mb={[6, 6, 140, 140]} justifyContent='center'>
       <Text
         width={[1, 1, 1 / 2, 1 / 2]}
-        fontSize={[ 6, 6, 8, 9 ]}
+        fontSize={[6, 6, 8, 9]}
         as='div'
         textAlign='center'
       >
@@ -97,7 +99,10 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
           color='pulse'
           as='span'
         >
-          © moonflower
+          © moonflower{' '}
+          <Text as='span' color='lavendar'>
+            &nbsp;&bull;&nbsp;C9-18-0000070-TEMP
+          </Text>
         </Flex>
       </Flex>
     </Row>
