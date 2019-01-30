@@ -43,9 +43,9 @@ export class CarouselText extends React.Component<Props, State> {
           speed={1000}
         >
           {data.map(slide => (
-            <Slide key={slide.id} >
-              <Flex width={1} flexWrap='wrap'>
-                <Box width={1/2}>
+            <Slide key={slide.id}>
+              <Flex width={1} flexWrap='wrap' css={{height: 600}}>
+                <Box width={1 / 2}>
                   <Text
                     as='h4'
                     fontSize={5}
@@ -53,17 +53,17 @@ export class CarouselText extends React.Component<Props, State> {
                     dangerouslySetInnerHTML={{ __html: slide.title }}
                   />
                 </Box>
-                <Image width={1/2}>
-                  <img src={slide.image}  />
+                <Image width={1 / 2}>
+                  <img src={slide.image} />
                 </Image>
-              </Flex>
-              <Flex width={1} flexWrap='wrap'>
-                <Text
-                  as='p'
-                  fontSize={5}
-                  css={{ alignSelf: 'flex-end' }}
-                  dangerouslySetInnerHTML={{ __html: slide.content }}
-                />
+                <Box width={1} flexWrap='wrap' alignSelf='flex-end'>
+                  <Text
+                    as='p'
+                    fontSize={5}
+                    css={{ alignSelf: 'flex-end' }}
+                    dangerouslySetInnerHTML={{ __html: slide.content }}
+                  />
+                </Box>
               </Flex>
             </Slide>
           ))}
@@ -82,15 +82,6 @@ export class CarouselText extends React.Component<Props, State> {
 
 const Image = styled(Box)`
   position: relative;
-  right: -4rem;
-
-  ${between('0', '1')} {
-  }
-  ${between('1', '2')} {
-  }
-  ${up('1')} {
-    right: -8rem;
-  }
 `
 
 const Slide = styled(Box)``
