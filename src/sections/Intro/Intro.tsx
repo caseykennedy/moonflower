@@ -18,9 +18,9 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
         <Carousel data={data} />
       </FlexCol>
       <FlexCol width={[ 1, 1, 1/2 ]} justifyContent='flex-end' alignItems='flex-end'>
-        <Flashcard width={1} p={[ 3, 3, 4 ]}>
-          <Box width={[ 1, 2/3, 1/2 ]}>
-            <Text fontSize={8} color='pulse'>
+        <Flashcard width={1} p={[ 2, 3, 3, 4 ]}>
+          <Box width={[ 1, 2/3, 2/3, 1/2 ]}>
+            <Text fontSize={8} p={4} color='pulse' bg='lunar'>
               Now delivering in Marin &amp; Sonoma
             </Text>
           </Box>
@@ -68,7 +68,7 @@ const Container = styled(Flex)`
 `
 
 const Flashcard = styled(Flex)`
-  background: ${p => p.theme.colors.white} url('');
+  background: ${p => p.theme.colors.lunar} url('https://res.cloudinary.com/moonflower/image/upload/v1548097460/bg-featurecard.jpg');
   background-size: cover;
   height: initial;
   
