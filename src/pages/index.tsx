@@ -29,7 +29,7 @@ const IndexPage: React.SFC<Props> = () => (
         <Heading
           as='h1'
           fontSize={[8, 50, 60, 60]}
-          letterSpacing='-0.2rem'
+          letterSpacing={[ 0, 0, '-0.2rem', '-0.2rem' ]}
           color='lunar'
           mt={8}
         >
