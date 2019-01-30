@@ -158,6 +158,7 @@ const SubmitButton = styled(Button)`
   text-transform: uppercase;
   width: 100%;
   white-space: nowrap;
+  transition: background-color 0.2s ease-in;
 
   ${up('0')} {
     width: 30%;

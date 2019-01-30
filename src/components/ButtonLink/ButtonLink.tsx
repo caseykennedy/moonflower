@@ -98,21 +98,23 @@ const looks = {
     }
   `,
   light: css`
-    background-color: ${props => props.theme.colors.lavendar};
-    border: 2px solid ${p => p.theme.colors.lavendar};
+    background-color: ${props => props.theme.colors.paleMoon};
+    border: 2px solid ${p => p.theme.colors.paleMoon};
     color: ${props => props.theme.colors.darkSky};
 
     &:hover {
       background-color: ${p =>
-        p.theme.colors.lavendar && shade(0.1, p.theme.colors.lavendar)};
+        p.theme.colors.lavendar && lighten(0.1, p.theme.colors.lavendar)};
       border-color: ${p =>
-        p.theme.colors.lavendar && shade(0.1, p.theme.colors.lavendar)};
+        p.theme.colors.lavendar && lighten(0.1, p.theme.colors.lavendar)};
+      color: ${props => props.theme.colors.superNova};
     }
     &:active {
       background-color: ${p =>
-        p.theme.colors.lavendar && shade(0.2, p.theme.colors.lavendar)};
+        p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
       border-color: ${p =>
-        p.theme.colors.lavendar && shade(0.2, p.theme.colors.lavendar)};
+        p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
+      color: ${props => props.theme.colors.superNova};
     }
   `
 }

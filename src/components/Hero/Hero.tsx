@@ -11,8 +11,8 @@ interface HeroProps {
 
 const Hero: React.SFC<HeroProps> = ({ children }) => (
   <Container
-    pt={[220, 120, 120, 120]}
-    pb={[80, 0, 0, 0]}
+    pt={[120, 120, 120, 120]}
+    pb={[200, 0, 0, 80]}
     px={[2, 3, 4, 4]}
   >
     <FlexBox
@@ -38,7 +38,7 @@ const FlexBox = styled(Flex)`
 
 const Container = styled(Flex)`
   background-color: ${p => p.theme.colors.superNova};
-  /* background-image: url('https://res.cloudinary.com/moonflower/image/upload/v1548095489/bg-bridge-2.jpg'); */
+  background-image: url('https://res.cloudinary.com/moonflower/image/upload/v1548095489/bg-bridge-2.jpg');
   background-size: cover;
   min-height: 100%;
   align-items: center;

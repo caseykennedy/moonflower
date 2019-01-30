@@ -63,9 +63,9 @@ const BurgerBox = styled(Flex)`
 `
 
 const Button = styled.a`
-  border: 2px solid ${props => props.theme.colors.pulse};
+  border: 2px solid ${props => props.theme.colors.paleMoon};
   border-radius: 100px;
-  color: ${props => props.theme.colors.pulse};
+  color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
   display: none;
   font-size: 1.4rem;
@@ -97,7 +97,7 @@ const Button = styled.a`
 `
 
 const NavLink = styled(Link)`
-  color: ${props => props.theme.colors.pulse};
+  color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
   display: none;
   font-size: 1.4rem;
@@ -106,7 +106,7 @@ const NavLink = styled(Link)`
   white-space: nowrap;
 
   &:hover {
-    color: ${p => p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
+    color: ${p => p.theme.colors.pulse && lighten(0.2, p.theme.colors.paleMoon)};
   }
 
   ${between('0','1')} {

@@ -30,14 +30,14 @@ const IndexPage: React.SFC<Props> = () => (
           as='h1'
           fontSize={[8, 50, 60, 70]}
           letterSpacing='-0.2rem'
-          color='pulse'
+          color='superNova'
           mt={8}
         >
-          Curated Cali cannabis, swiftly delivered
+          Marin county’s premier online dispensary, delivered to you
         </Heading>
         <Box mt={[4]}>
           <ButtonLink
-            look='primary'
+            look='light'
             size='default'
             variant='solid'
             radius={100}
@@ -77,11 +77,10 @@ const IndexPage: React.SFC<Props> = () => (
     </Section> */}
 
     <Section
-      bg='darkSky'
+      bg='lunar'
       pageWidth={1360}
-      bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548102305/bg-square.jpg'
     >
-      <Box pt={[0, 0, 160, 200]}>
+      <Box mt={-120}>
         <Fade distance='2rem' bottom>
           <Intro />
         </Fade>
@@ -94,7 +93,8 @@ const IndexPage: React.SFC<Props> = () => (
       <Fade distance='2rem' bottom>
         <Flex width={1} alignItems='flex-end'>
           <Flex bg='superNova' width={'100%'} p={4} alignItems='stretch'>
-            {/* <Iframe
+          <Text as='h3' color='paleMoon'>eCommerce iFrame</Text>
+            <Iframe
               id='blazeIframe'
               frameborder='0'
               width='100%'
@@ -103,7 +103,7 @@ const IndexPage: React.SFC<Props> = () => (
               display='initial'
               position='relative'
               allowFullScreen
-            /> */}
+            />
           </Flex>
         </Flex>
       </Fade>

@@ -18,21 +18,21 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
         <Carousel data={data} />
       </FlexCol>
       <FlexCol width={[ 1, 1, 1/2 ]} justifyContent='flex-end' alignItems='flex-end'>
-        <Flashcard width={1} p={[ 2, 3, 3, 4 ]}>
-          <Box width={[ 1, 2/3, 2/3, 1/2 ]}>
-            <Text fontSize={8} p={4} color='pulse' bg='lunar'>
-              Now delivering in Marin &amp; Sonoma
+        <Flashcard width={1} p={[ 2, 3, 3, 4 ]} justifyContent='center' alignItems='center'>
+          <Box width={[ 1, 2/3, 2/3, 2/3 ]} py={[4, 4, 0, 0]}>
+            <Text fontSize={[ 6, 7, 8, 8 ]} color='paleMoon' textAlign='center'>
+            Now delivering to Marin, &amp; soon to be Sonoma County
             </Text>
           </Box>
         </Flashcard>
-        <Box width={1/2} bg='paleMoon' css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
+        <Box width={1/2} bg='white' css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
           <Text as='p' fontSize={[ 3, 5 ]}>
-            Delivery<br /> Schedule
+            Delivery<br /> Schedule?
           </Text>
         </Box>
         <Box width={1/2} bg='superNova'  css={{ height: '50%' }} p={[ 3, 3, 4 ]}>
           <Text as='p' fontSize={[ 3, 5 ]}>
-            Medical <br /> Cards
+            (?)
           </Text>
         </Box>
       </FlexCol>
@@ -43,7 +43,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
 Intro.defaultProps = {}
 
 const Grid = styled(Flex)`
-  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.07);
+  /* box-shadow: 0 0 10rem rgba(0, 0, 0, 0.07); */
   flex-grow: 1;
   flex-wrap: wrap;
   justify-content: center;
@@ -68,7 +68,7 @@ const Container = styled(Flex)`
 `
 
 const Flashcard = styled(Flex)`
-  background: ${p => p.theme.colors.lunar} url('https://res.cloudinary.com/moonflower/image/upload/v1548097460/bg-featurecard.jpg');
+  background: ${p => p.theme.colors.purpleRain};
   background-size: cover;
   height: initial;
   
