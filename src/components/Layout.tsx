@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Provider } from 'react-redux'
 import { store } from '../store'
-
+import SEO from './SEO'
 import GlobalStyle from '../styles/global'
 import { ThemeProvider } from 'styled-components'
 import theme from '../theme/theme'
@@ -22,9 +22,10 @@ export interface LayoutProps {
     pathname: string
   }
   children: any
+  customSEO: boolean
 }
 
-const Layout = (props: LayoutProps) => {
+const Layout = ({location, children, customSEO}: LayoutProps) => {
   // const { pathname } = props.location
   // // const isHome = pathname === "/"
 
@@ -34,13 +35,18 @@ const Layout = (props: LayoutProps) => {
         <Provider store={store}>
           <div>
             <Header />
-            {props.children}
+            {children}
           </div>
         </Provider>
       </ThemeProvider>
+      {/* {!customSEO && <SEO />} */}
       <GlobalStyle />
     </React.Fragment>
   )
+}
+
+Layout.defaultProps = {
+  customSEO: false,
 }
 
 export default Layout

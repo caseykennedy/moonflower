@@ -1,12 +1,32 @@
 const config = './src/theme/config';
-// Const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+const website = './theme/website';
 
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    title: `My website`,
-    googleVerification: `abcdefz`,
-    disqus: `gatsby-typescript`
+
+    titleTemplate: '%s · Online Cannabis Dispensary in Marin &amp; Sonoma',
+
+    url: 'https://www.moonflowerdelivery.com', // No trailing slash allowed!
+    image: '/images/snape.jpg', // Path to your image you placed in the 'static' folder
+    twitterUsername: '@occlumency',
+    googleVerification: `asdfasdfasdfasdfasdf`,
+    disqus: `gatsby-typescript`,
+
+    // SEO Component Data -- not in use
+    siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
+    pathPrefix,
+    title: website.title,
+    titleAlt: website.titleAlt,
+    description: website.description,
+    banner: website.logo,
+    headline: website.headline,
+    siteLanguage: website.siteLanguage,
+    ogLanguage: website.ogLanguage,
+    author: website.author,
+    twitter: website.twitter,
+    facebook: website.facebook
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': `AuthorJson`
