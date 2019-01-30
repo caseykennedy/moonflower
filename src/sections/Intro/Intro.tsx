@@ -21,7 +21,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
         <Flashcard width={1} p={[ 3, 3, 4 ]}>
           <Box width={[ 1, 2/3, 1/2 ]}>
             <Text fontSize={8} color='pulse'>
-              Now delivering in Marin & Sonoma
+              Now delivering in Marin &amp; Sonoma
             </Text>
           </Box>
         </Flashcard>
@@ -53,6 +53,7 @@ const Grid = styled(Flex)`
 
 const FlexCol = styled(Flex)`
   flex-wrap: wrap;
+  overflow: hidden;
 `
 
 const Container = styled(Flex)`

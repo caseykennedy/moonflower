@@ -22,9 +22,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
       <Fade>
         <Box width={[1, 1, 1, 6 / 8]} px={[4, 6, 8]} py={[6, 10, 160]} mb={3}>
           <Heading as='h2' fontSize={[6, 7, 8, 8]} pb={0} color='pulse'>
-            How does <strong>moonflower</strong> work? Doc, she's beautiful.
-            She's crazy about me. Look at this, look what she wrote me, Doc.
-            That says it all. Doc, you're my only hope.
+            <strong>moonflower</strong> helps you get your cannabis fast. Just choose your medicine, get rewards, set location, and relax until delivery.
           </Heading>
         </Box>
       </Fade>
