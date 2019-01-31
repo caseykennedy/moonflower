@@ -66,7 +66,7 @@ const BurgerBox = styled(Flex)`
   height: 100%;
 `
 
-const Button = styled.a`
+const Button = styled.span`
   border: 2px solid ${props => props.theme.colors.paleMoon};
   border-radius: 100px;
   color: ${props => props.theme.colors.paleMoon};

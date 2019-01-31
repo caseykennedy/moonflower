@@ -37,6 +37,7 @@ const IndexPage: React.SFC<Props> = () => (
         <Box mt={[4]}>
           <AnchorLink href='#shop' style={{ textDecoration: 'none' }}>
             <ButtonLink
+              as='span'
               look='light'
               size='default'
               variant='solid'
@@ -87,12 +88,12 @@ const IndexPage: React.SFC<Props> = () => (
 
     <HowItWorks />
 
-    <Section bg='lunar' pageWidth={'100%'}>
-      <Fade distance='2rem' bottom>
+    <Section bg='lunar' pageWidth={'100%'} px={[0, 0, 4, 4]}>
         <Flex
           bg='superNova'
           width={1}
-          p={4}
+          py={4}
+          px={[0, 2, 3, 4]}
           alignItems='stretch'
           flexDirection='column'
           id='shop'
@@ -119,7 +120,6 @@ const IndexPage: React.SFC<Props> = () => (
             />
           </Box>
         </Flex>
-      </Fade>
     </Section>
 
     {/* <Section bg='darkSky' py={300}>
@@ -141,7 +141,6 @@ const IndexPage: React.SFC<Props> = () => (
             fontWeight: 300
           }}
         >
-          <Fade>
             <Text as='span' color='paleMoon' css={{
             fontWeight: 400
           }}>
@@ -149,7 +148,6 @@ const IndexPage: React.SFC<Props> = () => (
             </Text>{' '}
             It's easy to get an online medical recommendation from the comfort
             of your own home.
-          </Fade>
         </Heading>
         <Text as='p' color='paleMoon'>
           <TextLink to='/'>Book a fast &amp; easy online appointment</TextLink>
