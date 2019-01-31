@@ -78,7 +78,7 @@ const AboutPage: React.SFC<Props> = () => (
       >
         <Box width={[1, 2 / 3, 1 / 2]} pr={4}>
           <Fade>
-            <Heading as='h2' fontSize={[6]} pb={8}>
+            <Heading as='h2' fontSize={[9]} pb={8}>
               Spread
               <br />
               the love
@@ -121,7 +121,7 @@ const AboutPage: React.SFC<Props> = () => (
       >
         <Box width={[1, 2 / 3, 1 / 2]} pl={4}>
           <Fade>
-            <Heading as='h2' fontSize={[6]} pb={8}>
+            <Heading as='h2' fontSize={[9]} pb={8}>
               A team
               <br />
               you can trust

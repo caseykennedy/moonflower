@@ -35,13 +35,13 @@ const IndexPage: React.SFC<Props> = () => (
           Marin county’s premier online dispensary, delivered to you
         </Heading>
         <Box mt={[4]}>
-          <AnchorLink href='#shop' style={{ textDecoration: 'none' }}>
+          <AnchorLink href='/#shop' style={{ textDecoration: 'none' }}>
             <ButtonLink
               look='light'
               size='default'
               variant='solid'
               radius={100}
-              to='/'
+              to='#'
             >
               Browse the menu
             </ButtonLink>
