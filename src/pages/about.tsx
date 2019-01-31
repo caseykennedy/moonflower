@@ -45,7 +45,7 @@ const AboutPage: React.SFC<Props> = () => (
     <Section
       bg='darkSky'
       pageWidth={'100%'}
-      bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548102305/bg-square.jpg'
+      bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548918004/bg__emailCapture--3.jpg'
     >
       <Box py={200}>
         <Fade distance='2rem' bottom>
@@ -146,7 +146,8 @@ const AboutPage: React.SFC<Props> = () => (
               left: -80,
               bottom: 0,
               right: 0,
-              borderRadius: 999
+              borderRadius: 999,
+              backgroundImage: 'url(https://res.cloudinary.com/moonflower/image/upload/v1548918004/bg__emailCapture.jpg)'
             }}
           />
           <Fade distance='2rem' bottom>

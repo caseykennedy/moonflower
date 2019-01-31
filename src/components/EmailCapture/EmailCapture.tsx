@@ -50,7 +50,7 @@ const encode = data => {
 
 class EmailCapture extends React.Component<Props, State> {
   static defaultProps: Partial<Props> = {
-    bg: 'darkSky'
+    bg: 'purpleRain'
   }
   constructor(props: Props) {
     super(props)
@@ -77,21 +77,24 @@ class EmailCapture extends React.Component<Props, State> {
     return (
       <Section
         bg='purpleRain'
-        bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548741512/bg-galactic.jpg'
+        bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548918004/bg__emailCapture--5.jpg'
+
       >
+      <Flex width={1} justifyContent='center'>
         <Box
           bg={bg}
           px={[3, 3, 4, 4]}
           py={[8]}
           width={[1, 1, 1 / 2, 1 / 2]}
-          mt={200}
+          mt={240}
+          css={{alignSelf: 'center'}}
         >
           <Box css={{ textAlign: 'center', margin: '0 auto' }}>
             <Fade>
-              <Heading as='h2' fontSize={8} mb={0} color='superNova'>
+              <Heading as='h2' fontSize={8} mb={0} color='lunar'>
                 Sweet deals &amp; updates?
               </Heading>
-              <Text as='p' fontSize={4} color='superNova' mb={4}>
+              <Text as='p' fontSize={4} color='paleMoon' mb={4}>
                 Feel free to subscribe for unbeatable deals and the occasional
                 company updates.
               </Text>
@@ -131,6 +134,7 @@ class EmailCapture extends React.Component<Props, State> {
             )}
           </Box>
         </Box>
+        </Flex>
       </Section>
     )
   }

@@ -35,7 +35,7 @@ const IndexPage: React.SFC<Props> = () => (
           Marin county’s premier online dispensary, delivered to you
         </Heading>
         <Box mt={[4]}>
-          <AnchorLink href='/#shop' style={{ textDecoration: 'none' }}>
+          <AnchorLink href='#shop' style={{ textDecoration: 'none' }}>
             <ButtonLink
               look='light'
               size='default'
@@ -156,8 +156,6 @@ const IndexPage: React.SFC<Props> = () => (
         </Text>
       </Box>
     </Section>
-
-    <Separator />
 
     {/* <Section bg='darkSky' pageWidth={1360}>
       <Fade distance='2rem' bottom>
