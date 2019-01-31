@@ -1,8 +1,9 @@
+import { Link } from 'gatsby'
 import * as React from 'react'
 import { connect } from 'react-redux'
 // import { Container } from "semantic-ui-react"
 import styled from 'styled-components'
-import { Box, Heading, Flex, Link } from 'rebass'
+import { Box, Heading, Flex } from 'rebass'
 import withSizes from 'react-sizes'
 import { up, down, between, only } from 'styled-breakpoints'
 import Headroom from 'react-headroom'
@@ -23,7 +24,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
     <Flex alignItems='center' py={[2, 2, 3, 4]}>
       <Box width={1 / 2}>
         {/* <Box>{isMobile ? <LogoSymbol /> : <Logo />}</Box> */}
-        <Logo />
+        <Link to='/'><Logo /></Link>
       </Box>
       <Flex
         alignItems='baseline'
@@ -96,7 +97,7 @@ const Button = styled.a`
   }
 `
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
   display: none;

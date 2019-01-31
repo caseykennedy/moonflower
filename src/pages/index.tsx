@@ -13,6 +13,7 @@ import Hero from '../components/Hero'
 import ButtonLink from '../components/ButtonLink'
 import Section from '../components/Section'
 import TextLink from '../components/TextLink'
+import Separator from '../components/Separator'
 
 import Intro from '../sections/Intro'
 import HowItWorks from '../sections/HowItWorks'
@@ -140,6 +141,9 @@ const IndexPage: React.SFC<Props> = () => (
         </Box>
       </Fade>
     </Section>
+
+    <Separator />
+
     {/* <Section bg='darkSky' pageWidth={1360}>
       <Fade distance='2rem' bottom>
         <Flex width={1} alignItems='flex-end'>

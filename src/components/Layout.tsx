@@ -38,7 +38,7 @@ const Layout = (props: LayoutProps) => {
           <div>
             <Header />
             {props.children}
-            <EmailCapture />
+            <EmailCapture bg='purpleRain' />
             <Separator bg='paleMoon' />
             <Footer />
           </div>

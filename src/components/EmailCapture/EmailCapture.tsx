@@ -11,8 +11,11 @@ import Section from '../Section'
 
 import Fade from 'react-reveal/Fade'
 import { isEmail } from 'validator'
+import Separator from '../Separator'
 
-interface Props {}
+interface Props {
+  bg?: string
+}
 
 interface State {
   email: any
@@ -46,6 +49,9 @@ const encode = data => {
 }
 
 class EmailCapture extends React.Component<Props, State> {
+  static defaultProps: Partial<Props> = {
+    bg: 'darkSky'
+  }
   constructor(props: Props) {
     super(props)
     this.state = { email: '', submitted: false }
@@ -67,9 +73,9 @@ class EmailCapture extends React.Component<Props, State> {
 
   public render() {
     const { email } = this.state
-    const {} = this.props
+    const { bg } = this.props
     return (
-      <Section bg='lavendar' py={[120, 120, 200, 200]}>
+      <Section bg={bg} py={[120, 120, 200, 200]}>
         <Box
           css={{ textAlign: 'center', margin: '0 auto' }}
           width={[1, 9 / 10, 7 / 10, 4 / 10]}
@@ -127,10 +133,11 @@ class EmailCapture extends React.Component<Props, State> {
 
 const StyledInput = styled(Input)`
   /* background-color: ${p => p.theme.colors.paleMoon}; */
-  border: 2px solid ${p => p.theme.colors.pulse};
+  border: 2px solid ${p => p.theme.colors.ogPurp};
   border-radius: 6rem;
   color: ${p => p.theme.colors.paleMoon};
   font-size: 1.8rem;
+  font-weight: 500;
   line-height: 1.8rem;
   margin-bottom: 1rem;
   padding: 1.8rem 3rem 1.5rem;
@@ -145,21 +152,21 @@ const StyledInput = styled(Input)`
   }
 
   &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: ${p => p.theme.colors.paleMoon};
+    color: ${p => p.theme.colors.ogPurp};
     opacity: 1; /* Firefox */
   }
 
   &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: ${p => p.theme.colors.paleMoon};
+    color: ${p => p.theme.colors.ogPurp};
   }
 
   &::-ms-input-placeholder { /* Microsoft Edge */
-    color: ${p => p.theme.colors.paleMoon};
+    color: ${p => p.theme.colors.ogPurp};
   }
 `
 
 const SubmitButton = styled(Button)`
-  background-color: ${p => p.theme.colors.pulse};
+  background-color: ${p => p.theme.colors.ogPurp};
   border-radius: 6rem;
   color: ${p => p.theme.colors.paleMoon};
   cursor: pointer;
@@ -182,11 +189,11 @@ const SubmitButton = styled(Button)`
 
   &:hover {
     background-color: ${p =>
-      p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
+      p.theme.colors.ogPurp && lighten(0.1, p.theme.colors.ogPurp)};
   }
   &:active {
     background-color: ${p =>
-      p.theme.colors.pulse && lighten(0.2, p.theme.colors.pulse)};
+      p.theme.colors.ogPurp && lighten(0.2, p.theme.colors.ogPurp)};
   }
 `
 
