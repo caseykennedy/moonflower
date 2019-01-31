@@ -24,21 +24,21 @@ const AboutPage: React.SFC<Props> = () => (
       }}
     >
       <Box width={[1, 1, 1 / 2]}>
-        <Heading
-          as='h2'
-          lineHeight={1.1}
-          fontSize={[6, 7, 8, 8]}
-          color='lavendar'
-          css={{
-            fontWeight: 300
-          }}
-        >
-          <Text as='span' color='paleMoon'>
+        <Fade>
+          <Heading
+            as='h2'
+            lineHeight={1.1}
+            fontSize={[6, 7, 8, 8]}
+            color='paleMoon'
+            css={{
+              fontWeight: 300
+            }}
+          >
             <strong>moonflower</strong> delivery was created by passionate
             cannabis enthusiasts that have used cannabis to help find the light
             in the darkest of times.
-          </Text>
-        </Heading>
+          </Heading>
+        </Fade>
       </Box>
     </Flex>
 
@@ -77,19 +77,23 @@ const AboutPage: React.SFC<Props> = () => (
         mb={160}
       >
         <Box width={[1, 2 / 3, 1 / 2]} pr={4}>
-          <Heading as='h2' fontSize={[6]} pb={8}>
-            Spread
-            <br />
-            the love
-          </Heading>
-          <Text as='p' fontSize={[6]} pb={[8, 0, 0]}>
-            We have seen how cannabis has benefited the closest ones around us
-            and in return, have been inspired to spread our love for the plant,
-            while making a positive impact within our community.
-          </Text>
+          <Fade>
+            <Heading as='h2' fontSize={[6]} pb={8}>
+              Spread
+              <br />
+              the love
+            </Heading>
+            <Text as='p' fontSize={[6]} pb={[8, 0, 0]}>
+              We have seen how cannabis has benefited the closest ones around us
+              and in return, have been inspired to spread our love for the
+              plant, while making a positive impact within our community.
+            </Text>
+          </Fade>
         </Box>
         <Box width={[1, 1 / 3, 1 / 2]} pl={4}>
-          <img src='https://images.unsplash.com/photo-1515705576963-95cad62945b6' />
+          <Fade distance='2rem' bottom>
+            <img src='https://images.unsplash.com/photo-1515705576963-95cad62945b6' />
+          </Fade>
         </Box>
       </Flex>
       <Flex
@@ -100,34 +104,40 @@ const AboutPage: React.SFC<Props> = () => (
         mb={160}
       >
         <Box width={[1, 2 / 3, 1 / 2]} pl={4}>
-          <Heading as='h2' fontSize={[6]} pb={8}>
-            A team
-            <br />
-            you can trust
-          </Heading>
-          <Heading as='h2' fontSize={[6]} pb={[8, 0, 0]}>
-            We are experts within the fields of farming, tech, compliance,
-            fashion and retail. We have a combined experience of over 20+ years
-            in the cannabis industry, and look forward to bringing unique,
-            high-quality products, and first-class customer service to the Marin
-            and Sonoma County.
-          </Heading>
+          <Fade>
+            <Heading as='h2' fontSize={[6]} pb={8}>
+              A team
+              <br />
+              you can trust
+            </Heading>
+            <Heading as='h2' fontSize={[6]} pb={[8, 0, 0]}>
+              We are experts within the fields of farming, tech, compliance,
+              fashion and retail. We have a combined experience of over 20+
+              years in the cannabis industry, and look forward to bringing
+              unique, high-quality products, and first-class customer service to
+              the Marin and Sonoma County.
+            </Heading>
+          </Fade>
         </Box>
         <Box width={[1, 1 / 3, 1 / 2]} pr={4}>
-          <img src='https://images.unsplash.com/photo-1520224855316-280b2e6afca1' />
+          <Fade distance='2rem' bottom>
+            <img src='https://images.unsplash.com/photo-1520224855316-280b2e6afca1' />
+          </Fade>
         </Box>
       </Flex>
       <Flex css={{ maxWidth: 1360 }} alignItems='center' flexWrap='wrap'>
         <Box width={[1]}>
-          <Heading as='h2' fontSize={[80]} lineHeight={1.1}>
-            We work with cannabis brands that provide exceptional cannabis
-            products across the Golden State. These companies align with our
-            mission to ensure our customers have the best experience from the
-            moment they receive their products at their doorstep. These brands
-            may have different methods, sources, and processing, but their
-            philosophy for making the most refined, consistent, and high-quality
-            products they possibly can, all remains the same.
-          </Heading>
+          <Fade>
+            <Heading as='h2' fontSize={[80]} lineHeight={1.1}>
+              We work with cannabis brands that provide exceptional cannabis
+              products across the Golden State. These companies align with our
+              mission to ensure our customers have the best experience from the
+              moment they receive their products at their doorstep. These brands
+              may have different methods, sources, and processing, but their
+              philosophy for making the most refined, consistent, and
+              high-quality products they possibly can, all remains the same.
+            </Heading>
+          </Fade>
         </Box>
       </Flex>
     </Section>
