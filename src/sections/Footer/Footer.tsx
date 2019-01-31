@@ -100,9 +100,9 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
           as='span'
         >
           © moonflower{' '}
-          <Text as='span' color='lavendar'>
+          {/* <Text as='span' color='lavendar'>
             &nbsp;&bull;&nbsp;C9-18-0000070-TEMP
-          </Text>
+          </Text> */}
         </Flex>
       </Flex>
     </Row>

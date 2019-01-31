@@ -110,13 +110,13 @@ const AboutPage: React.SFC<Props> = () => (
               <br />
               you can trust
             </Heading>
-            <Heading as='h2' fontSize={[6]} pb={[8, 0, 0]}>
+            <Text as='p' fontSize={[6]} pb={[8, 0, 0]}>
               We are experts within the fields of farming, tech, compliance,
               fashion and retail. We have a combined experience of over 20+
               years in the cannabis industry, and look forward to bringing
               unique, high-quality products, and first-class customer service to
               the Marin and Sonoma County.
-            </Heading>
+            </Text>
           </Fade>
         </Box>
         <Box width={[1, 1 / 3, 1 / 2]} pr={4}>
@@ -125,10 +125,10 @@ const AboutPage: React.SFC<Props> = () => (
           </Fade>
         </Box>
       </Flex>
-      <Flex css={{ maxWidth: 1360 }} alignItems='center' flexWrap='wrap'>
+      <Flex css={{ maxWidth: 1360 }} flexWrap='wrap'>
         <Box width={[1]}>
-          <Fade>
-            <Heading as='h2' fontSize={[80]} lineHeight={1.1}>
+          <Text as='p' fontSize={[6, 50, 60, 80]}>
+            <Fade distance='2rem' duration={2600} bottom cascade>
               We work with cannabis brands that provide exceptional cannabis
               products across the Golden State. These companies align with our
               mission to ensure our customers have the best experience from the
@@ -136,8 +136,8 @@ const AboutPage: React.SFC<Props> = () => (
               may have different methods, sources, and processing, but their
               philosophy for making the most refined, consistent, and
               high-quality products they possibly can, all remains the same.
-            </Heading>
-          </Fade>
+            </Fade>
+          </Text>
         </Box>
       </Flex>
     </Section>
