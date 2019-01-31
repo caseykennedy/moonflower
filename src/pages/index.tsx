@@ -88,22 +88,19 @@ const IndexPage: React.SFC<Props> = () => (
 
     <HowItWorks />
 
-    <Section bg='lunar' pageWidth={'100%'} px={[0, 0, 4, 4]}>
+    <Section bg='darkSky' pageWidth={'100%'} px={0} py={0}>
         <Flex
-          bg='superNova'
           width={1}
-          py={4}
-          px={[0, 2, 3, 4]}
           alignItems='stretch'
           flexDirection='column'
           id='shop'
         >
-          <Box width={1} pb={4}>
-            <Text as='p' fontSize={4} pb={1}>
+          <Box width={1} py={4} css={{textAlign: 'center'}}>
+            <Text as='p' fontSize={4} pb={1} color='paleMoon'>
               Phone orders, please call: +1 (707) 731 1337
             </Text>
 
-            <Text as='p' fontSize={4}>
+            <Text as='p' fontSize={4} color='paleMoon'>
               Bureau of Cannabis Control | License Number: C9-18-0000070-TEMP
             </Text>
           </Box>

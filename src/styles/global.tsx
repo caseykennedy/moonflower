@@ -238,6 +238,17 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a { color: ${config.colors.pulse}; transition: all 0.2s ease; }
+
+
+  /* Blaze iFrame Style Overrides */
+
+  .RetailConnect-cardProducts {
+    box-shadow: none !important;
+  }
+
+  .Button--default {
+    text-shadow: none;
+  }
   
 `
 export default GlobalStyle

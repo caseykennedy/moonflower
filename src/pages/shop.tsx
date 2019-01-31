@@ -40,12 +40,10 @@ const ShopPage: React.SFC<Props> = () => (
       </Box> */}
     </Flex>
 
-    <Section bg='lunar' pageWidth={'100%'} px={[0, 0, 4, 4]}>
+    <Section bg='lunar' pageWidth={'100%'} px={0} py={0}>
         <Flex
           bg='superNova'
           width={1}
-          py={[0, 2, 3, 4]}
-          px={[0, 2, 3, 4]}
           alignItems='stretch'
           flexDirection='column'
           id='shop'
