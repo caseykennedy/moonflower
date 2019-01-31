@@ -47,12 +47,12 @@ const AboutPage: React.SFC<Props> = () => (
       pageWidth={'100%'}
       bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548102305/bg-square.jpg'
     >
-      <Box py={260}>
+      <Box py={200}>
         <Fade distance='2rem' bottom>
           <Flex width={1} justifyContent='center'>
             <Box width={[1, 2 / 3, 1 / 2, 1 / 2]} p={[2, 4, 6, 6]}>
               <Box width={1} css={{ textAlign: 'center' }}>
-                <LogoSymbol width={53} fill='white' />
+                <LogoSymbol width={80} fill='white' />
               </Box>
               {/* <Heading
                 as='h2'
@@ -92,7 +92,7 @@ const AboutPage: React.SFC<Props> = () => (
         </Box>
         <Box width={[1, 1 / 3, 1 / 2]} pl={4}>
           <Fade distance='2rem' bottom>
-            <img src='https://images.unsplash.com/photo-1515705576963-95cad62945b6' />
+            <img src='https://res.cloudinary.com/moonflower/image/upload/v1548906714/spread__love.jpg' alt='Cannabis benefits' />
           </Fade>
         </Box>
       </Flex>
@@ -121,7 +121,7 @@ const AboutPage: React.SFC<Props> = () => (
         </Box>
         <Box width={[1, 1 / 3, 1 / 2]} pr={4}>
           <Fade distance='2rem' bottom>
-            <img src='https://images.unsplash.com/photo-1520224855316-280b2e6afca1' />
+            <img src='https://res.cloudinary.com/moonflower/image/upload/v1548906714/trust__us.jpg' alt='You can trust us' />
           </Fade>
         </Box>
       </Flex>
