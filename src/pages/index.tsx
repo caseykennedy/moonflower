@@ -142,7 +142,9 @@ const IndexPage: React.SFC<Props> = () => (
           }}
         >
           <Fade>
-            <Text as='span' color='paleMoon'>
+            <Text as='span' color='paleMoon' css={{
+            fontWeight: 400
+          }}>
               Need a medical marijuana card?
             </Text>{' '}
             It's easy to get an online medical recommendation from the comfort

@@ -75,56 +75,61 @@ class EmailCapture extends React.Component<Props, State> {
     const { email } = this.state
     const { bg } = this.props
     return (
-      <Section bg={bg} py={[120, 120, 200, 200]} px={[ 4, 3, 4, 4 ]}>
+      <Section
+        bg='purpleRain'
+        bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548741512/bg-galactic.jpg'
+      >
         <Box
-          css={{ textAlign: 'center', margin: '0 auto' }}
-          width={[1, 9 / 10, 7 / 10, 4 / 10]}
+          bg={bg}
+          px={[3, 3, 4, 4]}
+          py={[8]}
+          width={[1, 1, 1 / 2, 1 / 2]}
+          mt={200}
         >
-          <Fade>
-            <Heading as='h2' fontSize={8} mb={0} color='superNova'>
-              Sweet deals &amp; updates?
-            </Heading>
-            <Text as='p' fontSize={4} color='superNova' mb={4}>
-              Feel free to subscribe for unbeatable deals and the occasional
-              company updates.
-            </Text>
-          </Fade>
-        </Box>
-        <Box
-          css={{ textAlign: 'center', margin: '0 auto' }}
-          width={[1, 9 / 10, 1 / 2, 4 / 10]}
-        >
-          {!this.state.submitted && (
+          <Box css={{ textAlign: 'center', margin: '0 auto' }}>
             <Fade>
-              <EmailForm name='emailcapture' onSubmit={this.handleSubmit}>
-                <Flex
-                  width={1}
-                  flexWrap='wrap'
-                  justifyContent='center'
-                  alignItems='flex-start'
-                >
-                  <StyledInput
-                    placeholder='Enter your email'
-                    type='email'
-                    name='email'
-                    value={email}
-                    onChange={this.handleChange}
-                    validations={[emailaddress]}
-                  />
-                  <SubmitButton className='button'>Subscribe</SubmitButton>
-                </Flex>
-              </EmailForm>
+              <Heading as='h2' fontSize={8} mb={0} color='superNova'>
+                Sweet deals &amp; updates?
+              </Heading>
+              <Text as='p' fontSize={4} color='superNova' mb={4}>
+                Feel free to subscribe for unbeatable deals and the occasional
+                company updates.
+              </Text>
             </Fade>
-          )}
-          {this.state.submitted && (
-            <Fade>
-              <Box mt={4} bg='pulse' css={{ borderRadius: '6rem' }} p={4}>
-                <Text as='p' color='paleMoon'>
-                  Thanks for subscribing!
-                </Text>
-              </Box>
-            </Fade>
-          )}
+          </Box>
+          <Box css={{ textAlign: 'center', margin: '0 auto' }}>
+            {!this.state.submitted && (
+              <Fade>
+                <EmailForm name='emailcapture' onSubmit={this.handleSubmit}>
+                  <Flex
+                    width={1}
+                    flexWrap='wrap'
+                    justifyContent='center'
+                    alignItems='flex-start'
+                  >
+                    <StyledInput
+                      placeholder='Enter your email'
+                      type='email'
+                      name='email'
+                      value={email}
+                      onChange={this.handleChange}
+                      validations={[emailaddress]}
+                    />
+                    <SubmitButton className='button'>Subscribe</SubmitButton>
+                  </Flex>
+                </EmailForm>
+              </Fade>
+            )}
+            {this.state.submitted && (
+              <Fade>
+                <Box mt={4} bg='lunar' css={{ borderRadius: '6rem' }} p={4}>
+                  <Text as='p' color='pulse'>
+                    Thanks for subscribing!
+                  </Text>
+                </Box>
+              </Fade>
+            )}
+          </Box>
         </Box>
       </Section>
     )
@@ -166,14 +171,16 @@ const StyledInput = styled(Input)`
 `
 
 const SubmitButton = styled(Button)`
-  background-color: ${p => p.theme.colors.ogPurp};
+  background-color: transparent;
+  border: 2px solid ${p => p.theme.colors.ogPurp};
+  border-left: none;
   border-radius: 6rem;
   color: ${p => p.theme.colors.paleMoon};
   cursor: pointer;
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
-  line-height: 2.7rem;
+  line-height: 2.3rem;
   padding: 1.8rem 1rem 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -188,12 +195,12 @@ const SubmitButton = styled(Button)`
   }
 
   &:hover {
-    background-color: ${p =>
-      p.theme.colors.ogPurp && lighten(0.1, p.theme.colors.ogPurp)};
+    background-color: ${p => p.theme.colors.ogPurp};
+    border-color: ${p => p.theme.colors.ogPurp};
   }
   &:active {
-    background-color: ${p =>
-      p.theme.colors.ogPurp && lighten(0.2, p.theme.colors.ogPurp)};
+    background-color: ${p => p.theme.colors.ogPurp};
+    border-color: ${p => p.theme.colors.ogPurp};
   }
 `
 
