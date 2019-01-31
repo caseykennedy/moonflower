@@ -184,6 +184,7 @@ const GlobalStyle = createGlobalStyle`
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
     line-height: 1.1;
+    overflow-x: hidden;
     color: ${config.colors.pulse};
   }
 

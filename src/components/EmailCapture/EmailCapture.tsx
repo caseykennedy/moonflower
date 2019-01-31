@@ -12,8 +12,7 @@ import Section from '../Section'
 import Fade from 'react-reveal/Fade'
 import { isEmail } from 'validator'
 
-interface Props {
-}
+interface Props {}
 
 interface State {
   email: any
@@ -31,19 +30,19 @@ const emailaddress = (value: any) => {
     return (
       <Fade>
         <Error pb={2} className='form-error is-visible'>
-        <Text fontSize='2' color='#e72c2c'>
-          {value} is not a valid email
-        </Text>
-      </Error>
+          <Text fontSize='2' color='goldBloom'>
+            {value} is not a valid email
+          </Text>
+        </Error>
       </Fade>
     )
   }
 }
 
-const encode = (data) => {
+const encode = data => {
   return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
 }
 
 class EmailCapture extends React.Component<Props, State> {
@@ -70,16 +69,16 @@ class EmailCapture extends React.Component<Props, State> {
     const { email } = this.state
     const {} = this.props
     return (
-      <Section bg='lunar' py={[ 120, 120, 200, 200 ]}>
+      <Section bg='lavendar' py={[120, 120, 200, 200]}>
         <Box
           css={{ textAlign: 'center', margin: '0 auto' }}
           width={[1, 9 / 10, 7 / 10, 4 / 10]}
         >
           <Fade>
-            <Heading as='h2' fontSize={8} mb={0} color='pulse'>
+            <Heading as='h2' fontSize={8} mb={0} color='superNova'>
               Sweet deals &amp; updates?
             </Heading>
-            <Text as='p' fontSize={4} color='pulse' mb={4}>
+            <Text as='p' fontSize={4} color='superNova' mb={4}>
               Feel free to subscribe for unbeatable deals and the occasional
               company updates.
             </Text>
@@ -113,8 +112,10 @@ class EmailCapture extends React.Component<Props, State> {
           )}
           {this.state.submitted && (
             <Fade>
-              <Box mt={4} bg='pulse' css={{borderRadius: '6rem'}} p={4}>
-                <Text as='p' color='paleMoon'>Thanks for subscribing!</Text>
+              <Box mt={4} bg='pulse' css={{ borderRadius: '6rem' }} p={4}>
+                <Text as='p' color='paleMoon'>
+                  Thanks for subscribing!
+                </Text>
               </Box>
             </Fade>
           )}
@@ -125,9 +126,10 @@ class EmailCapture extends React.Component<Props, State> {
 }
 
 const StyledInput = styled(Input)`
+  /* background-color: ${p => p.theme.colors.paleMoon}; */
   border: 2px solid ${p => p.theme.colors.pulse};
   border-radius: 6rem;
-  color: ${p => p.theme.colors.pulse};
+  color: ${p => p.theme.colors.paleMoon};
   font-size: 1.8rem;
   line-height: 1.8rem;
   margin-bottom: 1rem;
@@ -140,6 +142,19 @@ const StyledInput = styled(Input)`
     border-bottom-right-radius: 0;
   }
   ${up('1')} {
+  }
+
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: ${p => p.theme.colors.paleMoon};
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: ${p => p.theme.colors.paleMoon};
+  }
+
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: ${p => p.theme.colors.paleMoon};
   }
 `
 

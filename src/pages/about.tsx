@@ -167,7 +167,7 @@ const AboutPage: React.SFC<Props> = () => (
               height: '100%',
               position: 'absolute',
               top: -200,
-              left: 300,
+              left: 360,
               bottom: 0,
               right: 0,
               borderRadius: 999,
