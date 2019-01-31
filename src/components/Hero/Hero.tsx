@@ -52,7 +52,7 @@ const Container = styled(Flex)`
     min-height: 86vh;
   }
   ${up('2')} {
-    min-height: 80vh;
+    min-height: 90vh;
   }
 `
 

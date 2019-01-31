@@ -26,6 +26,7 @@ const AboutPage: React.SFC<Props> = () => (
       <Box width={[1, 1, 1 / 2]}>
         <Heading
           as='h2'
+          lineHeight={1.1}
           fontSize={[6, 7, 8, 8]}
           color='lavendar'
           css={{
@@ -118,7 +119,7 @@ const AboutPage: React.SFC<Props> = () => (
       </Flex>
       <Flex css={{ maxWidth: 1360 }} alignItems='center' flexWrap='wrap'>
         <Box width={[1]}>
-          <Heading as='h2' fontSize={[80]}>
+          <Heading as='h2' fontSize={[80]} lineHeight={1.1}>
             We work with cannabis brands that provide exceptional cannabis
             products across the Golden State. These companies align with our
             mission to ensure our customers have the best experience from the
