@@ -1,44 +1,190 @@
-import * as React from "react"
-import { Header, Container, Segment, Icon } from "semantic-ui-react"
-import { withLayout } from "../components/Layout"
+import { Link } from 'gatsby'
+import * as React from 'react'
+import { withLayout, LayoutProps } from '../components/Layout'
+import styled from 'styled-components'
+import { up, down, between, only } from 'styled-breakpoints'
+import { Box, Heading, Flex, Text } from 'rebass'
+import Fade from 'react-reveal/Fade'
 
-import styled from "styled-components"
+import Section from '../components/Section'
+import LogoSymbol from '../components/LogoSymbol'
 
-const Test = styled.div`
-  margin-top: 400px;
+interface Props {}
+
+const AboutPage: React.SFC<Props> = () => (
+  <React.Fragment>
+    <Flex
+      bg='darkSky'
+      pt={[135]}
+      pb={4}
+      px={[2, 3, 4, 4]}
+      alignItems='flex-end'
+      css={{
+        height: '80vh'
+      }}
+    >
+      <Box width={[1, 1, 1 / 2]}>
+        <Heading
+          as='h2'
+          fontSize={[6, 7, 8, 8]}
+          color='lavendar'
+          css={{
+            fontWeight: 300
+          }}
+        >
+          <Text as='span' color='paleMoon'>
+            <strong>moonflower</strong> delivery was created by passionate
+            cannabis enthusiasts that have used cannabis to help find the light
+            in the darkest of times.
+          </Text>
+        </Heading>
+      </Box>
+    </Flex>
+
+    <Section
+      bg='darkSky'
+      pageWidth={'100%'}
+      bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548102305/bg-square.jpg'
+    >
+      <Box py={260}>
+        <Fade distance='2rem' bottom>
+          <Flex width={1} justifyContent='center'>
+            <Box width={[1, 2 / 3, 1 / 2, 1 / 2]} p={[2, 4, 6, 6]}>
+              <Box width={1} css={{ textAlign: 'center' }}>
+                <LogoSymbol width={53} fill='white' />
+              </Box>
+              {/* <Heading
+                as='h2'
+                fontSize={[4, 5, 6, 6]}
+                color='pulse'
+                textAlign='center'
+                pb={0}
+              >
+                Now delviering in Marin &amp; Sonoma
+              </Heading> */}
+            </Box>
+          </Flex>
+        </Fade>
+      </Box>
+    </Section>
+
+    <Section bg='superNova'>
+      <Flex
+        css={{ maxWidth: 1360 }}
+        alignItems='center'
+        flexWrap='wrap'
+        mb={160}
+      >
+        <Box width={[1, 2 / 3, 1 / 2]} pr={4}>
+          <Heading as='h2' fontSize={[6]} pb={8}>
+            Spread
+            <br />
+            the love
+          </Heading>
+          <Text as='p' fontSize={[6]} pb={[8, 0, 0]}>
+            We have seen how cannabis has benefited the closest ones around us
+            and in return, have been inspired to spread our love for the plant,
+            while making a positive impact within our community.
+          </Text>
+        </Box>
+        <Box width={[1, 1 / 3, 1 / 2]} pl={4}>
+          <img src='https://images.unsplash.com/photo-1515705576963-95cad62945b6' />
+        </Box>
+      </Flex>
+      <Flex
+        css={{ maxWidth: 1360 }}
+        alignItems='center'
+        flexWrap='wrap'
+        flexDirection='row-reverse'
+        mb={160}
+      >
+        <Box width={[1, 2 / 3, 1 / 2]} pl={4}>
+          <Heading as='h2' fontSize={[6]} pb={8}>
+            A team
+            <br />
+            you can trust
+          </Heading>
+          <Heading as='h2' fontSize={[6]} pb={[8, 0, 0]}>
+            We are experts within the fields of farming, tech, compliance,
+            fashion and retail. We have a combined experience of over 20+ years
+            in the cannabis industry, and look forward to bringing unique,
+            high-quality products, and first-class customer service to the Marin
+            and Sonoma County.
+          </Heading>
+        </Box>
+        <Box width={[1, 1 / 3, 1 / 2]} pr={4}>
+          <img src='https://images.unsplash.com/photo-1520224855316-280b2e6afca1' />
+        </Box>
+      </Flex>
+      <Flex css={{ maxWidth: 1360 }} alignItems='center' flexWrap='wrap'>
+        <Box width={[1]}>
+          <Heading as='h2' fontSize={[80]}>
+            We work with cannabis brands that provide exceptional cannabis
+            products across the Golden State. These companies align with our
+            mission to ensure our customers have the best experience from the
+            moment they receive their products at their doorstep. These brands
+            may have different methods, sources, and processing, but their
+            philosophy for making the most refined, consistent, and high-quality
+            products they possibly can, all remains the same.
+          </Heading>
+        </Box>
+      </Flex>
+    </Section>
+
+    {/* <Section bg='purpleRain' pageWidth={1360}>
+      <Box mt={-120} p={4} bg='lunar'>
+        <Fade distance='2rem' bottom>
+          <Box width={1 / 2}>
+            <Heading
+              as='h2'
+              fontSize={[6]}
+              color='lavendar'
+              css={{
+                fontWeight: 300
+              }}
+            >
+              <Text as='p' color='pulse' pb={4}>
+                We have seen how cannabis has benefited the closest ones around
+                us and in return, have been inspired to spread our love for the
+                plant, while making a positive impact within our community.
+              </Text>
+              <Text as='p' color='pulse' pb={4}>
+                Our team are experts within their respective fields in farming,
+                tech, compliance, fashion and retail. We have a combined
+                experience of over 20+ years in the cannabis industry, and look
+                forward to bringing unique, high-quality products, and
+                first-class customer service to the Marin and Sonoma County
+                areas.
+              </Text>
+              <Text as='p' color='pulse'>
+                We work with cannabis brands that provide the most exceptional
+                cannabis products across the Golden State. These companies align
+                with our mission to ensure our customers have the best
+                experience from the moment they receive their products at their
+                doorstep. These brands may have different methods, sources, and
+                processing but philosophy for making the most refined,
+                consistent, and highest-quality products they possibly can all
+                remains the same.
+              </Text>
+            </Heading>
+          </Box>
+        </Fade>
+      </Box>
+    </Section> */}
+  </React.Fragment>
+)
+
+const PageTitle = styled(Flex)`
+  /* background: -webkit-linear-gradient(
+    to right,
+    #202136,
+    #11111b
+  );
+  background: linear-gradient(
+    to right,
+    #202136,
+    #11111b
+  ); */
 `
-
-const AboutPage = () => {
-  return (
-    <Container>
-      <Segment vertical>
-        <Header as="h2">
-          <Icon name="info circle" />
-          <Header.Content>About</Header.Content>
-        </Header>
-        <Test>asdfsdaf</Test>
-      </Segment>
-      <Segment vertical>
-        <p>This starter was created by @fabien0102.</p>
-        <p>
-          For any question, I'm on{" "}
-          <a href="https://discord.gg/2bz8EzW" target="blank">
-            discord #reactiflux/gatsby
-          </a>
-        </p>
-        <p>
-          For any issues, any PR are welcoming
-          <a
-            href="https://github.com/fabien0102/gatsby-starter/issues"
-            target="blank"
-          >
-            {" "}
-            on this repository
-          </a>
-        </p>
-      </Segment>
-    </Container>
-  )
-}
 
 export default withLayout(AboutPage)

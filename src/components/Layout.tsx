@@ -10,6 +10,9 @@ import 'prismjs/themes/prism-okaidia.css'
 import { Segment, Sidebar } from 'semantic-ui-react'
 
 import Header from './Header'
+import EmailCapture from '../components/EmailCapture'
+import Separator from '../components/Separator'
+import Footer from '../sections/Footer'
 
 // export const menuItems = [
 //   { name: 'Home', path: '/', exact: true, icon: 'home', inverted: true },
@@ -35,6 +38,9 @@ const Layout = (props: LayoutProps) => {
           <div>
             <Header />
             {props.children}
+            <EmailCapture />
+            <Separator bg='paleMoon' />
+            <Footer />
           </div>
         </Provider>
       </ThemeProvider>

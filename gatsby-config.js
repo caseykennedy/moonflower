@@ -5,7 +5,7 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     title: `My website`,
-    googleVerification: `abcdefz`,
+    googleVerification: `googlefba39e0cb87112fa`,
     disqus: `gatsby-typescript`
   },
   mapping: {

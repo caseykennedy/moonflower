@@ -12,13 +12,10 @@ import Iframe from 'react-iframe'
 import Hero from '../components/Hero'
 import ButtonLink from '../components/ButtonLink'
 import Section from '../components/Section'
-import Separator from '../components/Separator'
 import TextLink from '../components/TextLink'
-import EmailCapture from '../components/EmailCapture'
 
 import Intro from '../sections/Intro'
 import HowItWorks from '../sections/HowItWorks'
-import Footer from '../sections/Footer'
 
 interface Props {}
 
@@ -172,14 +169,6 @@ const IndexPage: React.SFC<Props> = () => (
         </Flex>
       </Fade>
     </Section> */}
-
-    <Separator />
-
-    <EmailCapture />
-
-    <Separator bg='paleMoon' />
-
-    <Footer />
   </React.Fragment>
 )
 

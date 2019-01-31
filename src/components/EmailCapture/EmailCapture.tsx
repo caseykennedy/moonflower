@@ -13,7 +13,6 @@ import Fade from 'react-reveal/Fade'
 import { isEmail } from 'validator'
 
 interface Props {
-  data: any
 }
 
 interface State {
@@ -41,10 +40,10 @@ const emailaddress = (value: any) => {
   }
 }
 
-const encode = (data: any) => {
+const encode = (data) => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
 }
 
 class EmailCapture extends React.Component<Props, State> {
