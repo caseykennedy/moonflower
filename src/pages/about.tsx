@@ -90,9 +90,25 @@ const AboutPage: React.SFC<Props> = () => (
             </Text>
           </Fade>
         </Box>
-        <Box width={[1, 1 / 3, 1 / 2]} pl={4}>
+        <Box width={[1, 1 / 3, 1 / 2]} pl={4} css={{ position: 'relative' }}>
+          <ColorBox
+            bg='white'
+            width={1}
+            css={{
+              height: '160%',
+              position: 'absolute',
+              top: -80,
+              left: 160,
+              bottom: 0,
+              right: 0,
+              borderRadius: 999
+            }}
+          />
           <Fade distance='2rem' bottom>
-            <img src='https://res.cloudinary.com/moonflower/image/upload/v1548906714/spread__love.jpg' alt='Cannabis benefits' />
+            <img
+              src='https://res.cloudinary.com/moonflower/image/upload/v1548906714/spread__love.jpg'
+              alt='Cannabis benefits'
+            />
           </Fade>
         </Box>
       </Flex>
@@ -119,16 +135,45 @@ const AboutPage: React.SFC<Props> = () => (
             </Text>
           </Fade>
         </Box>
-        <Box width={[1, 1 / 3, 1 / 2]} pr={4}>
+        <Box width={[1, 1 / 3, 1 / 2]} pr={4} css={{ position: 'relative' }}>
+        <ColorBox
+            bg='lunar'
+            width={1}
+            css={{
+              height: '70%',
+              position: 'absolute',
+              top: -80,
+              left: -80,
+              bottom: 0,
+              right: 0,
+              borderRadius: 999
+            }}
+          />
           <Fade distance='2rem' bottom>
-            <img src='https://res.cloudinary.com/moonflower/image/upload/v1548906714/trust__us.jpg' alt='You can trust us' />
+            <img
+              src='https://res.cloudinary.com/moonflower/image/upload/v1548906714/trust__us.jpg'
+              alt='You can trust us'
+            />
           </Fade>
         </Box>
       </Flex>
       <Flex css={{ maxWidth: 1360 }} flexWrap='wrap'>
-        <Box width={[1]}>
-          <Text as='p' fontSize={[6, 50, 60, 80]}>
-            <Fade distance='2rem' duration={2600} bottom cascade>
+        <Box width={[1]} css={{ position: 'relative' }}>
+          <Text as='span' fontSize={[6, 50, 60, 80]} textAlign='left'>
+            <Fade><ColorBox
+            bg='white'
+            width={1}
+            css={{
+              height: '100%',
+              position: 'absolute',
+              top: -200,
+              left: 300,
+              bottom: 0,
+              right: 0,
+              borderRadius: 999,
+              zIndex: 0
+            }}
+          />
               We work with cannabis brands that provide exceptional cannabis
               products across the Golden State. These companies align with our
               mission to ensure our customers have the best experience from the
@@ -138,6 +183,7 @@ const AboutPage: React.SFC<Props> = () => (
               high-quality products they possibly can, all remains the same.
             </Fade>
           </Text>
+            
         </Box>
       </Flex>
     </Section>
@@ -185,7 +231,8 @@ const AboutPage: React.SFC<Props> = () => (
   </React.Fragment>
 )
 
-const PageTitle = styled(Flex)`
+const ColorBox = styled(Box)`
+  
   /* background: -webkit-linear-gradient(
     to right,
     #202136,
