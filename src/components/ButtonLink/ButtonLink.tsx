@@ -104,10 +104,10 @@ const looks = {
 
     &:hover {
       background-color: ${p =>
-        p.theme.colors.lavendar && lighten(0.1, p.theme.colors.lavendar)};
+        p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
       border-color: ${p =>
-        p.theme.colors.lavendar && lighten(0.1, p.theme.colors.lavendar)};
-      color: ${props => props.theme.colors.superNova};
+        p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
+      color: ${props => props.theme.colors.paleMoon};
     }
     &:active {
       background-color: ${p =>

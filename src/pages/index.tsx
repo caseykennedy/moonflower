@@ -8,6 +8,7 @@ import { Box, Heading, Flex, Text } from 'rebass'
 import Carousel from '../components/Carousel'
 import Fade from 'react-reveal/Fade'
 import Iframe from 'react-iframe'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import Hero from '../components/Hero'
 import ButtonLink from '../components/ButtonLink'
@@ -34,15 +35,17 @@ const IndexPage: React.SFC<Props> = () => (
           Marin county’s premier online dispensary, delivered to you
         </Heading>
         <Box mt={[4]}>
-          <ButtonLink
-            look='light'
-            size='default'
-            variant='solid'
-            radius={100}
-            to='/'
-          >
-            Browse the menu
-          </ButtonLink>
+          <AnchorLink href='#shop' style={{ textDecoration: 'none' }}>
+            <ButtonLink
+              look='light'
+              size='default'
+              variant='solid'
+              radius={100}
+              to='/'
+            >
+              Browse the menu
+            </ButtonLink>
+          </AnchorLink>
         </Box>
       </Fade>
     </Hero>
@@ -84,10 +87,26 @@ const IndexPage: React.SFC<Props> = () => (
 
     <HowItWorks />
 
-    <Section bg='lunar' pageWidth={1360}>
+    <Section bg='lunar' pageWidth={'100%'}>
       <Fade distance='2rem' bottom>
-        <Flex width={1} alignItems='flex-end'>
-          <Flex bg='superNova' width={1} p={4} alignItems='stretch'>
+        <Flex
+          bg='superNova'
+          width={1}
+          p={4}
+          alignItems='stretch'
+          flexDirection='column'
+          id='shop'
+        >
+          <Box width={1} pb={4}>
+            <Text as='p' fontSize={4} pb={1}>
+              Phone orders, please call: +1 (707) 731 1337
+            </Text>
+
+            <Text as='p' fontSize={4}>
+              Bureau of Cannabis Control | License Number: C9-18-0000070-TEMP
+            </Text>
+          </Box>
+          <Box width={1}>
             <Iframe
               id='blazeIframe'
               frameborder='0'
@@ -98,7 +117,7 @@ const IndexPage: React.SFC<Props> = () => (
               position='relative'
               allowFullScreen
             />
-          </Flex>
+          </Box>
         </Flex>
       </Fade>
     </Section>

@@ -32,6 +32,7 @@ declare module 'react-iframe'
 declare module 'react-validation/build/form'
 declare module 'react-validation/build/input'
 declare module 'react-validation/build/button'
+declare module 'react-anchor-link-smooth-scroll'
 
 // Image Type Declarations
 declare module '*.svg'

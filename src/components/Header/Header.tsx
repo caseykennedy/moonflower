@@ -1,13 +1,14 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
 import { connect } from 'react-redux'
-// import { Container } from "semantic-ui-react"
 import styled from 'styled-components'
 import { Box, Heading, Flex } from 'rebass'
 import withSizes from 'react-sizes'
 import { up, down, between, only } from 'styled-breakpoints'
 import Headroom from 'react-headroom'
 import { lighten } from 'polished'
+
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import LogoSymbol from '../LogoSymbol'
 
@@ -24,7 +25,9 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
     <Flex alignItems='center' py={[2, 2, 3, 4]}>
       <Box width={1 / 2}>
         {/* <Box>{isMobile ? <LogoSymbol /> : <Logo />}</Box> */}
-        <Link to='/'><Logo /></Link>
+        <Link to='/'>
+          <Logo />
+        </Link>
       </Box>
       <Flex
         alignItems='baseline'
@@ -32,11 +35,12 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
         width={1 / 2}
         justifyContent='flex-end'
       >
-        
         <NavLink to='/about/'>about</NavLink>
         <NavLink to='#'>faq</NavLink>
+        <AnchorLink href='#shop' style={{ textDecoration: 'none' }}>
+          <Button>Place An Order</Button>
+        </AnchorLink>
 
-        <Button>Place An Order</Button>
         {/* <BurgerBox ml={[ 2, 3, 4, 4 ]}>
           <IconMenu />
         </BurgerBox> */}
@@ -78,9 +82,9 @@ const Button = styled.a`
 
   &:hover {
     background-color: ${p =>
-        p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
+      p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
     border-color: ${p =>
-        p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
+      p.theme.colors.pulse && lighten(0.1, p.theme.colors.pulse)};
     color: ${props => props.theme.colors.superNova};
   }
 
@@ -107,10 +111,11 @@ const NavLink = styled(Link)`
   white-space: nowrap;
 
   &:hover {
-    color: ${p => p.theme.colors.pulse && lighten(0.2, p.theme.colors.paleMoon)};
+    color: ${p =>
+      p.theme.colors.pulse && lighten(0.2, p.theme.colors.paleMoon)};
   }
 
-  ${between('0','1')} {
+  ${between('0', '1')} {
   }
   ${up('0')} {
     display: inherit;
