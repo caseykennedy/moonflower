@@ -15,9 +15,13 @@ interface HtmlProps {
 export default (props: HtmlProps) => {
   const head = Helmet.rewind()
 
-  const verification = config.siteMetadata && config.siteMetadata.googleVerification ? <meta
-    name='google-site-verification'
-    content={config.siteMetadata.googleVerification} /> : null
+  const verification =
+    config.siteMetadata && config.siteMetadata.googleVerification ? (
+      <meta
+        name='google-site-verification'
+        content={config.siteMetadata.googleVerification}
+      />
+    ) : null
 
   return (
     <html lang='en'>
@@ -36,12 +40,20 @@ export default (props: HtmlProps) => {
         {verification}
       </head>
       <body>
-        <div
-          id='___gatsby'
-          dangerouslySetInnerHTML={{ __html: props.body }}
-        />
+        <div id='___gatsby' dangerouslySetInnerHTML={{ __html: props.body }} />
         {props.postBodyComponents}
-        <script>var blazeUrl="https://store.blaze.me"; var apiKey="4e527f2108b84dd19f2189a0c0287b4b";var script=document.createElement('script');script.src=blazeUrl+'/'+'widget.js';script.id='blazeIframeScript';script.setAttribute('blazeUrl',blazeUrl) script.setAttribute('apiKey',apiKey) document.head.appendChild(script);</script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            var blazeUrl='https://store.blaze.me'; var
+          apiKey="b730e04b7fe843d2b0015d2f5f3012f4";var
+          script=document.createElement('script');script.src=blazeUrl+'/'+'widget.js';script.id='blazeIframeScript';script.setAttribute('blazeUrl',blazeUrl)
+          script.setAttribute('apiKey',apiKey)
+          document.head.appendChild(script);
+        `
+          }}
+        />
       </body>
     </html>
   )

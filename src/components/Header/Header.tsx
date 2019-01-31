@@ -33,9 +33,8 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
         justifyContent='flex-end'
       >
         
-        <NavLink>delivery</NavLink>
-        <NavLink>faq</NavLink>
-        <NavLink>contact</NavLink>
+        <NavLink to='/about/'>about</NavLink>
+        <NavLink to='#'>faq</NavLink>
 
         <Button>Place An Order</Button>
         {/* <BurgerBox ml={[ 2, 3, 4, 4 ]}>
@@ -97,12 +96,13 @@ const Button = styled.a`
   }
 `
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
   display: none;
   font-size: 1.4rem;
   margin-right: 2rem;
+  text-decoration: none;
   /* text-transform: uppercase; */
   white-space: nowrap;
 
@@ -111,12 +111,10 @@ const NavLink = styled.a`
   }
 
   ${between('0','1')} {
-    margin-right: 2rem;
   }
   ${up('0')} {
     display: inherit;
     font-size: 2rem;
-    margin-right: 2rem;
   }
   ${up('1')} {
     margin-right: 3rem;

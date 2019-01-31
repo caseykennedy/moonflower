@@ -75,7 +75,7 @@ class EmailCapture extends React.Component<Props, State> {
     const { email } = this.state
     const { bg } = this.props
     return (
-      <Section bg={bg} py={[120, 120, 200, 200]}>
+      <Section bg={bg} py={[120, 120, 200, 200]} px={[ 4, 3, 4, 4 ]}>
         <Box
           css={{ textAlign: 'center', margin: '0 auto' }}
           width={[1, 9 / 10, 7 / 10, 4 / 10]}

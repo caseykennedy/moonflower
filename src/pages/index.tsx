@@ -27,7 +27,7 @@ const IndexPage: React.SFC<Props> = () => (
         <Heading
           as='h1'
           fontSize={[8, 50, 60, 60]}
-          letterSpacing={[ 0, 0, '-0.2rem', '-0.2rem' ]}
+          letterSpacing={[0, 0, '-0.2rem', '-0.2rem']}
           color='lunar'
           mt={8}
         >
@@ -74,10 +74,7 @@ const IndexPage: React.SFC<Props> = () => (
       </Box>
     </Section> */}
 
-    <Section
-      bg='lunar'
-      pageWidth={1360}
-    >
+    <Section bg='lunar' pageWidth={1360}>
       <Box mt={-120}>
         <Fade distance='2rem' bottom>
           <Intro />
@@ -90,8 +87,7 @@ const IndexPage: React.SFC<Props> = () => (
     <Section bg='lunar' pageWidth={1360}>
       <Fade distance='2rem' bottom>
         <Flex width={1} alignItems='flex-end'>
-          <Flex bg='superNova' width={'100%'} p={4} alignItems='stretch'>
-          <Text as='h3' color='paleMoon'>eCommerce iFrame</Text>
+          <Flex bg='superNova' width={1} p={4} alignItems='stretch'>
             <Iframe
               id='blazeIframe'
               frameborder='0'
@@ -115,31 +111,29 @@ const IndexPage: React.SFC<Props> = () => (
       </Box>
     </Section> */}
 
-    <Section pageWidth={1360} bg='darkSky' py={[6, 10, 200]}>
-      <Fade>
-        <Box width={[1, 1, 1, 6 / 8]} px={[4, 6, 8]}>
-          <Heading
-            as='h2'
-            fontSize={[6, 7, 8, 8]}
-            mb={8}
-            color='lavendar'
-            css={{
-              fontWeight: 300
-            }}
-          >
+    <Section pageWidth={1360} bg='darkSky' py={[160, 160, 200]}>
+      <Box width={[1, 1, 1, 6 / 8]} px={[2, 6, 8]}>
+        <Heading
+          as='h3'
+          fontSize={[6, 7, 8, 8]}
+          mb={8}
+          color='lavendar'
+          css={{
+            fontWeight: 300
+          }}
+        >
+          <Fade>
             <Text as='span' color='paleMoon'>
               Need a medical marijuana card?
             </Text>{' '}
             It's easy to get an online medical recommendation from the comfort
             of your own home.
-          </Heading>
-          <Text as='p' color='paleMoon'>
-            <TextLink to='/'>
-              Book a fast &amp; easy online appointment
-            </TextLink>
-          </Text>
-        </Box>
-      </Fade>
+          </Fade>
+        </Heading>
+        <Text as='p' color='paleMoon'>
+          <TextLink to='/'>Book a fast &amp; easy online appointment</TextLink>
+        </Text>
+      </Box>
     </Section>
 
     <Separator />
