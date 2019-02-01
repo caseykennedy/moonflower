@@ -5,7 +5,7 @@ import { withLayout, LayoutProps } from '../components/Layout'
 import styled from 'styled-components'
 import { up, down, between, only } from 'styled-breakpoints'
 import { Box, Heading, Flex, Text } from 'rebass'
-import Carousel from '../components/Carousel'
+import Slider from '../components/Slider'
 import Fade from 'react-reveal/Fade'
 import Iframe from 'react-iframe'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
@@ -20,6 +20,8 @@ import LogoSymbol from '../components/LogoSymbol'
 import Intro from '../sections/Intro'
 import HowItWorks from '../sections/HowItWorks'
 
+import data from '../assets/data/slides.json'
+
 interface Props {}
 
 interface State {
@@ -30,43 +32,39 @@ export class IndexPage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
 
-
-
     this.state = {
       random: 0
     }
   }
 
-
-
   resetIframe = () => {
-    this.setState({random: this.state.random + 1})
+    this.setState({ random: this.state.random + 1 })
   }
 
   public render() {
-    const {  } = this.props
+    const {} = this.props
     return (
       <React.Fragment>
         <Flex
-          bg='darkSky'
+          bg='#161623'
           pt={[135]}
-          pb={4}
+          pb={[2, 3, 4, 4]}
           px={[2, 3, 4, 4]}
           alignItems='flex-end'
           css={{
-            height: '48rem'
+            height: '58rem'
           }}
         >
-          <Box width={[1, 1, 1 / 2]}>
+          <Box width={[9 / 10, 1 / 2, 1 / 2]}>
             <Fade>
               <Heading
                 as='h1'
                 pb={0}
                 lineHeight={1.1}
-                fontSize={[6, 7, 8, 8]}
-                color='lunar'
+                fontSize={[5, 6, 8, 8]}
+                color='paleMoon'
                 css={{
-                  fontWeight: 400
+                  fontWeight: 300
                 }}
               >
                 <strong>Marin County’s</strong> premier online dispensary,
@@ -76,53 +74,54 @@ export class IndexPage extends React.Component<Props, State> {
           </Box>
         </Flex>
         {/* <Hero>
-      <Fade>
-        <Heading
-          as='h1'
-          fontSize={[8, 50, 60, 60]}
-          letterSpacing={[0, 0, '-0.2rem', '-0.2rem']}
-          color='lunar'
-          mt={8}
-        >
-          Marin county’s premier online dispensary, delivered to you
-        </Heading>
-        <Box mt={[4]}>
-          <AnchorLink href='#shop' style={{ textDecoration: 'none' }}>
-            <ButtonLink
-              as='span'
-              look='light'
-              size='default'
-              variant='solid'
-              radius={100}
-              to='#'
+          <Fade>
+            <Heading
+              as='h1'
+              fontSize={[8, 50, 60, 60]}
+              letterSpacing={[0, 0, '-0.2rem', '-0.2rem']}
+              color='lunar'
+              mt={8}
             >
-              Browse the menu
-            </ButtonLink>
-          </AnchorLink>
-        </Box>
-      </Fade>
-    </Hero> */}
+              Marin county’s premier online dispensary, delivered to you
+            </Heading>
+            <Box mt={[4]}>
+              <AnchorLink href='#shop' style={{ textDecoration: 'none' }}>
+                <ButtonLink
+                  as='span'
+                  look='light'
+                  size='default'
+                  variant='solid'
+                  radius={100}
+                  to='#'
+                >
+                  Browse the menu
+                </ButtonLink>
+              </AnchorLink>
+            </Box>
+          </Fade>
+        </Hero> */}
 
-        <Section
+        <Slider data={data} />
+
+        {/* <Section
           bg='darkSky'
           pageWidth={'100%'}
           bgImage='https://images.unsplash.com/photo-1513656967094-e96936e02fad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80'
         >
-          <Box mt={[160, 200, 200, 600]}>
+          <Box mt={[200, 200, 200, 600]}>
             <Fade distance='2rem' bottom>
               <Flex width={1} justifyContent='flex-end' />
             </Fade>
           </Box>
-        </Section>
+        </Section> */}
 
-        <Section bg='darkSky' pageWidth={'100%'} py={4}>
+        <Section bg='#161623' pageWidth={'100%'} py={120}>
           <Box mt={[0]}>
             <Fade distance='2rem' bottom>
-              <Flex width={1} justifyContent='center'>
-                <Box width={8 / 10}>
-                  <Heading
+              <Flex width={1} justifyContent='center' flexWrap='wrap'>
+                <Box width={[1, 1, 8 / 10, 8 / 10]} pb={[2, 2, 0, 0]}>
+                  <Text
                     as='p'
-                    fontSize={[5]}
                     mb={0}
                     color='lavendar'
                     css={{
@@ -141,9 +140,9 @@ export class IndexPage extends React.Component<Props, State> {
                     <br />
                     It's easy to get an online medical recommendation from the
                     comfort of your own home.
-                  </Heading>
+                  </Text>
                 </Box>
-                <Box width={2 / 10}>
+                <Box width={[1, 1, 2 / 10, 2 / 10]}>
                   <Text as='p' color='paleMoon'>
                     <TextLink to='/'>
                       book a fast &amp; easy online appointment

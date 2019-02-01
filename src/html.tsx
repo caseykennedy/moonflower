@@ -46,12 +46,12 @@ export default (props: HtmlProps) => {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-            var blazeUrl='https://store.blaze.me'; var
-          apiKey="12c2645f3ebd4e12bc06a1ffe85d3624";var
-          script=document.createElement('script');script.src=blazeUrl+'/'+'widget.js';script.id='blazeIframeScript';script.setAttribute('blazeUrl',blazeUrl)
-          script.setAttribute('apiKey',apiKey)
-          document.head.appendChild(script);
-        `
+              var blazeUrl='https://store.blaze.me';
+              var apiKey="9d2cdd6ceec8480489da3fa91d0a34be";
+              var script=document.createElement('script');script.src=blazeUrl+'/'+'widget.js';script.id='blazeIframeScript';script.setAttribute('blazeUrl',blazeUrl)
+              script.setAttribute('apiKey',apiKey)
+              document.head.appendChild(script);
+            `
           }}
         />
       </body>
