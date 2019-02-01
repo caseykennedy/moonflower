@@ -36,16 +36,12 @@ export class IndexPage extends React.Component<Props, State> {
     const {} = this.props
     return (
       <Layout>
-        <Flex
+        <PageTitle
           bg='#161623'
           pt={[135]}
           pb={[2, 3, 4, 4]}
           px={[2, 3, 4, 4]}
           alignItems='flex-end'
-          css={{
-            height: '58rem',
-            backgroundColor: '#161623'
-          }}
         >
           <Box width={[9 / 10, 1 / 2, 1 / 2]} pt={'40rem'}>
             <Fade>
@@ -61,7 +57,7 @@ export class IndexPage extends React.Component<Props, State> {
               </Heading>
             </Fade>
           </Box>
-        </Flex>
+        </PageTitle>
 
         <Slider data={data} />
 
