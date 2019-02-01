@@ -110,7 +110,7 @@ const SlideFrame = styled(Flex)`
   ${between('1', '2')} {
   }
   ${up('0')} {
-    height: 90vh;
+    height: 80vh;
   }
 `
 
