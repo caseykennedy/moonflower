@@ -68,7 +68,7 @@ export class IndexPage extends React.Component<Props, State> {
           </Box>
         </Flex>
 
-        <Slider data={data} />
+        {/* <Slider data={data} />
 
         <Section bg='#161623' pageWidth={'100%'} py={[8, 100, 160]}>
           <Box>
@@ -137,7 +137,7 @@ export class IndexPage extends React.Component<Props, State> {
               />
             </Box>
           </Flex>
-        </Section>
+        </Section> */}
       </React.Fragment>
     )
   }
