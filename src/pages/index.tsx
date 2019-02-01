@@ -23,23 +23,50 @@ interface State {
 }
 
 export class IndexPage extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
+  // constructor(props: Props) {
+  //   super(props)
 
-    this.state = {
-      random: 0
-    }
-  }
+  //   this.state = {
+  //     random: 0
+  //   }
+  // }
 
-  resetIframe = () => {
-    this.setState({ random: this.state.random + 1 })
-  }
+  // resetIframe = () => {
+  //   this.setState({ random: this.state.random + 1 })
+  // }
 
   public render() {
     const {} = this.props
     return (
       <React.Fragment>
-        
+        <Flex
+          bg='#161623'
+          pt={[135]}
+          pb={[2, 3, 4, 4]}
+          px={[2, 3, 4, 4]}
+          alignItems='flex-end'
+          css={{
+            height: '58rem'
+          }}
+        >
+          <Box width={[9 / 10, 1 / 2, 1 / 2]}>
+            <Fade>
+              <Heading
+                as='h1'
+                pb={0}
+                lineHeight={1.1}
+                fontSize={[5, 6, 8, 8]}
+                color='paleMoon'
+                css={{
+                  fontWeight: 300
+                }}
+              >
+                <strong>Marin County’s</strong> premier online dispensary,
+                delivered to you.
+              </Heading>
+            </Fade>
+          </Box>
+        </Flex>
 
         <Slider data={data} />
 
@@ -97,17 +124,17 @@ export class IndexPage extends React.Component<Props, State> {
             </Box>
             <Separator />
             <Box width={1}>
-              {/* <Iframe
+              <Iframe
                 id='blazeIframe'
                 frameborder='0'
                 width='100%'
                 height='110vh'
                 display='initial'
                 position='relative'
-                onLoad={this.resetIframe}
+                // onLoad={this.resetIframe}
                 url=''
                 allowFullScreen
-              /> */}
+              />
             </Box>
           </Flex>
         </Section>
