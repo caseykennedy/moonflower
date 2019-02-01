@@ -115,8 +115,8 @@ export class IndexPage extends React.Component<Props, State> {
           </Box>
         </Section> */}
 
-        <Section bg='#161623' pageWidth={'100%'} py={[8, 100, 120]}>
-          <Box mt={[0]}>
+        <Section bg='#161623' pageWidth={'100%'} py={[8, 100, 160]}>
+          <Box>
             <Fade distance='2rem' bottom>
               <Flex width={1} justifyContent='center' alignItems='center' flexWrap='wrap'>
                 <Box width={[1, 1, 8 / 10, 8 / 10]} pb={[2, 2, 0, 0]}>
@@ -143,7 +143,7 @@ export class IndexPage extends React.Component<Props, State> {
                   </Text>
                 </Box>
                 <Box width={[1, 1, 2 / 10, 2 / 10]}>
-                  <Text as='p' color='paleMoon'>
+                  <Text as='p' color='paleMoon' textAlign=''>
                     <TextLink to='/'>
                       book an appointment
                     </TextLink>
@@ -196,7 +196,7 @@ export class IndexPage extends React.Component<Props, State> {
             </Box>
             <Separator />
             <Box width={1}>
-              <Iframe
+              {/* <Iframe
                 id='blazeIframe'
                 frameborder='0'
                 width='100%'
@@ -206,7 +206,7 @@ export class IndexPage extends React.Component<Props, State> {
                 onLoad={this.resetIframe}
                 url=''
                 allowFullScreen
-              />
+              /> */}
             </Box>
           </Flex>
         </Section>
