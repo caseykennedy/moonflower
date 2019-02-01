@@ -43,7 +43,7 @@ export default (props: HtmlProps) => {
         <div id='___gatsby' dangerouslySetInnerHTML={{ __html: props.body }} />
         {props.postBodyComponents}
 
-        {/* <script
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               var blazeUrl='https://store.blaze.me';
@@ -53,7 +53,7 @@ export default (props: HtmlProps) => {
               document.head.appendChild(script);
             `
           }}
-        /> */}
+        />
       </body>
     </html>
   )

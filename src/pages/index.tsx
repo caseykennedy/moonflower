@@ -39,34 +39,7 @@ export class IndexPage extends React.Component<Props, State> {
     const {} = this.props
     return (
       <React.Fragment>
-        <Flex
-          bg='#161623'
-          pt={[135]}
-          pb={[2, 3, 4, 4]}
-          px={[2, 3, 4, 4]}
-          alignItems='flex-end'
-          css={{
-            height: '58rem'
-          }}
-        >
-          <Box width={[9 / 10, 1 / 2, 1 / 2]}>
-            <Fade>
-              <Heading
-                as='h1'
-                pb={0}
-                lineHeight={1.1}
-                fontSize={[5, 6, 8, 8]}
-                color='paleMoon'
-                css={{
-                  fontWeight: 300
-                }}
-              >
-                <strong>Marin County’s</strong> premier online dispensary,
-                delivered to you.
-              </Heading>
-            </Fade>
-          </Box>
-        </Flex>
+        
 
         <Slider data={data} />
 
