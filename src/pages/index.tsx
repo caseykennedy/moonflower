@@ -115,10 +115,10 @@ export class IndexPage extends React.Component<Props, State> {
           </Box>
         </Section> */}
 
-        <Section bg='#161623' pageWidth={'100%'} py={120}>
+        <Section bg='#161623' pageWidth={'100%'} py={[8, 100, 120]}>
           <Box mt={[0]}>
             <Fade distance='2rem' bottom>
-              <Flex width={1} justifyContent='center' flexWrap='wrap'>
+              <Flex width={1} justifyContent='center' alignItems='center' flexWrap='wrap'>
                 <Box width={[1, 1, 8 / 10, 8 / 10]} pb={[2, 2, 0, 0]}>
                   <Text
                     as='p'
@@ -145,7 +145,7 @@ export class IndexPage extends React.Component<Props, State> {
                 <Box width={[1, 1, 2 / 10, 2 / 10]}>
                   <Text as='p' color='paleMoon'>
                     <TextLink to='/'>
-                      book a fast &amp; easy online appointment
+                      book an appointment
                     </TextLink>
                   </Text>
                 </Box>
@@ -185,12 +185,12 @@ export class IndexPage extends React.Component<Props, State> {
 
         <Section bg='darkSky' pageWidth={'100%'} px={0} py={0}>
           <Flex width={1} alignItems='stretch' flexDirection='column' id='shop'>
-            <Box width={1} py={8} css={{ textAlign: 'center' }}>
+            <Box width={1} py={8} px={[ 2, 3, 4, 4 ]} css={{ textAlign: 'center' }}>
               <Text as='p' fontSize={6} pb={1} color='paleMoon'>
                 phone orders: <strong>+1 (707) 731 1337</strong>
               </Text>
 
-              <Text as='p' fontSize={2} color='lavendar'>
+              <Text as='p' fontSize={'1.3rem'} color='lavendar' letterSpacing='0.3rem' css={{ textTransform: 'uppercase', fontWeight: 500 }}>
                 Bureau of Cannabis Control | License Number: C9-18-0000070-TEMP
               </Text>
             </Box>
