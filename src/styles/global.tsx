@@ -172,7 +172,7 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    background: ${config.colors.superNova};
+    background: #161623;
     font-size: 10px;
     font-family: 'Transat', sans-serif;
     letter-spacing: 0rem;

@@ -43,7 +43,8 @@ export class IndexPage extends React.Component<Props, State> {
           px={[2, 3, 4, 4]}
           alignItems='flex-end'
           css={{
-            height: '58rem'
+            height: '58rem',
+            backgroundColor: '#161623'
           }}
         >
           <Box width={[9 / 10, 1 / 2, 1 / 2]} pt={'40rem'}>
