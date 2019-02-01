@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
-import { withLayout, LayoutProps } from '../components/Layout'
+import Layout from '../components/Layout'
 import styled from 'styled-components'
 import { up, down, between, only } from 'styled-breakpoints'
 import { Box, Heading, Flex, Text } from 'rebass'
@@ -14,7 +14,7 @@ import TextLink from '../components/TextLink'
 interface Props {}
 
 const ShopPage: React.SFC<Props> = () => (
-  <React.Fragment>
+  <Layout>
     <Flex bg='darkSky' pt={95} pb={4} px={[2, 3, 4, 4]} alignItems='flex-end'>
       {/* <Box width={[1, 1, 1 / 2]}>
         <Fade>
@@ -69,7 +69,7 @@ const ShopPage: React.SFC<Props> = () => (
         </Box>
       </Flex>
     </Section>
-  </React.Fragment>
+  </Layout>
 )
 
-export default withLayout(ShopPage)
+export default ShopPage

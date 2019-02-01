@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
-import { withLayout, LayoutProps } from '../components/Layout'
+import Layout from '../components/Layout'
 import styled from 'styled-components'
 import { up, down, between, only } from 'styled-breakpoints'
 import { Box, Heading, Flex, Text } from 'rebass'
@@ -12,7 +12,7 @@ import LogoSymbol from '../components/LogoSymbol'
 interface Props {}
 
 const AboutPage: React.SFC<Props> = () => (
-  <React.Fragment>
+  <Layout>
     <Flex
       bg='darkSky'
       pt={[135]}
@@ -229,7 +229,7 @@ const AboutPage: React.SFC<Props> = () => (
         </Fade>
       </Box>
     </Section> */}
-  </React.Fragment>
+  </Layout>
 )
 
 const ColorBox = styled(Box)`
@@ -246,4 +246,4 @@ const ColorBox = styled(Box)`
   ); */
 `
 
-export default withLayout(AboutPage)
+export default AboutPage

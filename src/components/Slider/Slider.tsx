@@ -51,13 +51,6 @@ export class Slider extends React.Component<Props, State> {
                   backgroundSize='cover'
                   p={[ 2, 3, 4, 4 ]}
                   width={1}
-                  css={{
-                    display: 'flex',
-                    justifyContent: 'flex-end',
-                    alignItems: 'flex-end',
-                    flexWrap: 'wrap',
-                    flexDirection: 'column'
-                  }}
                 >
                   <Flex
                     bg='darkSky'

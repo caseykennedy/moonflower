@@ -1,13 +1,10 @@
 import * as React from 'react'
-import { Provider } from 'react-redux'
-import { store } from '../store'
 
 import GlobalStyle from '../styles/global'
 import { ThemeProvider } from 'styled-components'
 import theme from '../theme/theme'
 
 import 'prismjs/themes/prism-okaidia.css'
-import { Segment, Sidebar } from 'semantic-ui-react'
 
 import Header from './Header'
 import EmailCapture from '../components/EmailCapture'
@@ -21,9 +18,6 @@ import Footer from '../sections/Footer'
 // ]
 
 export interface LayoutProps {
-  location: {
-    pathname: string
-  }
   children: any
 }
 
@@ -34,7 +28,6 @@ const Layout = (props: LayoutProps) => {
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
-        <Provider store={store}>
           <div>
             <Header />
             {props.children}
@@ -42,7 +35,6 @@ const Layout = (props: LayoutProps) => {
             <Separator bg='paleMoon' />
             <Footer />
           </div>
-        </Provider>
       </ThemeProvider>
       <GlobalStyle />
     </React.Fragment>
@@ -51,15 +43,15 @@ const Layout = (props: LayoutProps) => {
 
 export default Layout
 
-export const withLayout = <P extends object>(
-  WrappedComponent: React.ComponentType<P>
-) =>
-  class WithLayout extends React.Component<P & LayoutProps> {
-    render() {
-      return (
-        <Layout location={this.props.location}>
-          <WrappedComponent {...this.props} />
-        </Layout>
-      )
-    }
-  }
+// export const withLayout = <P extends object>(
+//   WrappedComponent: React.ComponentType<P>
+// ) =>
+//   class WithLayout extends React.Component<P & LayoutProps> {
+//     render() {
+//       return (
+//         <Layout>
+//           <WrappedComponent {...this.props} />
+//         </Layout>
+//       )
+//     }
+//   }
