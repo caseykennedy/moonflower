@@ -85,20 +85,19 @@ class EmailCapture extends React.Component<Props, State> {
           bg={bg}
           p={[4, 8, 100, 120]}
           width={[1, 1, 6/10, 6/10]}
-          css={{alignSelf: 'center'}}
         >
-          <Box css={{ textAlign: 'center', margin: '0 auto' }}>
+          <Box>
             <Fade>
-              <Heading as='h2' fontSize={8} mb={0} color='lunar'>
+              <Heading as='h2' fontSize={8} mb={0} color='lunar' textAlign='center'>
                 Sweet deals &amp; updates?
               </Heading>
-              <Text as='p' fontSize={4} color='paleMoon' mb={4}>
+              <Text as='p' fontSize={4} color='paleMoon' mb={4} textAlign='center'>
                 Feel free to subscribe for unbeatable deals and the occasional
                 company updates.
               </Text>
             </Fade>
           </Box>
-          <Box css={{ textAlign: 'center', margin: '0 auto' }}>
+          <Box>
             {!this.state.submitted && (
               <Fade>
                 <EmailForm name='emailcapture' onSubmit={this.handleSubmit}>
@@ -123,7 +122,7 @@ class EmailCapture extends React.Component<Props, State> {
             )}
             {this.state.submitted && (
               <Fade>
-                <Box mt={4} bg='lunar' css={{ borderRadius: '6rem' }} p={4}>
+                <Box mt={4} bg='lunar' p={4}>
                   <Text as='p' color='pulse'>
                     Thanks for subscribing!
                   </Text>

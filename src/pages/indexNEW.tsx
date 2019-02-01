@@ -1,4 +1,6 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
+import HeaderMenu from '../components/HeaderMenu/HeaderMenu'
 import { withLayout, LayoutProps } from '../components/Layout'
 import styled from 'styled-components'
 import { up, down, between, only } from 'styled-breakpoints'
@@ -9,6 +11,7 @@ import Section from '../components/Section'
 import TextLink from '../components/TextLink'
 import Separator from '../components/Separator'
 
+import LogoSymbol from '../components/LogoSymbol'
 import Iframe from 'react-iframe'
 
 import data from '../assets/data/slides.json'
@@ -36,14 +39,17 @@ export class IndexPage extends React.Component<Props, State> {
     const {} = this.props
     return (
       <React.Fragment>
-        <Flex
+        <PageTitle
           bg='#161623'
           pt={[135]}
           pb={[2, 3, 4, 4]}
           px={[2, 3, 4, 4]}
           alignItems='flex-end'
+          css={{
+            height: '58rem'
+          }}
         >
-          <Box width={[9 / 10, 1 / 2, 1 / 2]} pt={'40rem'}>
+          <Box width={[9 / 10, 1 / 2, 1 / 2]}>
             <Fade>
               <Heading
                 as='h1'
@@ -51,13 +57,16 @@ export class IndexPage extends React.Component<Props, State> {
                 lineHeight={1.1}
                 fontSize={[5, 6, 8, 8]}
                 color='paleMoon'
+                css={{
+                  fontWeight: 300
+                }}
               >
                 <strong>Marin County’s</strong> premier online dispensary,
                 delivered to you.
               </Heading>
             </Fade>
           </Box>
-        </Flex>
+        </PageTitle>
 
         <Slider data={data} />
 
