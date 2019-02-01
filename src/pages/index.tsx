@@ -22,7 +22,7 @@ interface State {
   random: number
 }
 
-export class IndexPage extends React.Component<Props> {
+export class IndexPage extends React.Component<Props, State> {
   // constructor(props: Props) {
   //   super(props)
 
@@ -38,7 +38,8 @@ export class IndexPage extends React.Component<Props> {
   public render() {
     const {} = this.props
     return (
-      <Flex
+      <React.Fragment>
+        <Flex
           bg='#161623'
           pt={[135]}
           pb={[2, 3, 4, 4]}
@@ -66,6 +67,78 @@ export class IndexPage extends React.Component<Props> {
             </Fade>
           </Box>
         </Flex>
+
+        <Slider data={data} />
+
+        <Section bg='#161623' pageWidth={'100%'} py={[8, 100, 160]}>
+          <Box>
+            <Fade distance='2rem' bottom>
+              <Flex width={1} justifyContent='center' alignItems='center' flexWrap='wrap'>
+                <Box width={[1, 1, 8 / 10, 8 / 10]} pb={[2, 2, 0, 0]}>
+                  <Text
+                    as='p'
+                    mb={0}
+                    color='lavendar'
+                    css={{
+                      fontWeight: 400
+                    }}
+                  >
+                    <Text
+                      as='span'
+                      color='paleMoon'
+                      css={{
+                        fontWeight: 400
+                      }}
+                    >
+                      Need a medical cannabis card?
+                    </Text>
+                    <br />
+                    It's easy to get an online medical recommendation from the
+                    comfort of your own home.
+                  </Text>
+                </Box>
+                <Box width={[1, 1, 2 / 10, 2 / 10]}>
+                  <Text as='p' color='paleMoon' textAlign=''>
+                    <TextLink to='/'>
+                      book an appointment
+                    </TextLink>
+                  </Text>
+                </Box>
+              </Flex>
+            </Fade>
+          </Box>
+        </Section>
+
+        <Separator />
+
+        <Section bg='darkSky' pageWidth={'100%'} px={0} py={0}>
+          <Flex width={1} alignItems='stretch' flexDirection='column' id='shop'>
+            <Box width={1} py={8} px={[ 2, 3, 4, 4 ]} css={{ textAlign: 'center' }}>
+              <Text as='p' fontSize={6} pb={1} color='paleMoon'>
+                phone orders: <strong>+1 (707) 731 1337</strong>
+              </Text>
+
+              <Text as='p' fontSize={'1.3rem'} color='lavendar' letterSpacing='0.3rem' css={{ textTransform: 'uppercase', fontWeight: 500 }}>
+                Bureau of Cannabis Control | License Number: C9-18-0000070-TEMP
+              </Text>
+            </Box>
+            <Separator />
+            <Box width={1}>
+              <Iframe
+                id='blazeIframe'
+                frameborder='0'
+                width='100%'
+                height='110vh'
+                display='initial'
+                position='relative'
+                // onLoad={this.resetIframe}
+                url=''
+                allowFullScreen
+              />
+            </Box>
+          </Flex>
+        </Section>
+      </React.Fragment>
     )
   }
 }
