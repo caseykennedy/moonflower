@@ -15,5 +15,5 @@ exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadCompon
     </Provider>
   )
   replaceBodyHTMLString(renderToString(<ConnectedBody />))
-  setHeadComponents([sheet.getStyleElement()])
+  setHeadComponents([sheet.getStyleElement(), sheet.getStyleTags()])
 }

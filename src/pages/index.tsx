@@ -39,7 +39,7 @@ export class IndexPage extends React.Component<Props, State> {
     const {} = this.props
     return (
       <React.Fragment>
-        <Flex
+        <PageTitle
           bg='#161623'
           pt={[135]}
           pb={[2, 3, 4, 4]}
@@ -66,7 +66,7 @@ export class IndexPage extends React.Component<Props, State> {
               </Heading>
             </Fade>
           </Box>
-        </Flex>
+        </PageTitle>
 
         <Slider data={data} />
 
@@ -79,16 +79,10 @@ export class IndexPage extends React.Component<Props, State> {
                     as='p'
                     mb={0}
                     color='lavendar'
-                    css={{
-                      fontWeight: 400
-                    }}
                   >
                     <Text
                       as='span'
                       color='paleMoon'
-                      css={{
-                        fontWeight: 400
-                      }}
                     >
                       Need a medical cannabis card?
                     </Text>
@@ -113,12 +107,12 @@ export class IndexPage extends React.Component<Props, State> {
 
         <Section bg='darkSky' pageWidth={'100%'} px={0} py={0}>
           <Flex width={1} alignItems='stretch' flexDirection='column' id='shop'>
-            <Box width={1} py={8} px={[ 2, 3, 4, 4 ]} css={{ textAlign: 'center' }}>
-              <Text as='p' fontSize={6} pb={1} color='paleMoon'>
+            <Box width={1} py={8} px={[ 2, 3, 4, 4 ]}>
+              <Text as='p' fontSize={6} pb={1} color='paleMoon' textAlign='center'>
                 phone orders: <strong>+1 (707) 731 1337</strong>
               </Text>
 
-              <Text as='p' fontSize={'1.3rem'} color='lavendar' letterSpacing='0.3rem' css={{ textTransform: 'uppercase', fontWeight: 500 }}>
+              <Text as='h6' fontSize={'1.3rem'} color='lavendar' letterSpacing='0.3rem' textAlign='center'>
                 Bureau of Cannabis Control | License Number: C9-18-0000070-TEMP
               </Text>
             </Box>
@@ -143,19 +137,11 @@ export class IndexPage extends React.Component<Props, State> {
   }
 }
 
-const Main = styled(Box)`
-  min-height: 84vh;
+const PageTitle = styled(Flex)`
+  height: 58rem;
 
-  border-right: 6px solid ${props => props.theme.colors.paleMoon};
-
-  ${between('sm', 'md')} {
-    border-right: 6px solid ${props => props.theme.colors.ogPurp};
-  }
-  ${between('md', 'lg')} {
-    border-right: 6px solid ${props => props.theme.colors.superNova};
-  }
-  ${up('lg')} {
-    border-right: 6px solid ${props => props.theme.colors.goldBloom};
+  & h1 {
+    font-weight: 300;
   }
 `
 

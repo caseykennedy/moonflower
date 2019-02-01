@@ -89,8 +89,8 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
           color='pulse'
           as='span'
         >
-          <Link>faq</Link>&nbsp;&nbsp;/&nbsp;&nbsp;<Link>legal</Link>
-          &nbsp;&nbsp;/&nbsp;&nbsp;<Link>contact</Link>
+          {/* <Link>faq</Link>&nbsp;&nbsp;/&nbsp;&nbsp;<Link>legal</Link>
+          &nbsp;&nbsp;/&nbsp;&nbsp;<Link>contact</Link> */}
         </Flex>
         <Flex
           width={[1, 1, 1 / 3, 1 / 3]}

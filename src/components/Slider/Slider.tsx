@@ -45,7 +45,7 @@ export class Slider extends React.Component<Props, State> {
           {data.map(slide => (
             <Slide key={slide.id}>
               <SlideFrame width={1} flexWrap='wrap'>
-                <Card
+                <SlideCard
                   backgroundImage={'url(' + slide.image + ')'}
                   backgroundPosition='center center'
                   backgroundSize='cover'
@@ -85,7 +85,7 @@ export class Slider extends React.Component<Props, State> {
                       />
                     </Box>
                   </Flex>
-                </Card>
+                </SlideCard>
               </SlideFrame>
             </Slide>
           ))}
@@ -101,6 +101,14 @@ const Image = styled(Box)`
 `
 
 const Slide = styled(Box)``
+
+const SlideCard = styled(Card)`
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  flex-direction: column;
+`
 
 const SlideFrame = styled(Flex)`
   height: 100%;

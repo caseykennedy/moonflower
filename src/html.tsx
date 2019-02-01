@@ -3,13 +3,17 @@
 
 import * as React from 'react'
 import Helmet from 'react-helmet'
+import { ServerStyleSheet } from 'styled-components'
 
 const config = require('../gatsby-config.js')
+const sheet = new ServerStyleSheet()
+const styles = sheet.getStyleTags()
 
 interface HtmlProps {
   body: any
   postBodyComponents: any
   headComponents: any
+  styles: any
 }
 
 export default (props: HtmlProps) => {
@@ -38,6 +42,7 @@ export default (props: HtmlProps) => {
         {head.meta.toComponent()}
         {head.link.toComponent()}
         {verification}
+        <style>{props.styles}</style>
       </head>
       <body>
         <div id='___gatsby' dangerouslySetInnerHTML={{ __html: props.body }} />
