@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { withLayout, LayoutProps } from '../components/Layout'
+import Layout from '../components/Layout'
 import styled from 'styled-components'
 import { up, down, between, only } from 'styled-breakpoints'
 import { Box, Heading, Flex, Text } from 'rebass'
@@ -35,7 +35,7 @@ export class IndexPage extends React.Component<Props, State> {
   public render() {
     const {} = this.props
     return (
-      <React.Fragment>
+      <Layout>
         <Flex
           bg='#161623'
           pt={[135]}
@@ -123,7 +123,7 @@ export class IndexPage extends React.Component<Props, State> {
             </Box>
           </Flex>
         </Section>
-      </React.Fragment>
+      </Layout>
     )
   }
 }
@@ -136,4 +136,4 @@ const PageTitle = styled(Flex)`
   }
 `
 
-export default withLayout(IndexPage)
+export default IndexPage
