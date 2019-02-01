@@ -38,7 +38,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
         <NavLink to='/about/'>about</NavLink>
         <NavLink to='#'>faq</NavLink>
         <AnchorLink href='#shop' style={{ textDecoration: 'none' }}>
-          <Button>Place An Order</Button>
+          <Button>Browse the menu</Button>
         </AnchorLink>
 
         {/* <BurgerBox ml={[ 2, 3, 4, 4 ]}>

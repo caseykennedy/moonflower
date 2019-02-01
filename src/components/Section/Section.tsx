@@ -49,7 +49,7 @@ Section.defaultProps = {
 const FlexBox = styled(Box)`
   background-image: url('${(p: Props) => p.bgImage}');
   background-size: cover;
-  background-position: bottom left;
+  background-position: center left;
 `
 
 const PageWidth = styled(Box)`

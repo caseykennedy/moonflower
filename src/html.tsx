@@ -47,7 +47,7 @@ export default (props: HtmlProps) => {
           dangerouslySetInnerHTML={{
             __html: `
             var blazeUrl='https://store.blaze.me'; var
-          apiKey="b730e04b7fe843d2b0015d2f5f3012f4";var
+          apiKey="12c2645f3ebd4e12bc06a1ffe85d3624";var
           script=document.createElement('script');script.src=blazeUrl+'/'+'widget.js';script.id='blazeIframeScript';script.setAttribute('blazeUrl',blazeUrl)
           script.setAttribute('apiKey',apiKey)
           document.head.appendChild(script);

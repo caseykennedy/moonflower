@@ -50,7 +50,7 @@ const encode = data => {
 
 class EmailCapture extends React.Component<Props, State> {
   static defaultProps: Partial<Props> = {
-    bg: 'purpleRain'
+    bg: 'darkSky'
   }
   constructor(props: Props) {
     super(props)
@@ -76,17 +76,15 @@ class EmailCapture extends React.Component<Props, State> {
     const { bg } = this.props
     return (
       <Section
-        bg='purpleRain'
+        bg='darkSky'
         bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548918004/bg__emailCapture--5.jpg'
 
       >
-      <Flex width={1} justifyContent='center'>
+      <Flex width={1} justifyContent='flex-start'>
         <Box
           bg={bg}
-          px={[3, 3, 4, 4]}
-          py={[8]}
-          width={[1, 1, 1 / 2, 1 / 2]}
-          mt={240}
+          p={[4, 8, 100, 120]}
+          width={[1, 1, 6/10, 6/10]}
           css={{alignSelf: 'center'}}
         >
           <Box css={{ textAlign: 'center', margin: '0 auto' }}>

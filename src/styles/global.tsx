@@ -246,8 +246,96 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: none !important;
   }
 
-  .Button--default {
+  .Button--default,
+  .button {
     text-shadow: none;
+    border-radius: 300px;
+    border-width: 1px;
+    font-weight: 300;
+    text-transform: none;
+    font-size: 14px !important;
+    letter-spacing: 0.2rem;
+  }
+
+  .RetailConnect-brandingHome ul li a {
+    text-shadow: none;
+  }
+
+  .FormField .FormInput {
+    border-radius: 300px;
+    padding: 2rem 2rem;
+  }
+
+  .RetailConnect-brancdingHome ul li,
+  a,
+  li {
+    font-weight: 400;
+  }
+
+  .themeBgColor {
+    background-color: #202136 !important;
+  }
+
+  .themeFontColor,
+  .themeBorderColor {
+    color: #202136 !important;
+    border-color: #d7ddf7 !important;
+  }
+
+  .branding-home {
+    padding: 4rem 1rem;
+    border: none;
+    background: #e9edfb;
+  }
+
+  .branding-home ul li a {
+    font-size: 18px;
+  }
+
+  .tabs-button.active {
+    color: #ffffff !important;
+  }
+
+  .show-all {
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    padding: 30px 20px;
+    transition: all 0.2s ease-in;
+    font-size: 18px;
+  }
+
+  a {
+    transition: all 0.2s ease-in;
+  }
+
+  .RetailConnect-cardProducts .Card h4 {
+    letter-spacing: 0;
+    margin: 0 0 30px;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #260e4a !important;
+  }
+
+  .RetailConnect-cardProducts .Card span {
+    display: block;
+    padding-top: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .RetailConnect-cardProducts .Card {
+    text-align: left;
+    padding: 0em;
+    box-shadow: none;
+    margin: 20px 0 0;
+  }
+
+  .categoryHeading h2 {
+    color: #260e4a;
+    font-weight: 300;
+    font-size: 40px;
   }
   
 `
