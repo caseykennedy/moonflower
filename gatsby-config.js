@@ -12,7 +12,7 @@ module.exports = {
     'MarkdownRemark.frontmatter.author': `AuthorJson`
   },
   plugins: [
-    'gatsby-plugin-styled-components',
+    // 'gatsby-plugin-styled-components',
 
     {
       resolve: 'gatsby-plugin-react-svg',
