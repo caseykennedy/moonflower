@@ -37,7 +37,7 @@ export class IndexPage extends React.Component<Props, State> {
     return (
       <Layout>
         <PageTitle
-          bg='#161623'
+          bg='singularity'
           pt={[135]}
           pb={[2, 3, 4, 4]}
           px={[2, 3, 4, 4]}
@@ -96,7 +96,7 @@ export class IndexPage extends React.Component<Props, State> {
 
         <Separator />
 
-        <Section bg='darkSky' pageWidth={'100%'} px={0} py={0}>
+        <Section bg='singularity' pageWidth={'100%'} px={0} py={0}>
           <Flex width={1} alignItems='stretch' flexDirection='column' id='shop'>
             <Box width={1} py={8} px={[2, 3, 4, 4]}>
               <Text

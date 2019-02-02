@@ -97,7 +97,8 @@ const theme = {
     paleMoon: config.colors.paleMoon,
     superNova: config.colors.superNova,
     spaceDust: config.colors.spaceDust,
-    lunar: config.colors.lunar
+    lunar: config.colors.lunar,
+    singularity: config.colors.singularity
   },
 
   widths: {

@@ -41,7 +41,8 @@ export default {
     paleMoon: '#d7ddf7',
     superNova: '#f6f6f8',
     spaceDust: '#7c6e92',
-    lunar: '#e9edfb'
+    lunar: '#e9edfb',
+    singularity: '#141320'
   },
 
   maxWidth: 1440,
