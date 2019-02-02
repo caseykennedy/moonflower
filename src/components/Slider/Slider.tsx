@@ -4,6 +4,9 @@ import styled, { createGlobalStyle } from 'styled-components'
 import Carousel from 'nuka-carousel'
 import { up, down, between, only } from 'styled-breakpoints'
 
+import ArrowLeft from '../../assets/chevron-left-lg.svg'
+import ArrowRight from '../../assets/chevron-right-lg.svg'
+
 interface Props {
   data: Array<{
     id: number
@@ -43,6 +46,12 @@ export class Slider extends React.Component<Props, State> {
           swiping={true}
           wrapAround={true}
           speed={600}
+          renderCenterLeftControls={({ previousSlide }) => (
+            <ButtonLeft onClick={previousSlide}><Previous /></ButtonLeft>
+          )}
+          renderCenterRightControls={({ nextSlide }) => (
+            <ButtonRight onClick={nextSlide}><Next /></ButtonRight>
+          )}
         >
           {data.map(slide => (
             <Slide key={slide.id}>
@@ -56,9 +65,9 @@ export class Slider extends React.Component<Props, State> {
                 >
                   <SlidePanel
                     bg='rgba(17, 17, 27, 0.95)'
-                    p={[ 3, 3, 4, 4 ]}
-                    mt={[ 200, 0, 0 ]}
-                    width={[ 1, 9/10, 8/10, 1/3 ]}
+                    p={[3, 3, 4, 4]}
+                    mt={[200, 0, 0]}
+                    width={[1, 9 / 10, 8 / 10, 1 / 3]}
                     fustifyContent='center'
                     alignItems='center'
                     flexWrap='wrap'
@@ -75,12 +84,14 @@ export class Slider extends React.Component<Props, State> {
                     <Box width={1}>
                       <Text
                         as='p'
-                        fontSize={[3]}
+                        fontSize={[4]}
                         color='lunar'
                         mb={2}
                         dangerouslySetInnerHTML={{ __html: slide.content }}
                       />
-                      <StyledLink fontSize={3} href={slide.link}>{slide.linkText}</StyledLink>
+                      <StyledLink fontSize={4} href={slide.link}>
+                        {slide.linkText}
+                      </StyledLink>
                     </Box>
                   </SlidePanel>
                 </SlideCard>
@@ -100,9 +111,47 @@ const Image = styled(Box)`
 
 const Slide = styled(Box)``
 
-const SlidePanel = styled(Flex)`
-  
+const Previous = styled(ArrowLeft)`
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: white;
 `
+
+const Next = styled(ArrowRight)`
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: white;
+`
+
+const ButtonLeft = styled.button`
+  background-color: rgba(17, 17, 27, 0.95);
+  padding: 1.8rem 2rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.4;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    opacity: 1;
+  }
+`
+
+const ButtonRight = styled.button`
+  background-color: rgba(17, 17, 27, 0.95);
+  padding: 1.8rem 2rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.4;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    opacity: 1;
+  }
+`
+
+const SlidePanel = styled(Flex)``
 
 const StyledLink = styled(Link)`
   border-bottom: 2px solid ${p => p.theme.colors.ogPurp};
@@ -150,6 +199,13 @@ const DotDot = styled.button`
 `
 
 const GlobalStyle = createGlobalStyle`
+
+  .slider-control-centerleft {
+    top: 30px !important;
+  }
+  .slider-control-centerright {
+    top: 30px !important;
+  }
 
   .slider-frame {
     overflow: visible !important;
