@@ -37,11 +37,15 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
           <Box width={1} mb={[8, 8, 160, 160]}>
             <LogoSymbol width={53} />
           </Box>
-          <Box width={1} color='pulse'>
-            <strong>moonflower's</strong> purpose is to encourage others to
-            think differently about cannabis and break the age old stigma that
-            it was once plagued with.
+          <Box width={1} color='pulse' mb={1}>
+            <strong>moonflower</strong> has seen how cannabis has benefited those closest to us, and in return, we have been inspired to spread our love for the plant, while making a positive impact within our community here in the North Bay.
           </Box>
+          <Text as='span' fontSize={3} width={1} color='lavendar' mb={1}>
+            <strong>open:</strong> Tues-Fri 11am-7pm | Sat-Sun 12pm-6pm
+          </Text>
+          <Text as='span' fontSize={3} width={1} color='lavendar' mb={1}>
+            <strong>moonflower</strong> cannot deliver to an address on publicly owned land, a building leased by a public agency, or a school.
+          </Text>
         </Fade>
       </Text>
     </Row>
@@ -54,7 +58,7 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
         textAlign='center'
       >
         <Fade bottom cascade distance='2rem' duration={1600}>
-          +1 (707) 313 1337
+          +1 (707) 760 9566
         </Fade>
       </Text>
     </Row>

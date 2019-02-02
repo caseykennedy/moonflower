@@ -89,11 +89,10 @@ class EmailCapture extends React.Component<Props, State> {
           <Box>
             <Fade>
               <Heading as='h2' fontSize={8} mb={0} color='lunar' textAlign='center'>
-                Sweet deals &amp; updates?
+                Deals &amp; updates?
               </Heading>
               <Text as='p' fontSize={4} color='paleMoon' mb={4} textAlign='center'>
-                Feel free to subscribe for unbeatable deals and the occasional
-                company updates.
+                Subscribe to be the first to know about product drops and exclusives.
               </Text>
             </Fade>
           </Box>

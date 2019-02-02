@@ -53,7 +53,7 @@ export class Slider extends React.Component<Props, State> {
                   width={1}
                 >
                   <Flex
-                    bg='darkSky'
+                    bg='lavendar'
                     p={[ 3, 3, 4, 4 ]}
                     mt={[ 200, 0, 0 ]}
                     width={[ 1, 1, 1/2, 1/3 ]}
@@ -64,6 +64,7 @@ export class Slider extends React.Component<Props, State> {
                     <Box width={1}>
                       <Text
                         as='p'
+                        fontSize={[5, 6, 7, 7]}
                         color='lunar'
                         mb={8}
                         dangerouslySetInnerHTML={{ __html: slide.title }}
@@ -72,6 +73,7 @@ export class Slider extends React.Component<Props, State> {
                     <Box width={1}>
                       <Text
                         as='p'
+                        fontSize={[4, 4, 5, 5]}
                         color='lunar'
                         css={{ alignSelf: 'flex-end' }}
                         dangerouslySetInnerHTML={{ __html: slide.content }}
@@ -101,10 +103,11 @@ const SlideCard = styled(Card)`
   align-items: flex-end;
   flex-wrap: wrap;
   flex-direction: column;
+  height: 100%;
 `
 
 const SlideFrame = styled(Flex)`
-  height: 100%;
+  height: 570px;
 
   ${between('0', '1')} {
   }

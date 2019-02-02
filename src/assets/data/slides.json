@@ -2,8 +2,8 @@
   {
     "id": 0,
     "title": "Easy ordering<br />&amp; delivery",
-    "content": "How does moonflower work? Doc, she's beautiful. She's crazy about me. Look at this, look what she wrote me, Doc. That says it all. Doc, you're my only hope.",
-    "image": "https://images.unsplash.com/photo-1513656967094-e96936e02fad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80"
+    "content": "We've tried every product and hand selected the finest quality the Golden State has to offer. We deliver to anywhere, any address*, in Marin County and soon to be, Sonoma County.",
+    "image": "https://res.cloudinary.com/moonflower/image/upload/v1549072078/hero__bridge.jpg"
   },
   {
     "id": 1,
@@ -13,8 +13,8 @@
   },
   {
     "id": 2,
-    "title": "Curated<br />inventory",
-    "content": "<strong>moonflower</strong> is an online dispensary that thoughtfully curates &amp; delivers cannabis products directly to your doorstep. ",
+    "title": "Our gift<br />to you",
+    "content": "First time customers received 15% off. Seniors and Veterans receive 10% off everyday",
     "image": "https://images.unsplash.com/photo-1533577059201-70fbca82b2a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
   }
 ]

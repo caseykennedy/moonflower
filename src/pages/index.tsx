@@ -61,7 +61,7 @@ export class IndexPage extends React.Component<Props, State> {
 
         <Slider data={data} />
 
-        <Section bg='#161623' pageWidth={'100%'} py={[8, 100, 160]}>
+        <Section bg='#161623' pageWidth={'100%'} py={[8]}>
           <Box>
             <Fade distance='2rem' bottom>
               <Flex width={1} justifyContent='center' alignItems='center' flexWrap='wrap'>
@@ -84,9 +84,9 @@ export class IndexPage extends React.Component<Props, State> {
                 </Box>
                 <Box width={[1, 1, 2 / 10, 2 / 10]}>
                   <Text as='p' color='paleMoon' textAlign=''>
-                    <TextLink to='/'>
+                    <StyledLink href='https://doctor.to/moonflower' target='_blank'>
                       book an appointment
-                    </TextLink>
+                    </StyledLink>
                   </Text>
                 </Box>
               </Flex>
@@ -100,11 +100,13 @@ export class IndexPage extends React.Component<Props, State> {
           <Flex width={1} alignItems='stretch' flexDirection='column' id='shop'>
             <Box width={1} py={8} px={[ 2, 3, 4, 4 ]}>
               <Text as='p' fontSize={6} pb={1} color='paleMoon' textAlign='center'>
-                phone orders: <strong>+1 (707) 731 1337</strong>
+                <strong>+1 (707) 760 9566</strong>
               </Text>
 
               <Text as='h6' fontSize={'1.3rem'} color='lavendar' letterSpacing='0.3rem' textAlign='center'>
                 Bureau of Cannabis Control | License Number: C9-18-0000070-TEMP
+                <br />
+                Must be over the age of 18 and have your medical cannabis doctors recommendation to order from Moonflower.
               </Text>
             </Box>
             <Separator />
@@ -129,10 +131,21 @@ export class IndexPage extends React.Component<Props, State> {
 }
 
 const PageTitle = styled(Flex)`
-  height: 58rem;
+  height: 40rem;
 
   & h1 {
     font-weight: 300;
+  }
+`
+
+const StyledLink = styled.a`
+  border-bottom: 2px solid ${p => p.theme.colors.ogPurp};
+  color: currentColor;
+  text-decoration: none;
+  padding-bottom: 0.1rem;
+
+  &:hover {
+    border-color: currentColor;
   }
 `
 

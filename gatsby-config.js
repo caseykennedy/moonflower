@@ -96,13 +96,13 @@ module.exports = {
         theme_color: `#7175a2`,
         display: `minimal-ui`
       }
-    },
+    }
     /* eslint-enable camelcase */
 
     // This plugin generates a service worker and AppShell
     // html file so the site works offline and is otherwise
     // resistant to bad networks. Works with almost any
     // site!
-    `gatsby-plugin-offline`
+    // `gatsby-plugin-offline`
   ]
 };
