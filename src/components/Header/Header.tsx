@@ -24,7 +24,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
   <Container as='header' width={1} px={[2, 3, 4, 4]}>
     <Flex alignItems='center' py={[2, 2, 3, 4]}>
       <Box width={1 / 2}>
-        {/* <Box>{isMobile ? <LogoSymbol /> : <Logo />}</Box> */}
+        {/* <Box>{isMobile ? <LogoSymbol fill='#e9edfb' /> : <Logo />}</Box> */}
         <Link to='/'>
           <Logo />
         </Link>
@@ -38,7 +38,7 @@ const Header: React.SFC<HeaderProps> = ({ isMobile }) => (
         {/* <NavLink to='/about/'>about</NavLink>
         <NavLink to='#'>faq</NavLink> */}
         <AnchorLink href='#shop' style={{ textDecoration: 'none' }}>
-          <Button>Browse the menu</Button>
+          <Button />
         </AnchorLink>
 
         {/* <BurgerBox ml={[ 2, 3, 4, 4 ]}>
@@ -71,7 +71,7 @@ const Button = styled.span`
   border-radius: 100px;
   color: ${props => props.theme.colors.paleMoon};
   cursor: pointer;
-  display: none;
+  /* display: none; */
   font-size: 1.4rem;
   font-weight: 600;
   padding: 1.6rem 2.6rem 1.4rem;
@@ -79,6 +79,10 @@ const Button = styled.span`
   letter-spacing: 0.1em;
   line-height: 1;
   white-space: nowrap;
+
+  &:after {
+    content: 'Shop';
+  }
 
   &:hover {
     background-color: ${p =>
@@ -97,6 +101,10 @@ const Button = styled.span`
 
   ${up('0')} {
     display: inherit;
+
+    &:after {
+      content: 'Browse our menu';
+    }
   }
 `
 
