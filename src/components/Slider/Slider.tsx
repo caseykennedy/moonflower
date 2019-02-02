@@ -65,7 +65,7 @@ export class Slider extends React.Component<Props, State> {
                 >
                   <SlidePanel
                     bg='rgba(17, 17, 27, 0.95)'
-                    p={[3, 3, 4, 4]}
+                    p={[2, 3, 4, 4]}
                     mt={[200, 0, 0]}
                     width={[1, 9 / 10, 8 / 10, 1 / 3]}
                     fustifyContent='center'
@@ -77,19 +77,19 @@ export class Slider extends React.Component<Props, State> {
                         as='p'
                         fontSize={[3, 4, 5, 5]}
                         color='lunar'
-                        mb={8}
+                        mb={[4, 4, 6, 8]}
                         dangerouslySetInnerHTML={{ __html: slide.title }}
                       />
                     </Box>
                     <Box width={1}>
                       <Text
                         as='p'
-                        fontSize={[4]}
+                        fontSize={[3, 4, 5, 5]}
                         color='lunar'
                         mb={2}
                         dangerouslySetInnerHTML={{ __html: slide.content }}
                       />
-                      <StyledLink fontSize={4} href={slide.link}>
+                      <StyledLink fontSize={[3, 4, 5, 5]} href={slide.link}>
                         {slide.linkText}
                       </StyledLink>
                     </Box>
