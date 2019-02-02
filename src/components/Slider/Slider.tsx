@@ -75,7 +75,6 @@ export class Slider extends React.Component<Props, State> {
                         as='p'
                         fontSize={[4, 4, 5, 5]}
                         color='lunar'
-                        css={{ alignSelf: 'flex-end' }}
                         dangerouslySetInnerHTML={{ __html: slide.content }}
                       />
                     </Box>
