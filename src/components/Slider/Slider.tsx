@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Box, Text, Flex, Card } from 'rebass'
+import { Box, Text, Flex, Card, Link } from 'rebass'
 import styled, { createGlobalStyle } from 'styled-components'
 import Carousel from 'nuka-carousel'
 import { up, down, between, only } from 'styled-breakpoints'
@@ -10,6 +10,8 @@ interface Props {
     title: string
     content: string
     image: string
+    link?: string
+    linkText?: string
   }>
 }
 
@@ -49,14 +51,14 @@ export class Slider extends React.Component<Props, State> {
                   backgroundImage={'url(' + slide.image + ')'}
                   backgroundPosition='center center'
                   backgroundSize='cover'
-                  p={[ 2, 3, 4, 4 ]}
                   width={1}
+                  p={[2]}
                 >
-                  <Flex
-                    bg='lavendar'
+                  <SlidePanel
+                    bg='rgba(17, 17, 27, 0.95)'
                     p={[ 3, 3, 4, 4 ]}
                     mt={[ 200, 0, 0 ]}
-                    width={[ 1, 1, 1/2, 1/3 ]}
+                    width={[ 1, 9/10, 8/10, 1/3 ]}
                     fustifyContent='center'
                     alignItems='center'
                     flexWrap='wrap'
@@ -64,7 +66,7 @@ export class Slider extends React.Component<Props, State> {
                     <Box width={1}>
                       <Text
                         as='p'
-                        fontSize={[5, 6, 7, 7]}
+                        fontSize={[3, 4, 5, 5]}
                         color='lunar'
                         mb={8}
                         dangerouslySetInnerHTML={{ __html: slide.title }}
@@ -73,12 +75,14 @@ export class Slider extends React.Component<Props, State> {
                     <Box width={1}>
                       <Text
                         as='p'
-                        fontSize={[4, 4, 5, 5]}
+                        fontSize={[3]}
                         color='lunar'
+                        mb={2}
                         dangerouslySetInnerHTML={{ __html: slide.content }}
                       />
+                      <StyledLink fontSize={3} href={slide.link}>{slide.linkText}</StyledLink>
                     </Box>
-                  </Flex>
+                  </SlidePanel>
                 </SlideCard>
               </SlideFrame>
             </Slide>
@@ -96,10 +100,25 @@ const Image = styled(Box)`
 
 const Slide = styled(Box)``
 
+const SlidePanel = styled(Flex)`
+  
+`
+
+const StyledLink = styled(Link)`
+  border-bottom: 2px solid ${p => p.theme.colors.ogPurp};
+  color: ${p => p.theme.colors.lunar};
+  text-decoration: none;
+  padding-bottom: 0.1rem;
+
+  &:hover {
+    border-color: currentColor;
+  }
+`
+
 const SlideCard = styled(Card)`
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
   height: 100%;
@@ -113,7 +132,7 @@ const SlideFrame = styled(Flex)`
   ${between('1', '2')} {
   }
   ${up('0')} {
-    height: 80vh;
+    height: 90vh;
   }
 `
 

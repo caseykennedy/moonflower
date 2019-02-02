@@ -226,7 +226,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.5rem;
     text-transform: uppercase;
     line-height: 1.1;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   p {

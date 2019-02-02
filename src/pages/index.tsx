@@ -49,7 +49,7 @@ export class IndexPage extends React.Component<Props, State> {
                 as='h1'
                 pb={0}
                 lineHeight={1.1}
-                fontSize={[5, 6, 8, 8]}
+                fontSize={[5, 6, 7, 7]}
                 color='paleMoon'
               >
                 <strong>Marin County’s</strong> premier online dispensary,
@@ -61,7 +61,7 @@ export class IndexPage extends React.Component<Props, State> {
 
         <Slider data={data} />
 
-        <Section bg='#161623' pageWidth={'100%'} py={[8]}>
+        {/* <Section bg='#161623' pageWidth={'100%'} py={[8]}>
           <Box>
             <Fade distance='2rem' bottom>
               <Flex width={1} justifyContent='center' alignItems='center' flexWrap='wrap'>
@@ -92,21 +92,51 @@ export class IndexPage extends React.Component<Props, State> {
               </Flex>
             </Fade>
           </Box>
-        </Section>
+        </Section> */}
 
         <Separator />
 
         <Section bg='darkSky' pageWidth={'100%'} px={0} py={0}>
           <Flex width={1} alignItems='stretch' flexDirection='column' id='shop'>
-            <Box width={1} py={8} px={[ 2, 3, 4, 4 ]}>
-              <Text as='p' fontSize={6} pb={1} color='paleMoon' textAlign='center'>
+            <Box width={1} py={8} px={[2, 3, 4, 4]}>
+              <Text
+                as='h6'
+                fontSize={'1.2rem'}
+                color='lavendar'
+                letterSpacing='0.3rem'
+                textAlign='center'
+              >
+                Phone orders
+              </Text>
+              <Text
+                as='p'
+                fontSize={8}
+                mb={4}
+                color='paleMoon'
+                textAlign='center'
+              >
                 <strong>+1 (707) 760 9566</strong>
               </Text>
 
-              <Text as='h6' fontSize={'1.3rem'} color='lavendar' letterSpacing='0.3rem' textAlign='center'>
+              <Text
+                as='h6'
+                fontSize={'1.2rem'}
+                color='lavendar'
+                letterSpacing='0.3rem'
+                textAlign='center'
+              >
                 Bureau of Cannabis Control | License Number: C9-18-0000070-TEMP
-                <br />
-                Must be over the age of 18 and have your medical cannabis doctors recommendation to order from Moonflower.
+              </Text>
+
+              <Text
+                as='h6'
+                fontSize={'1.2rem'}
+                color='lavendar'
+                letterSpacing='0.3rem'
+                textAlign='center'
+              >
+                Must be over the age of 18 and have your medical cannabis
+                doctors recommendation to order from Moonflower.
               </Text>
             </Box>
             <Separator />
