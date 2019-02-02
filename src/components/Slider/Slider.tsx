@@ -64,7 +64,7 @@ export class Slider extends React.Component<Props, State> {
                   p={[2]}
                 >
                   <SlidePanel
-                    bg='rgba(17, 17, 27, 0.95)'
+                    bg='rgba(20, 19, 32, 0.90)'
                     p={[2, 3, 4, 4]}
                     mt={[200, 0, 0]}
                     width={[1, 9 / 10, 8 / 10, 1 / 3]}
