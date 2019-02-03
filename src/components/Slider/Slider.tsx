@@ -62,39 +62,39 @@ export class Slider extends React.Component<Props, State> {
                   backgroundSize='cover'
                   width={1}
                   p={[2]}
-                >
-                  <SlidePanel
-                    bg='rgba(20, 19, 32, 0.90)'
+                />
+                <SlidePanel
+                    bg='purpleRain'
                     p={[2, 3, 4, 4]}
-                    mt={[200, 0, 0]}
-                    width={[1, 9 / 10, 8 / 10, 1 / 3]}
+                    width={1}
                     fustifyContent='center'
                     alignItems='center'
                     flexWrap='wrap'
                   >
-                    <Box width={1}>
+                    <Box width={[1, 2/3, 2/3]}>
                       <Text
                         as='p'
                         fontSize={[3, 4, 5, 5]}
                         color='lunar'
-                        mb={[4, 4, 6, 8]}
+                        mb={4}
                         dangerouslySetInnerHTML={{ __html: slide.title }}
                       />
-                    </Box>
-                    <Box width={1}>
                       <Text
                         as='p'
                         fontSize={[3, 4, 5, 5]}
                         color='lunar'
-                        mb={2}
+                        mb={4}
                         dangerouslySetInnerHTML={{ __html: slide.content }}
                       />
-                      <StyledLink fontSize={[3, 4, 5, 5]} href={slide.link}>
+                    </Box>
+                    <Flex justifyContent='center' width={[1, 1/3, 1/3]}>
+                      
+                      <StyledLink fontSize={[3, 4, 5, 5]} href={slide.link} 
+                        mb={[6, 0, 0, 0]}>
                         {slide.linkText}
                       </StyledLink>
-                    </Box>
+                    </Flex>
                   </SlidePanel>
-                </SlideCard>
               </SlideFrame>
             </Slide>
           ))}
@@ -151,7 +151,9 @@ const ButtonRight = styled.button`
   }
 `
 
-const SlidePanel = styled(Flex)``
+const SlidePanel = styled(Flex)`
+  position: relative;
+`
 
 const StyledLink = styled(Link)`
   border-bottom: 2px solid ${p => p.theme.colors.ogPurp};
@@ -170,18 +172,22 @@ const SlideCard = styled(Card)`
   align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
-  height: 100%;
+  height: 60vh;
+
+  ${up('0')} {
+    height: 60vh;
+  }
 `
 
 const SlideFrame = styled(Flex)`
-  height: 570px;
+  
 
   ${between('0', '1')} {
   }
   ${between('1', '2')} {
   }
   ${up('0')} {
-    height: 90vh;
+    
   }
 `
 
@@ -209,6 +215,10 @@ const GlobalStyle = createGlobalStyle`
 
   .slider-frame {
     overflow: visible !important;
+  }
+
+  .slider-list {
+    height: 100%;
   }
 `
 

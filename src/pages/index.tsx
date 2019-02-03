@@ -141,7 +141,7 @@ export class IndexPage extends React.Component<Props, State> {
             </Box>
             <Separator />
             <Box width={1}>
-              <Iframe
+              {/* <Iframe
                 id='blazeIframe'
                 frameborder='0'
                 width='100%'
@@ -151,7 +151,7 @@ export class IndexPage extends React.Component<Props, State> {
                 // onLoad={this.resetIframe}
                 url=''
                 allowFullScreen
-              />
+              /> */}
             </Box>
           </Flex>
         </Section>

@@ -8,60 +8,12 @@
     "image": "https://res.cloudinary.com/moonflower/image/upload/v1549094118/bridge-og.jpg"
   },
   {
-    "id": 1,
-    "title": "Easy ordering<br />&amp; delivery",
-    "content": "We deliver to anywhere at any *address in Marin County and soon to be, Sonoma County.",
-    "linkText":"Place an order",
-    "link":"#shop",
-    "image": "https://res.cloudinary.com/moonflower/image/upload/v1549088641/foggy-bridge.jpg"
-  },
-  {
-    "id": 2,
-    "title": "Easy ordering<br />&amp; delivery",
-    "content": "We deliver to anywhere at any *address in Marin County and soon to be, Sonoma County.",
-    "linkText":"Place an order",
-    "link":"#shop",
-    "image": "https://res.cloudinary.com/moonflower/image/upload/v1549088641/purple-bridge.jpg"
-  },
-  {
-    "id": 3,
-    "title": "Hand<br /> selected",
-    "content": "We’ve tried every product, checked every ingredient and hand-selected the finest quality the Golden State has to offer.",
-    "linkText":"Place an order",
-    "link":"#shop",
-    "image": "https://res.cloudinary.com/moonflower/image/upload/v1549087961/rollie--tinted.jpg"
-  },
-  {
     "id": 4,
     "title": "Our gift<br />to you",
     "content": "First time customers receive 15% off. Seniors and Veterans receive 10% off everyday.",
     "linkText":"Place an order",
     "link":"#shop",
     "image": "https://images.unsplash.com/photo-1533577059201-70fbca82b2a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-  },
-  {
-    "id": 5,
-    "title": "Our gift<br />to you",
-    "content": "First time customers receive 15% off. Seniors and Veterans receive 10% off everyday.",
-    "linkText":"Place an order",
-    "link":"#shop",
-    "image": "https://res.cloudinary.com/moonflower/image/upload/v1549089517/rollie--dude.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Need a<br /> medical card?",
-    "content": "It's easy to get an online medical recommendation from the comfort of your own home.",
-    "linkText":"Boon an appointment",
-    "link":"http://www.prestodoctor/moonflower",
-    "image": "https://res.cloudinary.com/moonflower/image/upload/v1549089828/alexandre-chambon-157651-unsplash.jpg"
-  },
-  {
-    "id": 7,
-    "title": "Need a<br /> medical card?",
-    "content": "It's easy to get an online medical recommendation from the comfort of your own home.",
-    "linkText":"Boon an appointment",
-    "link":"http://www.prestodoctor/moonflower",
-    "image": "https://res.cloudinary.com/moonflower/image/upload/v1549090565/home-table.jpg"
   },
   {
     "id": 8,
