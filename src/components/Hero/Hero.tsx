@@ -49,10 +49,10 @@ const Container = styled(Flex)`
     min-height: 80vh;
   }
   ${between('1', '2')} {
-    min-height: 86vh;
+    min-height: 80vh;
   }
   ${up('2')} {
-    min-height: 90vh;
+    min-height: 80vh;
   }
 `
 

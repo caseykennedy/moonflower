@@ -61,12 +61,10 @@ export class Slider extends React.Component<Props, State> {
                   backgroundPosition='center center'
                   backgroundSize='cover'
                   width={1}
-                  p={[2]}
-                />
-                <SlidePanel
-                    bg='purpleRain'
-                    p={[2, 3, 4, 4]}
-                    width={1}
+                >
+                  <SlidePanel
+                    bg='rgba(17, 17, 27, 0.9)'
+                    p={[3]}
                     fustifyContent='center'
                     alignItems='center'
                     flexWrap='wrap'
@@ -76,25 +74,19 @@ export class Slider extends React.Component<Props, State> {
                         as='p'
                         fontSize={[3, 4, 5, 5]}
                         color='lunar'
-                        mb={4}
-                        dangerouslySetInnerHTML={{ __html: slide.title }}
-                      />
-                      <Text
-                        as='p'
-                        fontSize={[3, 4, 5, 5]}
-                        color='lunar'
-                        mb={4}
+                        mb={0}
                         dangerouslySetInnerHTML={{ __html: slide.content }}
                       />
                     </Box>
                     <Flex justifyContent='center' width={[1, 1/3, 1/3]}>
                       
-                      <StyledLink fontSize={[3, 4, 5, 5]} href={slide.link} 
-                        mb={[6, 0, 0, 0]}>
+                      <StyledLink fontSize={[3, 4, 5, 5]} href={slide.link}>
                         {slide.linkText}
                       </StyledLink>
                     </Flex>
                   </SlidePanel>
+                </SlideCard>
+                
               </SlideFrame>
             </Slide>
           ))}
@@ -152,7 +144,7 @@ const ButtonRight = styled.button`
 `
 
 const SlidePanel = styled(Flex)`
-  position: relative;
+  
 `
 
 const StyledLink = styled(Link)`
@@ -169,13 +161,13 @@ const StyledLink = styled(Link)`
 const SlideCard = styled(Card)`
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  height: 60vh;
+  height: 80vh;
 
   ${up('0')} {
-    height: 60vh;
+    height: 80vh;
   }
 `
 

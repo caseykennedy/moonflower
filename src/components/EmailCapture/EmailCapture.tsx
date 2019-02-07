@@ -50,7 +50,7 @@ const encode = data => {
 
 class EmailCapture extends React.Component<Props, State> {
   static defaultProps: Partial<Props> = {
-    bg: 'darkSky'
+    bg: 'lunar'
   }
   constructor(props: Props) {
     super(props)
@@ -78,20 +78,21 @@ class EmailCapture extends React.Component<Props, State> {
       <Section
         bg='darkSky'
         bgImage='https://res.cloudinary.com/moonflower/image/upload/v1548918004/bg__emailCapture--5.jpg'
-
+        py={[2, 3, 8, 10]}
+        px={[2, 3, 8, 10]}
       >
       <Flex width={1} justifyContent='flex-start'>
         <Box
           bg={bg}
           p={[4, 8, 100, 120]}
-          width={[1, 1, 6/10, 6/10]}
+          width={[2/3]}
         >
           <Box>
             <Fade>
-              <Heading as='h2' fontSize={8} mb={0} color='lunar' textAlign='center'>
+              <Heading as='h2' fontSize={8} mb={0} color='pulse' textAlign='center'>
                 Deals &amp; updates?
               </Heading>
-              <Text as='p' fontSize={4} color='paleMoon' mb={4} textAlign='center'>
+              <Text as='p' fontSize={4} color='pulse' mb={4} textAlign='center'>
                 Subscribe to be the first to know about product drops and exclusives.
               </Text>
             </Fade>
@@ -175,7 +176,7 @@ const SubmitButton = styled(Button)`
   border: 2px solid ${p => p.theme.colors.ogPurp};
   border-left: none;
   border-radius: 6rem;
-  color: ${p => p.theme.colors.paleMoon};
+  color: ${p => p.theme.colors.pulse};
   cursor: pointer;
   font-size: 1.4rem;
   font-weight: 600;
