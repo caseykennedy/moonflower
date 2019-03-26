@@ -40,12 +40,12 @@ const Intro: React.SFC<IntroProps> = ({ children }) => (
           <Box width={1} color='pulse' mb={1}>
             <strong>moonflower</strong> has seen how cannabis has benefited those closest to us, and in return, we have been inspired to spread our love for the plant, while making a positive impact within our community here in the North Bay.
           </Box>
-          <Text as='span' fontSize={3} width={1} color='lavendar' mb={1}>
+          {/* <Text as='span' fontSize={3} width={1} color='lavendar' mb={1}>
             <strong>open:</strong> Tues-Fri 11am-7pm | Sat-Sun 12pm-6pm
           </Text>
           <Text as='span' fontSize={3} width={1} color='lavendar' mb={1}>
             <strong>moonflower</strong> cannot deliver to an address on publicly owned land, a building leased by a public agency, or a school.
-          </Text>
+          </Text> */}
         </Fade>
       </Text>
     </Row>
